@@ -12,21 +12,113 @@
   <nav>
     <div class="logo">
       <img class="logo-img" src="logo.jpg" alt="logo">
-      <h4>Universo Emaranhado</h4>
+      <a href="index.html" id="logo">Universo Emaranhado</a>
     </div>
-    <ul class="nav-links">
-      <li><a href="index.html">Início</a></li>
-      <li><a href="#">Pré-requisitos</a></li>
-      <li><a href="#">Mecânica Quântica</a></li>
-      <li><a href="#">Computação Quântica</a></li>
-      <li><a href="#">Aplicações</a></li>
-    </ul>
+
+    <div class="navbar">
+      <div class="dropdown">
+        <button class="dropbtn">Pré-requisitos
+          <i class="fa fa-caret-down"></i>
+        </button>
+        <div class="dropdown-content">
+          <a href="#">Posts</a>
+          <a href="#">Vídeos</a>
+          <a href="#">Quizzes</a>
+          <a href="#">Código</a>
+        </div>
+      </div>
+      <div class="dropdown">
+        <button class="dropbtn">Mecânica Quântica
+          <i class="fa fa-caret-down"></i>
+        </button>
+        <div class="dropdown-content">
+          <a href="#">Posts</a>
+          <a href="#">Vídeos</a>
+          <a href="#">Quizzes</a>
+        </div>
+      </div>
+      <div class="dropdown">
+        <button class="dropbtn">Computação Quântica
+          <i class="fa fa-caret-down"></i>
+        </button>
+        <div class="dropdown-content">
+          <a href="#">Posts</a>
+          <a href="#">Vídeos</a>
+          <a href="#">Quizzes</a>
+          <a href="#">Código</a>
+        </div>
+      </div>
+      <div class="dropdown">
+        <button class="dropbtn">Aplicações
+          <i class="fa fa-caret-down"></i>
+        </button>
+        <div class="dropdown-content">
+          <a href="#">Posts</a>
+          <a href="#">Vídeos</a>
+          <a href="#">Quizzes</a>
+          <a href="#">Código</a>
+        </div>
+      </div>
+    </div>
+
+    <!--<ul class="nav-links">
+
+      <li id="pre">
+        <a href="#" class="nav">Pré-requisitos</a>
+      </li>
+
+      <li id="qm">
+        <a href="#" class="nav">Mecânica Quântica</a>
+      </li>
+
+      <li id="qc">
+        <a href="#" class="nav">Computação Quântica</a>
+      </li>
+
+      <li id="apli">
+        <a href="#" class="nav">Aplicações</a>
+      </li>
+    </ul>-->
+
     <div class="burger">
       <div class="line1"></div>
       <div class="line2"></div>
       <div class="line3"></div>
     </div>
   </nav>
+
+  <main>
+    <h1>Bem-vindo(a)!</h1>
+    <p>Este é meu blog de computação quântica</p>
+    <h2>Origem do blog</h2>
+    <p>Meu objetivo criando esse blog é tornar a computação quântica acessível
+      em nível intermediário.</p>
+    <p>Como assim? Percebi uma falta de recursos em português. Encontrei apenas
+      três tipos de recursos: notícias, artigos superficiais sobre o termo,
+      e artigos acadêmicos avançados.</p>
+    <p>Quero suprir a necessidade de recursos intermediários, que ajudem a
+      parte do público não especialista a programar computadores quânticos do
+      conforto de sua casa!</p>
+    <h2>O que esperar (conteúdos)</h2>
+    <p>Antes, o que não esperar:</p>
+    <p>Não espere um tratamento superficial sobre o termo computação quântica
+      - já existem recursos para isso.</p>
+    <p>Não espere também um tratamento avançado. Usaremos o nível mínimo
+       de matemática e formalismo possível, com no máximo cálculo introdutório
+        onde inevitável. </p>
+    <p>Espere sair daqui sabendo:</p>
+    <ul>
+      <li>as bases matemáticas e de programação necesssárias pra computação
+        quântica</li>
+      <li>os básicos de mecânica quântica</li>
+      <li>a teoria da computação/informação quântica</li>
+      <li>a implementação de programas quânticos em Qiskit</li>
+    </ul>
+    <p>Para cada tópico na barra de navegação, você verá um dropdown com
+       diferentes recursos (vídeos, posts, etc). Quando um vídeo/quiz/código
+       estiver relacionado a um post, isso será indicado no post.</p>
+    <p>Espero que goste!</p>
+  </main>
 
   <script src="app.js"></script>
 
