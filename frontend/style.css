@@ -5,7 +5,7 @@
 }
 
 body{
-  background-color: #130830;
+  background-color: #130624;
 }
 
 nav {
@@ -45,7 +45,7 @@ nav {
 }
 
 /* Add a red background color to navbar links on hover */
-.navbar a:hover, .dropdown:hover .dropbtn {
+.navbar a:hover, .dropdown:hover .dropbtn, .dropdown .selected{
   background-color: purple;
 }
 
@@ -133,10 +133,17 @@ nav {
   body{
     overflow-x:hidden;
   }
+
+  .main{
+    width:50%;
+    position:relative;
+    left:5px;
+  }
+
   .navbar {
     position:absolute;
     right:0px;
-    height:92vh;
+    height:100vh;
     top:8vh;
     background-image:url('space3.jpg');
     display:flex;
@@ -200,12 +207,13 @@ main{
   position: relative;
   left:30px;
   background:white;
-  border-radius: 13px;
-  border-style: solid;
+  /*border-radius: 13px;*/
+  /*border-style: solid; */
   color: black;
   padding:10px;
   margin:10px;
-  border-color: #e38ff7;
+  margin-top:20px;
+  /*border-color: #e38ff7; */
 }
 
 main p, h1, h2{
