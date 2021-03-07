@@ -72,13 +72,49 @@
   </nav>
 
   <main id="prereq_post1_main">
-    <div class="simulation">
-      <!-- <div class="slidecontainer">
-        <input type="range" min="0" max="360" value="0" class="slider" id="myRange">
-      </div>
-      <div id="demo"></div> -->
-      <div id="circ"></div>
-    </div>
+    <h1>Revisão de Matemática!</h1>
+    <h2>Trigonometria, Números Complexos, e Probabilidade</h2>
+    <p>Quando comecei a estudar computação quântica, minhas fundações não eram
+      das mais fortes: havia acabado de aprender sobre o ciclo trigonométrico,
+      e nem sabia programar.</p>
+    <p>Por isso recomendo que revise a matemática e computação necessárias
+      antes de começar. Não é preciso ter completo domínio sobre esses
+      conteúdos, mas uma introdução é definitivamente necessária. O domínio
+      virá conforme você se aprofunda no mundo quântico.</p>
+    <p>Se você nunca viu nenhum destes conteúdos, aqui estão fontes mais
+      completas (altamente recomendadas para leitores e leitoras que ainda não
+      cursaram o primeiro ano do Ensino Médio):</p>
+    <p><a href="https://pt.khanacademy.org/math/algebra2/introduction-to-complex-numbers-algebra-2">
+      Números Complexos</a></p>
+    <p><a href="https://pt.khanacademy.org/math/trigonometry">Trigonometria</a>(ver
+      principalmente "funções trigonométricas")</p>
+    <p><a href="https://pt.khanacademy.org/math/statistics-probability">Probabilidade</a>
+      (ver principalmente "probabilidade" e "variáveis aleatórias")</p>
+    <h3>Trigonometria</h3>
+    <p>No estudo de estados quânticos, veremos que podemos representá-los com
+      flechas apontando em diferentes direções, ou ângulos. Além disso, os
+      “gates” que vamos aplicar aos estados para fazer computações podem, de
+      maneira geral, ser descritos como giros na direção dessas flechas.</p>
+    <p>Assim, ângulos e trigonometria são claramente essenciais para a computação
+      quântica.</p>
+    <p>Se você já passou por seu nono ano do Ensino Fundamental, já conhece os
+      famosos seno, cosseno, e tangente. Se tratam de três das funções
+      trigonométricas. No entanto, no nono ano, pensamos sobre essas funções
+      como razões em triângulos retângulos:</p>
+    <div class="interactive" id="right_triangle"></div>
+    <p>Também vale a pena relembrar algumas propriedades importantes para cada função:</p>
+    <div class="interactive" id="trig_rules"></div>
+    <p>Por fim, é importante revisar a unidade de radianos e as coordenadas polares.</p>
+    <p>Costumamos medir ângulos em graus, mas, em geral, a unidade de radianos é mais útil.
+      Enquanto que, em graus, um círculo tem 360º, em radianos, dizemos que tem 2*pi rad:</p>
+    <div class="interactive" id="circ"></div>
+    <p>Também estamos acostumados com coordenadas cartesianas, com eixos x e y
+      em duas dimensões, e x, y, e z em três. No entanto, para vários contextos,
+      é útil entender como mudar para coordenadas polares, com (r, theta, phi):</p>
+    <div class="interactive" id="cart_to_polar"></div>
+    <p>Veremos que estados quânticos não somente são flechas em diferentes
+      ângulos, como são flechas que podem ser representadas em esferas.
+      Nesse caso, é claro que coordenadas polares são as mais intuitivas.</p>
   </main>
 
   <script src="pre-reqs.js"></script>

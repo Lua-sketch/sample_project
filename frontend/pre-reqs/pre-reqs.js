@@ -7,7 +7,9 @@ slider.oninput = function() {
   output.innerHTML = this.value;
 } */
 
-
+/*const c = document.querySelector('#circ');
+var w = c.style.width
+var h = c.style.height*/
 
 let slider;
 let theta;
@@ -18,10 +20,10 @@ let x;
 let y;
 
 function setup(){
-  let canvas = createCanvas(370, 300);
+  let canvas = createCanvas(370, 280);
   slider = createSlider(0, 360, 0);
-  slider.position(5, 80);
   slider.parent('circ');
+  //slider.position(5, 80);
   canvas.parent('circ');
 }
 
@@ -40,7 +42,9 @@ function draw(){
   line(xi, yi, x, y);
   fill(0);
   text(theta*PI/180, x+5, y+5);
-  text('rads = ângulo em radianos', 175, 150);
-  text('graus = ângulo em graus', 175, 175);
-  text('rads = graus * (pi / 180)', 175, 200);
+  textSize(16);
+  text('rads = graus * (pi / 180)', 175, 150);
+  textSize(12);
+  text('rads = ângulo em radianos', 175, 175);
+  text('graus = ângulo em graus', 175, 200);
 }
