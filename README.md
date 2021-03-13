@@ -10,9 +10,10 @@
 8. ~~Git add/clone/push~~
 9. Add favicon - https://stackoverflow.com/questions/35037482/favicon-with-github-pages
 10. Replace logo.jpg with logo.png
+11. Examples of labels you want to copy
 
 
 ## Nice to haves
-1. Google translate to and from Portuguese
+1. Google translate to and from Portuguese - https://www.w3schools.com/howto/howto_google_translate.asp
 2. Embedded videos
 3. Quizzes
