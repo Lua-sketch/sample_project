@@ -15,5 +15,5 @@
 
 ## Nice to haves
 1. Google translate to and from Portuguese - https://www.w3schools.com/howto/howto_google_translate.asp
-2. Embedded videos
+2. Embedded videos tiktok - https://developers.tiktok.com/doc/Embed, youtube https://www.w3schools.com/html/html_youtube.asp
 3. Quizzes
