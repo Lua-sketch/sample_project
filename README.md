@@ -9,6 +9,7 @@
 7. Icons and other cute stuff
 8. ~~Git add/clone/push~~
 9. Add favicon - https://stackoverflow.com/questions/35037482/favicon-with-github-pages
+10. Replace logo.jpg with logo.png
 
 
 ## Nice to haves
