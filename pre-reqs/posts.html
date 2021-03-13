@@ -1,0 +1,243 @@
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>Universo Emaranhado</title>
+  <link rel="stylesheet" type="text/css" href="../../style.css"></link>
+  <link rel="stylesheet" type="text/css" href="posts.css"></link>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+  <script src="../../p5.js"> </script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.5.11/addons/p5.dom.min.js"></script>
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Bubblegum+Sans&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+  <nav>
+
+    <div class="logo">
+      <img class="logo-img" src="../../logo.jpg" alt="logo">
+      <a href="../../index.html" id="logo">Universo Emaranhado</a>
+    </div>
+
+    <div class="navbar">
+
+      <div class="dropdown">
+        <button class="dropbtn selected">Pré-requisitos
+          <i class="fa fa-caret-down"></i>
+        </button>
+        <div class="dropdown-content">
+          <a href="posts.html">Posts</a>
+          <a href="#">Vídeos</a>
+          <a href="#">Quizzes</a>
+          <a href="#">Código</a>
+        </div>
+      </div>
+
+      <div class="dropdown">
+        <button class="dropbtn">Mecânica Quântica
+          <i class="fa fa-caret-down"></i>
+        </button>
+        <div class="dropdown-content">
+          <a href="#">Posts</a>
+          <a href="#">Vídeos</a>
+          <a href="#">Quizzes</a>
+        </div>
+      </div>
+
+      <div class="dropdown">
+        <button class="dropbtn">Computação Quântica
+          <i class="fa fa-caret-down"></i>
+        </button>
+        <div class="dropdown-content">
+          <a href="#">Posts</a>
+          <a href="#">Vídeos</a>
+          <a href="#">Quizzes</a>
+          <a href="#">Código</a>
+        </div>
+      </div>
+
+      <div class="dropdown">
+        <button class="dropbtn">Aplicações
+          <i class="fa fa-caret-down"></i>
+        </button>
+        <div class="dropdown-content">
+          <a href="#">Posts</a>
+          <a href="#">Vídeos</a>
+          <a href="#">Quizzes</a>
+          <a href="#">Código</a>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="burger">
+      <div class="line1"></div>
+      <div class="line2"></div>
+      <div class="line3"></div>
+    </div>
+
+  </nav>
+
+  <main id="prereq_post1_main">
+
+    <h1>Revisão de Matemática!</h1>
+
+    <h2>Trigonometria, Números Complexos, e Probabilidade</h2>
+    <p>Quando comecei a estudar computação quântica, minhas fundações não eram
+      das mais fortes: havia acabado de aprender sobre o ciclo trigonométrico,
+      e nem sabia programar.</p>
+    <p>Por isso recomendo que revise a matemática e computação necessárias
+      antes de começar. Não é preciso ter completo domínio sobre esses
+      conteúdos, mas uma introdução é definitivamente necessária. O domínio
+      virá conforme você se aprofunda no mundo quântico.</p>
+    <p>Se você nunca viu nenhum destes conteúdos, aqui estão fontes mais
+      completas (altamente recomendadas para leitores e leitoras que ainda não
+      cursaram o primeiro ano do Ensino Médio):</p>
+    <p><a target="_blank" href="https://pt.khanacademy.org/math/algebra2/introduction-to-complex-numbers-algebra-2">
+      Números Complexos</a></p>
+    <p><a target="_blank" href="https://pt.khanacademy.org/math/trigonometry">Trigonometria</a>(ver
+      principalmente "funções trigonométricas")</p>
+    <p><a target="_blank" href="https://pt.khanacademy.org/math/statistics-probability">Probabilidade</a>
+      (ver principalmente "probabilidade" e "variáveis aleatórias")</p>
+
+    <h3>Trigonometria</h3>
+    <p>No estudo de estados quânticos, veremos que podemos representá-los com
+      flechas apontando em diferentes direções, ou ângulos. Além disso, os
+      “gates” que vamos aplicar aos estados para fazer computações podem, de
+      maneira geral, ser descritos como giros na direção dessas flechas.</p>
+    <p>Assim, ângulos e trigonometria são claramente essenciais para a computação
+      quântica.</p>
+    <p>Se você já passou por seu nono ano do Ensino Fundamental, já conhece os
+      famosos seno, cosseno, e tangente. Se tratam de três das funções
+      trigonométricas. No entanto, no nono ano, pensamos sobre essas funções
+      como razões em triângulos retângulos:</p>
+    <div class="interactive" id="right_triangle"></div>
+    <p>Também vale a pena relembrar algumas propriedades importantes para cada função:</p>
+    <div class="interactive" id="trig_rules"></div>
+    <p>Por fim, é importante revisar a unidade de radianos e as coordenadas polares.</p>
+    <p>Costumamos medir ângulos em graus, mas, em geral, a unidade de radianos é mais útil.
+      Enquanto que, em graus, um círculo tem 360º, em radianos, dizemos que tem 2*pi rad:</p>
+    <div class="interactive" id="circ"></div>
+    <p>Também estamos acostumados com coordenadas cartesianas, com eixos x e y
+      em duas dimensões, e x, y, e z em três. No entanto, para vários contextos,
+      é útil entender como mudar para coordenadas polares, com (r, theta, phi):</p>
+    <div class="interactive" id="cart_to_polar"></div>
+    <p>Veremos que estados quânticos não somente são flechas em diferentes
+      ângulos, como são flechas que podem ser representadas em esferas.
+      Nesse caso, é claro que coordenadas polares são as mais intuitivas.</p>
+
+    <h3>Números Complexos</h3>
+    <p>Já justificamos a utilidade da trigonometria, dizendo que estados quânticos
+       são como flechas inclinadas a diferentes ângulos representados em uma esfera.
+        Mas o que não contamos é que essas flechas tem componentes complexos
+         (vamos entender o que “componentes” significa quando estudarmos vetores).</p>
+    <p>Assim, é importante saber os básicos de como lidar com esses números.</p>
+    <p>A unidade imaginária é o conceito inicial para entender números complexos.
+       Se trata da raiz quadrada de -1:</p>
+    <div class="interactive" id="imaginary_unit"></div>
+    <p>Se você se lembra de equações de segundo grau, verá que as equações que no
+       Ensino Fundamental dizíamos não ter solução por conter raízes de números negativos
+        na verdade tinham soluções, mas apenas soluções complexas.</p>
+    <p>Um número complexo é da forma</p>
+    <div class="interactive" id="rect_complex_number"></div>
+    <p>No entanto, essa é a forma retangular. Temos também a forma polar:</p>
+    <div class="interactive" id="polar_complex_number"></div>
+    <p>Visualizamos ambas as formas como segue no gráfico:</p>
+    <div class="interactive" id="complex_plane"></div>
+    <p>Como podemos ver, a conversão de uma forma para a outra pode ser realizada
+       segundo as equações:</p>
+    <div class="interactive" id="convert_polar_rect_complex"></div>
+    <p>Algumas operações importantes incluem:</p>
+    <div class="interactive" id="complex_ops"></div>
+    <p>Por fim, uma fórmula bastante útil em várias áreas da física, incluso na
+      computação quântica, é a chamada fórmula de Euler, que diz que</p>
+    <div class="interactive" id="euler"></div>
+    <p>Obs: a <a href="https://pt.m.wikipedia.org/wiki/F%C3%B3rmula_de_Euler#Prova_utilizando_c%C3%A1lculo">derivação</a>
+      desta fórmula envolve cálculo e/ou <a target="_blank" href="https://pt.wikipedia.org/wiki/S%C3%A9rie_de_Taylor">séries de Taylor</a>
+      ou <a target="_blank" href="https://pt.wikipedia.org/wiki/S%C3%A9rie_de_pot%C3%AAncias">séries de potência</a>,
+      conceitos estudados em cursos de cálculo; por isso, não a incluiremos aqui</p>
+
+    <h3>Probabilidade</h3>
+    <p>A mecânica quântica é fundamentalmente probabilística. O que quero dizer com “fundamentalmente”?
+      Bom, na física clássica, podemos até considerar a jogada de uma moeda como
+      aleatória/probabilística, mas se trata de uma aleatoriedade aparente. Isso
+      porque, na física clássica, se tivéssemos toda a informação possível sobre o
+      estado da moeda, poderíamos prever o resultado de sua jogada.</p>
+    <p>No entanto, isso não é possível na mecânica quântica. Se trata de uma teoria
+      verdadeiramente aleatória, em que não é possível prever o resultado de uma medição
+      ou experimento mesmo que tenhamos todo o conhecimento possível sobre o(s) estado(s) envolvido(s)</p>
+    <p>Não pense que isso torna a teoria inútil. Pelo contrário, essa característica é
+      utilizada em todo algoritmo quântico. Isso porque, apesar de não podermos prever
+      o resultado de um experimento, podemos calcular as probabilidades de cada resultado
+      e observar a frequência de cada um obedecendo nossas previsões ao repetir o experimento.</p>
+    <p>Vamos, então, revisar alguns conceitos básicos de probabilidade. Ao fim dessa seção,
+      teremos um gostinho do que está por vir no estudo de estados quânticos.</p>
+    <p>Definimos um conjunto como um objeto formado pela coleção de objetos distintos.
+      A ordem destes não importa. Temos também relações entre conjuntos, em que um
+      conjunto pode ser um subconjunto ou superconjunto de outro, ou até mesmo igual.</p>
+    <div class="interactive" id="sets"></div>
+    <p>O espaço amostral é o conjunto de todos os resultados possíveis de um experimento.
+      Este conjunto é coletivamente exaustivo e com elementos mutuamente exclusivos. Isso
+      é jargão para dizer que no mínimo um evento deve ocorrer (coletivamente exaustivo) e
+      que dois eventos não podem ocorrer simultaneamente (elementos mutuamente exclusivos).
+      Basicamente, um e somente um dos resultados possíveis no espaço amostral pode ocorrer de uma vez.</p>
+    <div class="interactive" id="sample_space_exs"></div>
+    <p>Uma lei de probabilidade atribui uma probabilidade para cada elemento do espaço amostral.</p>
+    <div class="interactive" id="prob_law"></div>
+    <p>Temos algumas regras importantes quanto à leis de probabilidade:</p>
+    <div class="interactive" id="prob_rules"></div>
+    <p>Uma variável aleatória mapeia cada resultado possível de um experimento a um número real.
+      Apesar de ser chamada de variável aleatória, se trata apenas de uma função do espaço amostral
+      para o conjunto de números reais. Já a função de massa de probabilidade associa uma
+      probabilidade a cada valor possível da variável aleatória.</p>
+    <div class="interactive" id="random_variable"></div>
+    <p>Agora, um conceito de extrema importância na computação quântica é o valor esperado de
+      uma variável aleatória. Se trata da média ponderada de todos os valores possíveis da
+      variável aleatória, em que os pesos usados são as probabilidades de cada valor
+      (aquelas que foram associadas pela função de massa de probabilidade)<p>
+    <div class="interactive" id="expected_value"></div>
+    <p>A importância deste conceito está ligada à lei de grandes números: quanto
+      mais vezes repetirmos o experimento em questão, mais próxima a média de
+      valores observados se torna do valor esperado.</p>
+    <p>A variância está também ligada ao valor esperado, medindo o quão dispersos
+      os dados do experimento são ao redor da média obtida. Vemos em sua fórmula
+      que se trata do valor esperado da variável aleatória (X-E[X])²:</p>
+    <div class="interactive" id="variance"></div>
+    <p>Por fim, chegamos ao “gostinho” de estados quânticos prometido ao início desta seção.
+      Vamos introduzir agora uma nova notação chamada notação Bra-Ket. Se você nunca estudou
+      vetores, tente acompanhar e, se não conseguir, dê uma olhada no próximo post (link),
+      sobre álgebra linear.</p>
+    <p>Bom, um “ket” é um vetor de coluna. O símbolo que utilizamos é:</p>
+    <div class="interactive" id="ket"></div>
+    <p>Já um “bra” é o conjugado transposto de um “ket”. Em outras palavras, é a
+      versão em linha do “bra”, e que tira o conjugado complexo de cada um de seus elementos:</p>
+    <div class="interactive" id="bra"></div>
+    <p>Veremos, mais para frente, que um bit quântico pode estar em mais de um estado ao mesmo
+      tempo. Um bit clássico é 0 ou 1. Já um bit quântico (qubit) pode estar em uma superposição
+      de ambos, algo entre os dois estados, o que expressamos como:</p>
+    <div class="interactive" id="superposition"></div>
+    <p>Neste contexto, o significado de alpha e beta é o de amplitudes de probabilidade.
+      Como assim? Bom, quando medimos/observamos um qubit, desfazemos sua superposição
+      e obtemos ou 0 ou 1. No entanto, podemos obter qualquer um deles, pois o estado
+      do qubit está entre os dois, como se tivesse uma parte de cada. Então, a probabilidade
+      de obtermos 0 e a probabilidade de obtermos 1 são, respectivamente:</p>
+    <div class="interactive" id="prob_amplitudes"></div>
+
+    <h3>Conclusão</h3>
+    <p>Assim concluímos nossa revisão de matemática para computação quântica.
+      Novamente, recomendo que, se você sentiu dificuldade entendendo estes
+      conceitos, acesse os links disponibilizados ao início do post. É importante
+      conseguir aplicar estes conhecimentos antes de seguir em frente.</p>
+    <p>Espero que tenha gostado! Para checar se você sabe o suficiente ou se
+      precisa de uma revisão, acesse o quiz</p>
+
+  </main>
+
+  <script src="pre-reqs_post1_interactive1.js"></script>
+  <script src="pre-reqs_post1_interactive2.js"></script>
+  <script src="../../app.js"></script>
+
+</body>
+</html>

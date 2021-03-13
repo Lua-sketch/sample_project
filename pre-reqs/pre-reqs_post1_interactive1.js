@@ -1,3 +1,4 @@
+
 /* var slider = document.getElementById("myRange");
 var output = document.getElementById("demo");
 output.innerHTML = slider.value; // Display the default slider value
@@ -7,9 +8,11 @@ slider.oninput = function() {
   output.innerHTML = this.value;
 } */
 
-/*const c = document.querySelector('#circ');
-var w = c.style.width
-var h = c.style.height*/
+const c = document.querySelector('#circ');
+const c_style = getComputedStyle(c);
+const c_w = c_style.width;
+const c_h = c_style.height;
+console.log('coffee')
 
 let slider;
 let theta;
@@ -19,12 +22,14 @@ let yi = 50;
 let x;
 let y;
 
-function setup(){
+function setup() {
+  console.log('enter setup')
   let canvas = createCanvas(370, 280);
   slider = createSlider(0, 360, 0);
   slider.parent('circ');
   //slider.position(5, 80);
   canvas.parent('circ');
+  console.log(slider);
 }
 
 function draw(){
@@ -43,8 +48,8 @@ function draw(){
   fill(0);
   text(theta*PI/180, x+5, y+5);
   textSize(16);
-  text('rads = graus * (pi / 180)', 175, 150);
+  text('θ = 𝜙 * (𝜋 / 180)', 175, 150);
   textSize(12);
-  text('rads = ângulo em radianos', 175, 175);
-  text('graus = ângulo em graus', 175, 200);
+  text('θ = ângulo em radianos', 175, 175);
+  text('𝜙 = ângulo em graus', 175, 200);
 }
