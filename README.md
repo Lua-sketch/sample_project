@@ -1,6 +1,6 @@
 # Luanna - Devon things to work on
 
-1. ~~Github pages with url set up [Github Page](https://pages.github.com)~~
+1. Github pages with url set up [Github Page](https://pages.github.com) - This doesn't seem to be working yet.
 2. ~~Design top navigation with javascript~~
 3. Blog contents
 4. Labels
