@@ -6,8 +6,7 @@ h1, h2, h3{
   margin:9px;
 }
 
-.interactive, #circ, #right_triangle{
-  width:370;
-  height:280;
-  background-color: lightgray;
+#prereqs_main{
+  width:70vw;
+  background:white;
 }
