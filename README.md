@@ -8,7 +8,7 @@
 6. ~~Make a logo for the brand~~
 7. Icons and other cute stuff
 8. ~~Git add/clone/push~~
-9. Add favicon - https://stackoverflow.com/questions/35037482/favicon-with-github-pages
+9. ~~Add favicon - https://stackoverflow.com/questions/35037482/favicon-with-github-pages~~
 10. Replace logo.jpg with logo.png
 11. Examples of labels you want to copy
 
