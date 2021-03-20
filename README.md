@@ -13,7 +13,7 @@
 11. Examples of labels you want to copy
 12. Embed a notebook
 13. Install NBinteract - pip install nbinteract
-14. Initialize nbinteract https://www.nbinteract.com/tutorial/tutorial_publishing.html
+14. Initialize nbinteract https://www.nbinteract.com/tutorial/tutorial_github_setup.html#Initializing-nbinteract
 15. Embed a notebook - turn a notebook into an html file - nbinteract [name of your file].ipynb
 16. Upload your new html to your github repo
 17. Use an iframe to embed this html into a webpage
