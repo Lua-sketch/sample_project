@@ -262,7 +262,7 @@ var interactive10 = new p5(complex_plane, 'complex_plane');
 // 11
 var convert_polar_rect_complex = function(p){
   p.setup = function(){
-    p.createCanvas(300, 140);
+    p.createCanvas(350, 140);
     slider_complex_x = p.createSlider(-100, 100, 0);
     slider_complex_y = p.createSlider(-100, 100, 0);
   };
@@ -272,12 +272,12 @@ var convert_polar_rect_complex = function(p){
     var y = slider_complex_y.value();
     p.textSize(16);
     p.text('(x, y) = ('+x+', '+y+')', 20, 20);
-    p.text('(r, θ) = ('+p.round(p.sqrt(p.sq(x)+p.sq(y)), 2)+', '+p.round(p.atan(y/x)*180/p.PI, 2)+')', 20, 50);
+    p.text('(r, θ) = ('+p.round(p.sqrt(p.sq(x)+p.sq(y)))+', '+p.round(p.atan(y/x)*180/p.PI)+')', 20, 50);
     p.textSize(18);
-    p.text('r = √(x² + y²)', 150, 20);
-    p.text('θ = arctan(y/x)', 150, 50);
-    p.text('x = rcos(θ)', 150, 80);
-    p.text('y = rsin(θ)', 150, 110);
+    p.text('r = √(x² + y²)', 200, 20);
+    p.text('θ = arctan(y/x)', 200, 50);
+    p.text('x = rcos(θ)', 200, 80);
+    p.text('y = rsin(θ)', 200, 110);
   };
 };
 
