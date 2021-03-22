@@ -134,9 +134,6 @@
       },
       correctAnswer: "d"
     }
-    {
-      
-    }
   ];
 
   // Kick things off
