@@ -133,6 +133,206 @@
         d: "'a' e 'c' estão corretos"
       },
       correctAnswer: "d"
+    },
+    {
+      question: "sin²(θ) + cos²(θ) = ?",
+      answers: {
+        a: "1",
+        b: "0",
+        c: "tan(θ)",
+        d: "não tem valor fixo"
+      },
+      correctAnswer: "a"
+    },
+    {
+      question: "sin(-θ) = ?, cos(-θ) = ?, tan(-θ) = ?",
+      answers: {
+        a: "sin(θ), cos(θ), tan(θ)",
+        b: "-sin(θ), -cos(θ), -tan(θ)",
+        c: "-sin(θ), cos(θ), -tan(θ)",
+        d: "-sin(θ), cos(θ), tan(θ)"
+      },
+      correctAnswer: "c"
+    },
+    {
+      question: "Como podemos expressar -sin(θ)?",
+      answers: {
+        a: "cos(θ+𝜋/2)",
+        b: "sin(θ+𝜋)",
+        c: "sin(θ-𝜋)",
+        d: "todas as anteriores"
+      },
+      correctAnswer:"d"
+    },
+    {
+      question: "Como podemos expressar cos(θ)?",
+      answers: {
+        a: "sin(θ+𝜋/2)",
+        b: "sin(θ-𝜋/2)",
+        c: "cos(θ+𝜋)",
+        d: "todas as anteriores"
+      },
+      correctAnswer: "a"
+    },
+    {
+      question: "Quantos graus correspondem a 𝜋/4 radianos?",
+      answers: {
+        a: "30",
+        b: "45",
+        c: "60",
+        d: "nenhuma das anteriores"
+      },
+      correctAnswer: "b"
+    },
+    {
+      question: "Quantos radianos correspondem a 210 graus?",
+      answers: {
+        a: "𝜋/6",
+        b: "2𝜋/3",
+        c: "7𝜋/6",
+        d: "nenhuma das anteriores"
+      },
+      correctAnswer: "c"
+    },
+    {
+      question: "(x = 60, y = 80) = ?",
+      answers: {
+        a: "(r = 70, θ = 4/3 rad)",
+        b: "(r = 70, θ = arctan(4/3) rad)",
+        c: "(r = 100, θ = 4/3 rad)",
+        d: "(r = 100, θ = arctan(4/3) rad)"
+      },
+      correctAnswer: "d"
+    },
+    {
+      question: "(r = 30, θ = 2𝜋/3 rad) = ?",
+      answers: {
+        a: "(x = -15, y = 15)",
+        b: "(x = -15, y = 15√3)",
+        c: "(x = 15, y = 15)",
+        d: "(x = 15, y = 15√3)"
+      },
+      correctAnswer: "b"
+    },
+    {
+      question: "z = 3 - 3i = ?",
+      answers: {
+        a: "3√2.exp(i.3𝜋/4)",
+        b: "3√2(cos(3𝜋/4) + isin(3𝜋/4))",
+        c: "3√2.exp(i.7𝜋/4)",
+        d: "todas as anteriores"
+      },
+      correctAnswer: "d"
+    },
+    {
+      question: "z = 30.exp(i.𝜋/6) = ?",
+      answers: {
+        a: "15√3 + 15i",
+        b: "15√3 - 15i",
+        c: "15 + 15√3i",
+        d: "15 - 15√3i"
+      },
+      correctAnswer: "a"
+    },
+    {
+      question: "z = 3 - 3i => z* = ?",
+      answers: {
+        a: "3 + 3i",
+        b: "3√2.exp(-i.3𝜋/4)",
+        c: "a e b",
+        d: "nenhuma das anteriores"
+      },
+      correctAnswer: "c"
+    },
+    {
+      question: "(3 - 3i) + (-14 + 7i) = ?",
+      answers: {
+        a: "-11 + 4i",
+        b: "11 - 4i",
+        c: "17 + 10i",
+        d: "nenhuma das anteriores"
+      },
+      correctAnswer: "a"
+    },
+    {
+      question: "(3 - 3i)(-14 + 7i) = ?",
+      answers: {
+        a: "-42 + 63i",
+        b: "42 - 63i",
+        c: "-21 + 63i",
+        d: "21 - 63i"
+      },
+      correctAnswer: "c"
+    },
+    {
+      question: "Se A = (cachorro, gato, abelha, macaco, lesma) e B = (macaco, lesma), então:",
+      answers:{
+        a: "A = B",
+        b: "A ⊃ B",
+        c: "A ⊂ B",
+        d: "nenhuma, a ordem dos elementos importa"
+      },
+      correctAnswer: "b"
+    },
+    {
+      question: "Qual o espaço amostral de uma jogada de dados?",
+      answers: {
+        a: "Ω = (1, 2, 3, 4, 5, 6)",
+        b: "Ω = (6, 5, 4, 3, 2, 1)",
+        c: "Ω = (4, 5, 6, 3, 1, 2)",
+        d: "todos os anteriores"
+      },
+      correctAnswer: "d"
+    },
+    {
+      question: "Qual o valor esperado de uma jogada de dados (assumindo um dado justo)?",
+      answers: {
+        a: "E = 1.1/6 + 2.1/6 + 3.1/6 + 4.1/6 + 5.1/6 + 6.1/6",
+        b: "E = 3,5",
+        c: "a e b",
+        d: "não há valor esperado pois as probabilidades são iguais"
+      },
+      correctAnswer: "c"
+    },
+    {
+      question: "Qual a variância de uma jogada de dados?",
+      answers: {
+        a: "var = 3,5",
+        b: "var ~ 2.92",
+        c: "var = 3",
+        d: "var = 0"
+      },
+      correctAnswer: "b"
+    },
+    {
+      question: "Se |v ⟩ = [[2], [9], [1 + 13i], [4]], então ⟨v | = ?",
+      answers: {
+        a: "[2, 9, 1 + 13i, 4]",
+        b: "[-2, -9, 1 - 13i, -4]",
+        c: "[-2, -9, -1 - 13i, -4]",
+        d: "[2, 9, 1 - 13i, 4]"
+      },
+      correctAnswer: "d"
+    },
+    {
+      question: "O que é superposição?",
+      answers: {
+        a: "Quando um qubit não pode ser descrito separadamente de outro",
+        b: "Quando um qubit se encontra em um estado 'entre' 0 e 1",
+        c: "Quando um qubit interfere com o outro",
+        d: "Quando um qubit está em mais de uma posição ao mesmo tempo"
+      },
+      correctAnswer: "b"
+    },
+    {
+      question: "Qual a probabilidade de obtermos 0 ao medir o estado |ψ ⟩ = √3/2|0 ⟩ + 1/2|1 ⟩?",
+      answers: {
+        a: "É imprevisível, não temos como saber",
+        b: "√3/2",
+        c: "3/4",
+        d: "nenhuma das anteriores"
+      },
+      correctAnswer: "c"
     }
   ];
 
