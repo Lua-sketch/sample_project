@@ -6,7 +6,17 @@ h1, h2, h3{
   margin:9px;
 }
 
-#prereqs_main{
+main{
   width:70vw;
-  background:white;
+  background: #130624;
+}
+
+#post1{
+  margin-top:20;
+}
+
+.post{
+  width:70vw;
+  background-color:white;
+  margin-top: 50;
 }
