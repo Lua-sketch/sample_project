@@ -1,13 +1,13 @@
 <html>
-
 <head>
   <meta charset="utf-8">
   <title>Universo Emaranhado</title>
   <link rel="shortcut icon" type="image/x-icon" href="../favicon.ico"></link>
   <link rel="stylesheet" type="text/css" href="../style.css"></link>
-  <link rel="stylesheet" type="text/css" href="quizzes.css"></link>
+  <link rel="stylesheet" type="text/css" href="posts.css"></link>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
-  <script src="../p5.js"></script>
+  <script src="../p5.js"> </script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.5.11/addons/p5.dom.min.js"></script>
   <link rel="preconnect" href="https://fonts.gstatic.com">
   <link href="https://fonts.googleapis.com/css2?family=Bubblegum+Sans&display=swap" rel="stylesheet">
 </head>
@@ -15,14 +15,16 @@
 <body>
 
   <nav>
+
     <div class="logo">
       <img class="logo-img" src="../logo.png" alt="logo">
       <a href="../index.html" id="logo">Universo Emaranhado</a>
     </div>
 
     <div class="navbar">
+
       <div class="dropdown">
-        <button class="dropbtn">Pré-requisitos
+        <button class="dropbtn selected">Pré-requisitos
           <i class="fa fa-caret-down"></i>
         </button>
         <div class="dropdown-content">
@@ -33,6 +35,7 @@
           <a href="flashcards.html">Flashcards</a>
         </div>
       </div>
+
       <div class="dropdown">
         <button class="dropbtn">Mecânica Quântica
           <i class="fa fa-caret-down"></i>
@@ -43,6 +46,7 @@
           <a href="#">Quizzes</a>
         </div>
       </div>
+
       <div class="dropdown">
         <button class="dropbtn">Computação Quântica
           <i class="fa fa-caret-down"></i>
@@ -54,6 +58,7 @@
           <a href="#">Código</a>
         </div>
       </div>
+
       <div class="dropdown">
         <button class="dropbtn">Aplicações
           <i class="fa fa-caret-down"></i>
@@ -65,6 +70,7 @@
           <a href="#">Código</a>
         </div>
       </div>
+
     </div>
 
     <div class="burger">
@@ -72,20 +78,12 @@
       <div class="line2"></div>
       <div class="line3"></div>
     </div>
+
   </nav>
 
   <main>
-    <div class="quiz-container">
-      <div id="quiz1"></div>
+    <div class="flashcard-div">
+    <iframe src="https://lua-sketch.github.io/flashcards/" style="border:0px # hidden;" name="trig_flashcards" scrolling="no" frameborder="1" marginheight="0px" marginwidth="0px" height="600px" width="600px" allowfullscreen></iframe>
     </div>
-    <button id="previous">Pergunta Anterior</button>
-    <button id="next">Próxima Pergunta</button>
-    <button id="submit1">Enviar Quiz</button>
-    <div id="results1"></div>
   </main>
-
-  <script src="../app.js"></script>
-  <script src="quizzes.js"></script>
-</body>
-
 </html>
