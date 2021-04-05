@@ -1,3 +1,5 @@
+                  // POST 1
+
 // 1
 var right_triangle = function(p){
 
@@ -541,3 +543,635 @@ var prob_amplitudes = function(p){
 };
 
 var interactive23 = new p5(prob_amplitudes, 'prob_amplitudes');
+
+
+              //POST 2
+
+//1
+var weight_ex_arrow = function(p){
+  p.setup = function(){
+    p.createCanvas(150, 180);
+  };
+  p.draw = function(){
+    p.noFill();
+    p.background(255);
+    p.stroke(0);
+    //person
+    p.ellipse(100, 40, 20, 20);
+    p.line(100, 50, 100, 90);
+    p.line(100, 90, 120, 130);
+    p.line(100, 90, 80, 130);
+    p.line(100, 50, 110, 70);
+    p.line(100, 50, 90, 70);
+    p.stroke(0, 0, 200);
+    //force
+    p.line(100, 70, 100, 140);
+    p.fill(0, 0, 200);
+    p.triangle(105, 140, 95, 140, 100, 145);
+    p.text('700', 108, 145)
+  };
+};
+
+var int1 = new p5(weight_ex_arrow, 'weight_ex_arrow');
+
+//2
+var weight_ex_vector = function(p){
+  p.setup = function(){
+    p.createCanvas();
+  };
+  p.draw = function(){
+    p.background(255);
+  };
+};
+
+//var int2 = new p5(weight_ex_vector, 'weight_ex_vector');
+
+//3
+var general_2d_vector = function(p){
+  p.setup = function(){
+    p.createCanvas();
+  };
+  p.draw = function(){
+    p.background(255);
+  };
+}
+
+//4
+var properties = function(p){
+  p.setup = function(){
+    p.createCanvas();
+  };
+  p.draw = function(){
+    p.background(255);
+  };
+}
+
+//5
+var vector_sum_ex = function(p){
+  p.setup = function(){
+    p.createCanvas();
+  };
+  p.draw = function(){
+    p.background(255);
+  };
+}
+
+//6
+var vector_sum_ex2 = function(p){
+  p.setup = function(){
+    p.createCanvas();
+  };
+  p.draw = function(){
+    p.background(255);
+  };
+}
+
+//7
+var vector_sum_formula = function(p){
+  p.setup = function(){
+    p.createCanvas();
+  };
+  p.draw = function(){
+    p.background(255);
+  };
+}
+
+//8
+var vector_scalar_mult_ex = function(p){
+  p.setup = function(){
+    p.createCanvas();
+  };
+  p.draw = function(){
+    p.background(255);
+  };
+}
+
+//9
+var vector_scalar_mult_formula = function(p){
+  p.setup = function(){
+    p.createCanvas();
+  };
+  p.draw = function(){
+    p.background(255);
+  };
+}
+
+//10
+var unit_vectors = function(p){
+  p.setup = function(){
+    p.createCanvas();
+  };
+  p.draw = function(){
+    p.background(255);
+  };
+}
+
+//11
+var vector_components = function(p){
+  p.setup = function(){
+    p.createCanvas();
+  };
+  p.draw = function(){
+    p.background(255);
+  };
+}
+
+//12
+var condition = function(p){
+  p.setup = function(){
+    p.createCanvas();
+  };
+  p.draw = function(){
+    p.background(255);
+  };
+}
+
+//13
+var threed_vector = function(p){
+  p.setup = function(){
+    p.createCanvas();
+  };
+  p.draw = function(){
+    p.background(255);
+  };
+}
+
+//14
+var general_vector = function(p){
+  p.setup = function(){
+    p.createCanvas();
+  };
+  p.draw = function(){
+    p.background(255);
+  };
+}
+
+//15
+var props_and_ops = function(p){
+  p.setup = function(){
+    p.createCanvas();
+  };
+  p.draw = function(){
+    p.background(255);
+  };
+}
+
+//16
+var form = function(p){
+  p.setup = function(){
+    p.createCanvas();
+  };
+  p.draw = function(){
+    p.background(255);
+  };
+}
+
+//17
+var column_v_form = function(p){
+  p.setup = function(){
+    p.createCanvas();
+  };
+  p.draw = function(){
+    p.background(255);
+  };
+}
+
+//18
+var row_v_form = function(p){
+  p.setup = function(){
+    p.createCanvas();
+  };
+  p.draw = function(){
+    p.background(255);
+  };
+}
+
+//19
+var form_exs = function(p){
+  p.setup = function(){
+    p.createCanvas();
+  };
+  p.draw = function(){
+    p.background(255);
+  };
+}
+
+//20
+var column_v = function(p){
+  p.setup = function(){
+    p.createCanvas();
+  };
+  p.draw = function(){
+    p.background(255);
+  };
+}
+
+//21
+var column_v_transpose = function(p){
+  p.setup = function(){
+    p.createCanvas();
+  };
+  p.draw = function(){
+    p.background(255);
+  };
+}
+
+//22
+var row_v = function(p){
+  p.setup = function(){
+    p.createCanvas();
+  };
+  p.draw = function(){
+    p.background(255);
+  };
+}
+
+//23
+var row_v_transpose = function(p){
+  p.setup = function(){
+    p.createCanvas();
+  };
+  p.draw = function(){
+    p.background(255);
+  };
+}
+
+//24
+var inner_product = function(p){
+  p.setup = function(){
+    p.createCanvas();
+  };
+  p.draw = function(){
+    p.background(255);
+  };
+}
+
+//25
+var summation_symbol = function(p){
+  p.setup = function(){
+    p.createCanvas();
+  };
+  p.draw = function(){
+    p.background(255);
+  };
+}
+
+//26
+var inner_product_ex = function(p){
+  p.setup = function(){
+    p.createCanvas();
+  };
+  p.draw = function(){
+    p.background(255);
+  };
+}
+
+//27
+var inner_with_self = function(p){
+  p.setup = function(){
+    p.createCanvas();
+  };
+  p.draw = function(){
+    p.background(255);
+  };
+}
+
+//28
+var inner_with_self_norm = function(p){
+  p.setup = function(){
+    p.createCanvas();
+  };
+  p.draw = function(){
+    p.background(255);
+  };
+}
+
+//29
+var normalization = function(p){
+  p.setup = function(){
+    p.createCanvas();
+  };
+  p.draw = function(){
+    p.background(255);
+  };
+}
+
+//30
+var conjugate_transpose = function(p){
+  p.setup = function(){
+    p.createCanvas();
+  };
+  p.draw = function(){
+    p.background(255);
+  };
+}
+
+//31
+var conj_trans_ex = function(p){
+  p.setup = function(){
+    p.createCanvas();
+  };
+  p.draw = function(){
+    p.background(255);
+  };
+}
+
+//32
+var wrong_way = function(p){
+  p.setup = function(){
+    p.createCanvas();
+  };
+  p.draw = function(){
+    p.background(255);
+  };
+}
+
+//33
+var complex_inner_product = function(p){
+  p.setup = function(){
+    p.createCanvas();
+  };
+  p.draw = function(){
+    p.background(255);
+  };
+}
+
+//34
+var right_way = function(p){
+  p.setup = function(){
+    p.createCanvas();
+  };
+  p.draw = function(){
+    p.background(255);
+  };
+}
+
+//35
+var grocery_list = function(p){
+  p.setup = function(){
+    p.createCanvas();
+  };
+  p.draw = function(){
+    p.background(255);
+  };
+}
+
+//36
+var linear_combs = function(p){
+  p.setup = function(){
+    p.createCanvas();
+  };
+  p.draw = function(){
+    p.background(255);
+  };
+}
+
+//37
+var vector_op = function(p){
+  p.setup = function(){
+    p.createCanvas();
+  };
+  p.draw = function(){
+    p.background(255);
+  };
+}
+
+//38
+var vector_op_graph = function(p){
+  p.setup = function(){
+    p.createCanvas();
+  };
+  p.draw = function(){
+    p.background(255);
+  };
+}
+
+//39
+var matrix_ex = function(p){
+  p.setup = function(){
+    p.createCanvas();
+  };
+  p.draw = function(){
+    p.background(255);
+  };
+}
+
+//40
+var zero_to_1 = function(p){
+  p.setup = function(){
+    p.createCanvas();
+  };
+  p.draw = function(){
+    p.background(255);
+  };
+}
+
+//41
+var vector_op2_graph = function(p){
+  p.setup = function(){
+    p.createCanvas();
+  };
+  p.draw = function(){
+    p.background(255);
+  };
+}
+
+//42
+var wrong_matrix = function(p){
+  p.setup = function(){
+    p.createCanvas();
+  };
+  p.draw = function(){
+    p.background(255);
+  };
+}
+
+//43
+var wrong_result = function(p){
+  p.setup = function(){
+    p.createCanvas();
+  };
+  p.draw = function(){
+    p.background(255);
+  };
+}
+
+//44
+var right_result = function(p){
+  p.setup = function(){
+    p.createCanvas();
+  };
+  p.draw = function(){
+    p.background(255);
+  };
+}
+
+//45
+var general_matrix = function(p){
+  p.setup = function(){
+    p.createCanvas();
+  };
+  p.draw = function(){
+    p.background(255);
+  };
+}
+
+//46
+var matrix_sum = function(p){
+  p.setup = function(){
+    p.createCanvas();
+  };
+  p.draw = function(){
+    p.background(255);
+  };
+}
+
+//47
+var matrix_scalar = function(p){
+  p.setup = function(){
+    p.createCanvas();
+  };
+  p.draw = function(){
+    p.background(255);
+  };
+}
+
+//48
+var matrix_vector = function(p){
+  p.setup = function(){
+    p.createCanvas();
+  };
+  p.draw = function(){
+    p.background(255);
+  };
+}
+
+//49
+var matrix_vector_draw = function(p){
+  p.setup = function(){
+    p.createCanvas();
+  };
+  p.draw = function(){
+    p.background(255);
+  };
+}
+
+//50
+var matrix_vector_forms = function(p){
+  p.setup = function(){
+    p.createCanvas();
+  };
+  p.draw = function(){
+    p.background(255);
+  };
+}
+
+//51
+var matrix_matrix = function(p){
+  p.setup = function(){
+    p.createCanvas();
+  };
+  p.draw = function(){
+    p.background(255);
+  };
+}
+
+//52
+var matrix_matrix_forms = function(p){
+  p.setup = function(){
+    p.createCanvas();
+  };
+  p.draw = function(){
+    p.background(255);
+  };
+}
+
+//53
+var matrix = function(p){
+  p.setup = function(){
+    p.createCanvas();
+  };
+  p.draw = function(){
+    p.background(255);
+  };
+}
+
+//54
+var matrix_transpose = function(p){
+  p.setup = function(){
+    p.createCanvas();
+  };
+  p.draw = function(){
+    p.background(255);
+  };
+}
+
+//55
+var matrix_conj_trans = function(p){
+  p.setup = function(){
+    p.createCanvas();
+  };
+  p.draw = function(){
+    p.background(255);
+  };
+}
+
+//56
+var identity_matrix = function(p){
+  p.setup = function(){
+    p.createCanvas();
+  };
+  p.draw = function(){
+    p.background(255);
+  };
+}
+
+//57
+var inverse_matrix = function(p){
+  p.setup = function(){
+    p.createCanvas();
+  };
+  p.draw = function(){
+    p.background(255);
+  };
+}
+
+//58
+var inv_m_formula = function(p){
+  p.setup = function(){
+    p.createCanvas();
+  };
+  p.draw = function(){
+    p.background(255);
+  };
+}
+
+//59
+var system = function(p){
+  p.setup = function(){
+    p.createCanvas();
+  };
+  p.draw = function(){
+    p.background(255);
+  };
+}
+
+//60
+var system_matrix = function(p){
+  p.setup = function(){
+    p.createCanvas();
+  };
+  p.draw = function(){
+    p.background(255);
+  };
+}
+
+//61
+var system_solution = function(p){
+  p.setup = function(){
+    p.createCanvas();
+  };
+  p.draw = function(){
+    p.background(255);
+  };
+}

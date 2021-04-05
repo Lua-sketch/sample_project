@@ -56,7 +56,7 @@
           <a href="#">Posts</a>
           <a href="#">Vídeos</a>
           <a href="#">Quizzes</a>
-          <a href="#">Código</a>
+          <a href="../quantum-computing/code.html">Código</a>
         </div>
       </div>
 
@@ -289,6 +289,261 @@
         tem um comprimento de 700 unidades, e que aponta na direção -y.</p>
       <p>Então, a notação geral para um vetor em duas dimensões é:</p>
       <div class="interactive" id="general_2d_vector"></div>
+
+      <h3>Propriedades</h3>
+      <p>Bom, se temos essa notação de um vetor, conseguimos encontrar sua direção
+        como o ângulo que faz em relação ao eixo x e conseguimos encontrar sua magnitude.
+        Isso será bastante parecido com o processo feito para passar de coordenadas cartesianas
+        para polares </p>
+      <div class="interactive" id="properties"></div>
+
+      <h3>Operações</h3>
+      <p>Se estou viajando a 40 km/h para a direita e a 30 km/h para cima, qual o vetor que
+        representa minha velocidade? Bom, estou, de certa forma, tentando somar dois vetores!
+        O que obtenho é:</p>
+      <div class="interactive" id="vector_sum_ex"></div>
+      <p>De forma mais geral, se dissesse que estava viajando a 40 km/h na direção de 30º
+        e 30 km/h na direção de 60º, iria obter:</p>
+      <div class="interactive" id="vector_sum_ex2"></div>
+      <p>Assim, percebemos que</p>
+      <div class="interactive" id="vector_sum_formula"></div>
+      <p>Agora, e se dissesse que estou viajando, como no primeiro exemplo, a 40 km/h
+        para a direita e a 30 km/h para cima, e que passei a viajar duas vezes mais rápido?
+        Bom, então estaria viajando a</p>
+      <div class="interactive" id="vector_scalar_mult_ex"></div>
+      <p>De forma mais geral, podemos multiplicar um vetor por um escalar como segue:</p>
+      <div class="interactive" id="vector_scalar_mult_formula"></div>
+
+      <h3>Decomposição</h3>
+      <p>Se definirmos os vetores</p>
+      <div class="interactives" id="unit_vectors"></div>
+      <p>Então temos que qualquer vetor (real e bidimensional) v pode ser escrito como:</p>
+      <div class="interactive" id="vector_components"></div>
+      <p>Dizemos que todo vetor tal que</p>
+      <div class="interactive" id="condition"></div>
+      <p>Pode ser expresso como uma combinação linear de i e j, que chamamos de vetores unitários (magnitude = 1)</p>
+
+      <h3>Generalizando</h3>
+      <p>Até agora, pensamos exclusivamente sobre vetores bidimensionais, mas estes não
+        são os únicos que podem existir, são apenas os mais fáceis de visualizar. Podemos
+        também incluir um eixo z, por exemplo, ao nosso plano cartesiano, e agora apresentar vetores da forma</p>
+      <div class="interactive" id="3d_vector"></div>
+      <p>Poderíamos incluir quantas dimensões quisermos, apesar de não conseguirmos visualizar isso muito bem. Assim, a forma geral de um vetor é</p>
+      <div class="interactive" id="general_vector"></div>
+      <p>E suas propriedades e operações, de forma geral, são</p>
+      <div class="interactive" id="props_and_ops"></div>
+
+      <h3>Forma</h3>
+      <p>Todos estes vetores a que estamos nos referindo possuem uma propriedade que chamamos de forma. A forma de um vetor qualquer é definida como</p>
+      <div class="interactive" id="form"></div>
+      <p>Este conceito também será bastante importante quando estudarmos matrizes, mas vamos revisá-lo quando chegarmos lá. </p>
+      <p>Até agora, falamos sobre vetores como colunas, então acabamos sempre tendo formas do tipo</p>
+      <div class="interactive" id="column_v_form"></div>
+      <p>Há também vetores que são linhas, e têm formas do tipo</p>
+      <div class="interactive" id="row_v_form"></div>
+      <p>Alguns exemplos são:</p>
+      <div class="interactive" id="form_exs"></div>
+
+      <h3>Transposição</h3>
+      <p>A transposição é uma operação em vetores que inverte sua forma (vetores coluna se tornam vetores linha e vice-versa).</p>
+      <p>Assim, se</p>
+      <div class="interactive" id="column_v"></div>
+      <p>Então seu transposto é</p>
+      <div class="interactive" id="column_v_transpose"></div>
+      <p>E se</p>
+      <div class="interactive" id="row_v"></div>
+      <p>Então seu transposto é</p>
+      <div class="interactive" id="row_v_transpose"></div>
+      <p>De novo, isso será importante e mais geral no contexto de matrizes, mas vamos revisar o conceito quando chegarmos lá.</p>
+
+      <h3>Produto Interno</h3>
+      <p>O produto interno, também chamado de produto escalar, é uma operação que mapeia dois
+        vetores a um número (escalar). Sua definição matemática é</p>
+      <div class="interactive" id="inner_product"></div>
+      <p>Calma! Este símbolo estranho parecendo apenas indica soma! Assim, a parte direita
+        desta expressão pode ser escrita, de maneira menos sucinta, como</p>
+      <div class="interactive" id="summation_symbol"></div>
+      <p>Tente se acostumar com esta notação antes de continuar. Feito isso, vamos ver um exemplo:</p>
+      <div class="interactive" id="inner_product_ex"></div>
+      <p>Legal, já sabemos o que é o produto interno! Agora, lhe pergunto:
+        o que acontece se calculamos o produto interno de um vetor consigo mesmo? </p>
+      <p><strong>Pare e pense sobre antes de continuar</strong></p>
+      <p><strong>.</strong></p>
+      <p><strong>.</strong></p>
+      <p><strong>.</strong></p>
+      <p>Parou? Ok, vamos ver o que acontece usando nossa definição:</p>
+      <div class="interactive" id="inner_with_self"></div>
+      <p>Hum, esta expressão me parece familiar… vamos expandir a soma e ver se a reconhecemos:</p>
+      <div class="interactive" id="inner_with_self_norm"></div>
+      <p>Esta é a magnitude do vetor ao quadrado!!! Lembrem que a magnitude era descrita pela
+        raiz quadrada desta expressão. Uma observação final: a magnitude de um vetor também pode ser chamada de sua norma.</p>
+
+      <h3>Normalização</h3>
+      <p>Um vetor normalizado/unitário é um vetor de magnitude 1. Simples, não? E bastante útil também!
+        Quando estudarmos estados quânticos, queremos que os vetores que os representam sejam
+        normalizados para garantir que a soma das probabilidades de obter 0 e 1 ao medí-los some a 1,
+        ou seja, 100%. Mas isso é para depois.</p>
+      <p>Como obtemos, então, um vetor normalizado? Bom, se podemos usar o produto interno
+        para descobrir a magnitude de um vetor, então podemos utilizar este resultado e dividir
+        todos os componentes do vetor por ele, obtendo, no novo vetor, uma magnitude igual a 1!</p>
+      <p>Isso foi bastante informação, então vamos a solidificar com um exemplo:</p>
+      <div class="interactive" id="normalization"></div>
+
+      <h3>Conjugado Transposto</h3>
+      <p>O que acontece com todas as considerações que fizemos até agora se estamos lidando com
+        vetores com componentes complexos?</p>
+      <p>Neste caso, no lugar de transpor um vetor, calculamos seu conjugado transposto! Diferença?
+        Além de inverter sua forma, substituímos cada componente complexo por seu conjugado complexo.</p>
+      <p>Assim, a definição do conjugado transposto é</p>
+      <div class="interactive" id="conjugate_transpose"></div>
+      <p>Um exemplo seria</p>
+      <div class="interactive" id="conj_trans_ex"></div>
+
+      <h3>Produto Interno Complexo</h3>
+      <p>Não é apenas o transposto que muda no caso de vetores complexos. Se tentarmos calcular
+        o produto interno de um vetor complexo consigo mesmo, podemos obter um resultado complexo,
+        o que não faz sentido geometricamente (no sentido de magnitude)! Segue um exemplo:</p>
+      <div class="interactive" id="wrong_way"></div>
+      <p>Assim, temos que definir uma nova operação. Se trata do produto interno complexo:</p>
+      <div class="interactive" id="complex_inner_product"></div>
+      <p>Utilizando o mesmo exemplo de vetor, obtemos, com essa nova operação:</p>
+      <div class="interactive" id="right_way"></div>
+
+      <h3>Combinações Lineares</h3>
+      <p>Uma combinação linear é uma entidade matemática composta de somas de diferentes termos
+        multiplicados por coeficientes escalares. Isso parece bastante jargão complicado, e é.
+        Uma lista de mercado pode ser vista como uma combinação linear de itens:</p>
+      <div class="interactive" id="grocery_list"></div>
+      <p>É claro que existe uma aplicação mais matemática na qual estamos interessados:
+        combinações lineares de vetores! Estas têm a forma geral de</p>
+      <div class="interactive" id="linear_combs"></div>
+      <p>Isso vai parecer levemente familiar para os que leram o último post. Lá, falamos que:</p>
+      <p>“ Um bit clássico é 0 ou 1. Já um bit quântico (qubit) pode estar em uma superposição de ambos,
+        algo entre os dois estados, o que expressamos como:”</p>
+      <div class="interactive" id="superposition_copy"></div>
+      <p>Perceba que, neste caso, a maneira com a qual escrevemos um estado de superposição foi
+        com uma combinação linear, e nem sabíamos o que isso significava ainda!</p>
+
+      <h3>Introdução a Matrizes</h3>
+      <p>Pense sobre a seguinte situação: temos um bit medindo 0, e queremos modificá-lo de
+        forma a tornar seu valor igual a 1; temos outro bit medindo 1, e queremos tornar seu
+        valor igual a 0. Matematicamente, como representamos essa operação? Bom, em notação de vetores, queremos</p>
+      <div class="interactive" id="vector_op"></div>
+      <p>Pense nesses vetores, novamente, como tendo o primeiro valor sendo o valor no eixo x e o
+        segundo, o valor no eixo y. Então, poderíamos também representar a operação que buscamos por meio do desenho:</p>
+      <div class="interactive" id="vector_op_graph"></div>
+      <p>Como podemos realizar essa rotação? Bom, considere a possibilidade, por enquanto
+        sem muita motivação, de escrever, lado a lado, em que queremos transformar o
+        primeiro vetor e em que queremos transformar o segundo:</p>
+      <div class="interactive" id="matrix_ex"></div>
+      <p>Acabamos de criar uma matriz! Perceba que se trata de uma coleção de colunas
+        (ou de linhas, dependendo de como decide vê-la). Mas para que isso serve?
+        Mais uma vez sem muita motivação, podemos definir uma espécie de multiplicação
+        entre este novo objeto e o vetor correspondente ao nosso bit de valor 0. Nosso
+        objetivo é transformá-lo, por meio dessa multiplicação, em um bit de valor 1. Assim, podemos fazer</p>
+      <div class="interactive" id="0_to_1"></div>
+      <p>Veremos uma definição mais geral dessa operação mais tarde, mas, por enquanto,
+        veja que ela funciona! Acabamos de representar aquela rotação que estávamos
+        buscando como uma matriz! Podemos testá-la no bit de valor 1 também:</p>
+      <div class="interactive" id="1_to_0"></div>
+      <p>E obtemos um bit de valor 0! Gosto de introduzir matrizes desta forma justamente
+        por poder mostrar sua utilidade. Na computação quântica, também vamos precisar
+        transformar/rotacionar/escalar nossos qubits, e para isso usamos “gates” quânticos.
+        Matematicamente, eles serão representados por matrizes.</p>
+      <p>Antes de prosseguir, vamos entender melhor o que está por trás do funcionamento
+        dessa matriz. Isso é importante porque veremos que nem sempre as colunas das
+        matrizes são em que queremos transformar os nossos vetores. Na verdade, se
+        tratam de no que queremos transformar os vetores unitários [[1] [0]] e [[0] [1]]. Como assim?</p>
+      <p>Bom, em nosso exemplo, os vetores que queríamos transformar eram justamente estes, mas e se
+        quiséssemos rotacionar, por 90º, o vetor [[3] [4]]?</p>
+      <div class="interactive" id="vector_op2_graph"></div>
+      <p>Mais cedo, com nosso exemplo de bits, dissemos que poderíamos “escrever, lado a lado,
+        em que queremos transformar o primeiro vetor e em que queremos transformar o segundo”. Se tentamos fazer isso neste caso, obtemos</p>
+      <div class="interactive" id="wrong_matrix"></div>
+      <p>E a multiplicação dessa matriz com nosso vetor fornece</p>
+      <div class="interactive" id="wrong_result"></div>
+      <p>Que não é perpendicular ao vetor inicial! Se, no lugar disso, apenas
+        pensamos sobre como essa transformação iria afetar os vetores [[1] [0]] e [[0] [1]],
+        e escrevemos os resultados disso lado a lado, acabamos com a mesma matriz que antes:</p>
+      <div class="interactive" id="matrix_ex_copy"></div>
+      <p>E, multiplicando ela por nosso vetor, obtemos:</p>
+      <div class="interactive" id="right_result"></div>
+      <p>Justamente o resultado que procurávamos! Assim, repito que, ao definir uma matriz para
+        efetuar uma transformação, devemos pensar sobre o resultado que essa transformação
+        teria em [[1] [0]] e escrevê-lo ao lado do resultado que ela teria em [[0] [1]]. </p>
+
+      <h3>Notação e Forma</h3>
+      <p>A parte mais importante sobre as matrizes já foi vista. Se você ainda não entendeu
+        como estes objetos funcionam, não prossiga até entender.</p>
+      <p>Como, então, podemos denotar uma matriz geral? Voltemos ao conceito de forma.
+        Ao discutir vetores, vimos que a forma de um vetor é (# de linhas X  # de colunas).
+        O mesmo se aplica a matrizes!</p>
+      <p>Uma matriz (n X m) é escrita como</p>
+      <div class="interactive" id="general_matrix"></div>
+      <p>Perceba que, se a forma de um objeto é (1 X 1), se trata de um número, um escalar.
+        Se a forma é (1 X m) ou (n X 1), com n, m > 1, o objeto é um vetor. Já se a forma
+        é (n X m), com n, m >1, se trata de uma matriz.</p>
+
+      <h3>Operações</h3>
+      <p>Podemos somar quaisquer duas matrizes da mesma forma que somamos vetores: somando seus componentes.</p>
+      <div class="interactive" id="matrix_sum"></div>
+      <p>Similarmente, multiplicamos uma matriz por um número (escalar) simplesmente multiplicando cada um de seus componentes por tal número:</p>
+      <div class="interactive" id="matrix_scalar"></div>
+      <p>Agora, chegamos à multiplicação entre um vetor e uma matriz. Como vimos antes, isso
+        equivale a aplicar uma transformação linear (escalação + rotação) ao vetor em questão.
+        Também como já vimos, o resultado da multiplicação será um novo vetor. Aqui está a fórmula geral:</p>
+      <div class="interactive" id="matrix_vector"></div>
+      <p>Perceba que os componentes do novo vetor correspondem a multiplicação entre o vetor original
+        e cada vetor-linha da matriz. Cada componente é resultado de um produto interno! </p>
+      <div class="interactive" id="matrix_vector_draw"></div>
+      <p>Além disso, note que a “altura” do vetor deve ser igual ao “comprimento” da matriz.
+        Aqui está a relação entre as formas dos objetos multiplicados e do resultado:</p>
+      <div class="interactive" id="matrix_vector_forms"></div>
+      <p>Por fim, como podemos multiplicar duas matrizes? Mais uma vez, cada componente, ao fim,
+        será resultado de um produto interno. Dessa vez, cada coluna da segunda matriz é multiplicada por cada linha da primeira:</p>
+      <div class="interactive" id="matrix_matrix"></div>
+      <p>A relação entre as formas das matrizes é:</p>
+      <div class="interactive" id="matrix_matrix_forms"></div>
+
+      <h3>Transposto e Conjugado Transposto</h3>
+      <p>De novo em analogia com vetores, matrizes possuem transpostos e conjugados transpostos. Se</p>
+      <div class="interactive" id="matrix"></div>
+      <p>Então</p>
+      <div class="interactive" id="matrix_transpose"></div>
+      <p>E</p>
+      <div class="interactive" id="matrix_conj_trans"></div>
+
+      <h3>Matriz Identidade e Inversão de Matrizes</h3>
+      <p>A matriz identidade é uma matriz que não faz nada! Definimos matrizes para realizarem
+        transformações em vetores, mas esta matriz em específico é justamente definida para não
+        mudar nada (escalar por 1 e rotacionar por 0º):</p>
+      <div class="interactive" id="identity_matrix"></div>
+      <p>Com isso em mente, definimos o inverso de uma matriz como sendo a matriz pela qual,
+        quando multiplicada, ela resulta na matriz identidade:</p>
+      <div class="interactive" id="inverse_matrix"></div>
+      <p>Note que nem toda matriz possui um inverso. Uma das formas de encontrar o inverso daquelas que têm é pela fórmula</p>
+      <div class="interactive" id="inv_m_formula"></div>
+      <p>Que só funciona se ad-bc diferente de 0.</p>
+
+      <h3>Sistemas Lineares de Equações</h3>
+      <p>Outra aplicação de matrizes, e uma das motivações iniciais para seu desenvolvimento,
+        é a resolução de sistemas lineares de equações. Sim, aqueles que você estudou no 7º ano.
+        Acontece que existem sistemas bem mais complicados, e que quem te ensinava provavelmente
+        escolhia justamente aqueles que contém soluções. </p>
+      <p>Um sistema da forma</p>
+      <div class="interactive" id="system"></div>
+      <p>Pode ser representado em termos de álgebra linear como</p>
+      <div class="interactive" id="system_matrix"></div>
+      <p>Para encontrar os valores de x, y e z, fazemos:</p>
+      <div class="interactive" id="system_solution"></div>
+
+      <h3>Conclusão</h3>
+      <p>Se você chegou até aqui e entendeu a maioria do conteúdo, parabéns!
+        Essa foi uma introdução bastante rápida à álgebra linear, então tome um tempo para absorver os novos conceitos.</p>
+      <p>Note que não conseguimos, em um post, falar sobre todos os detalhes envolvidos na álgebra linear.
+        Geralmente, este conteúdo é visto com mais profundidade ao longo de seis meses em um curso universitário.
+        O importante, para nossos objetivos aqui, é entender como aplicar estes básicos, sem necessariamente muita formalidade.</p>
+      <p>Agora, vamos começar a aprender sobre computação clássica e programação em Python, antes de mergulhar no mundo quântico!</p>
     </div>
   </main>
 
