@@ -547,7 +547,6 @@ var interactive23 = new p5(prob_amplitudes, 'prob_amplitudes');
 
               //POST 2
 
-//1
 var weight_ex_arrow = function(p){
   p.setup = function(){
     p.createCanvas(150, 180);
@@ -574,52 +573,6 @@ var weight_ex_arrow = function(p){
 
 var int_2_1 = new p5(weight_ex_arrow, 'weight_ex_arrow');
 
-//2
-var weight_ex_vector = function(p){
-  p.setup = function(){
-    p.createCanvas(100, 90);
-  };
-  p.draw = function(){
-    p.background(255);
-    p.textSize(16);
-    p.text('[[0]', 15, 20);
-    p.text('[700]]', 15, 53);
-  };
-};
-
-var int_2_2 = new p5(weight_ex_vector, 'weight_ex_vector');
-
-//3
-var general_2d_vector = function(p){
-  p.setup = function(){
-    p.createCanvas(100, 90);
-  };
-  p.draw = function(){
-    p.background(255);
-    p.textSize(16);
-    p.text('v = [[vₓ]', 15, 20);
-    p.text('    [vᵧ]]', 17, 53);
-  };
-};
-
-var int_2_3 = new p5(general_2d_vector, 'general_2d_vector');
-
-//4
-var properties = function(p){
-  p.setup = function(){
-    p.createCanvas(300, 100);
-  };
-  p.draw = function(){
-    p.background(255);
-    p.textSize(16);
-    p.text('||v|| = √(vₓ² + vᵧ²)', 20, 20);
-    p.text('∠ v = arctan(vᵧ/vₓ)', 20, 53);
-  };
-};
-
-var int_2_4 = new p5(properties, 'properties');
-
-//5
 var vector_sum_ex = function(p){
   p.setup = function(){
     p.createCanvas(300, 90);
@@ -638,9 +591,8 @@ var vector_sum_ex = function(p){
   };
 };
 
-var int_2_5 = new p5(vector_sum_ex, 'vector_sum_ex');
+var int_2_2 = new p5(vector_sum_ex, 'vector_sum_ex');
 
-//6
 var vector_sum_ex2 = function(p){
   p.setup = function(){
     p.createCanvas(300, 90);
@@ -659,9 +611,8 @@ var vector_sum_ex2 = function(p){
   };
 };
 
-var int_2_6 = new p5(vector_sum_ex2, 'vector_sum_ex2');
+var int_2_3 = new p5(vector_sum_ex2, 'vector_sum_ex2');
 
-//7
 var vector_sum_formula = function(p){
   p.setup = function(){
     p.createCanvas(300, 90);
@@ -676,28 +627,8 @@ var vector_sum_formula = function(p){
   };
 };
 
-var int_2_7 = new p5(vector_sum_formula, 'vector_sum_formula');
+var int_2_4 = new p5(vector_sum_formula, 'vector_sum_formula');
 
-//8
-var vector_scalar_mult_ex = function(p){
-  p.setup = function(){
-    p.createCanvas(300, 90);
-  };
-  p.draw = function(){
-    p.background(255);
-    p.textSize(16);
-    p.text('2 * ', 20, 20)
-    p.text('[[40]', 50, 20);
-    p.text(' [30]]', 50, 53);
-    p.text('=', 100, 31.5);
-    p.text('[[80]', 120, 20);
-    p.text(' [60]]', 120, 53);
-  };
-};
-
-var int_2_8 = new p5(vector_scalar_mult_ex, 'vector_scalar_mult_ex');
-
-//9
 var vector_scalar_mult_formula = function(p){
   p.setup = function(){
     p.createCanvas(300, 90);
@@ -714,9 +645,8 @@ var vector_scalar_mult_formula = function(p){
   };
 };
 
-var int_2_9 = new p5(vector_scalar_mult_formula, 'vector_scalar_mult_formula');
+var int_2_5 = new p5(vector_scalar_mult_formula, 'vector_scalar_mult_formula');
 
-//10
 var unit_vectors = function(p){
   p.setup = function(){
     p.createCanvas(300, 80);
@@ -731,508 +661,418 @@ var unit_vectors = function(p){
   };
 };
 
-var int_2_10 = new p5(unit_vectors, 'unit_vectors');
+var int_2_6 = new p5(unit_vectors, 'unit_vectors');
 
-//11
-var vector_components = function(p){
+var general_vector = function(p){
   p.setup = function(){
-    p.createCanvas(150, 50);
+    p.createCanvas(300, 110);
   };
   p.draw = function(){
     p.background(255);
     p.textSize(16);
-    p.text('v = vₓ i + vᵧ j', 20, 20);
+    p.text('v = [[v1]', 20, 20);
+    p.text('    [v2]', 20, 50);
+    p.text('    ...', 20, 70);
+    p.text('    [vn]]', 20, 90);
   };
 };
 
-var int_2_11 = new p5(vector_components, 'vector_components');
+var int_2_7 = new p5(general_vector, 'general_vector');
 
-//12
-var threed_vector = function(p){
-  p.setup = function(){
-    p.createCanvas();
-  };
-  p.draw = function(){
-    p.background(255);
-  };
-}
-
-//13
-var general_vector = function(p){
-  p.setup = function(){
-    p.createCanvas();
-  };
-  p.draw = function(){
-    p.background(255);
-  };
-}
-
-//14
 var props_and_ops = function(p){
   p.setup = function(){
-    p.createCanvas();
+    p.createCanvas(450, 200);
   };
   p.draw = function(){
     p.background(255);
+    p.textSize(16);
+    p.text('a + b = [[a1 + b1]', 20, 20);
+    p.text('        [a2 + b2]', 40, 40);
+    p.text('           ...', 40, 60);
+    p.text('        [an + bn]]', 40, 80);
+    p.text('c.v = [[c.v1]', 200, 20);
+    p.text('      [c.v2]', 220, 40);
+    p.text('       ...', 220, 60);
+    p.text('      [c.vn]]', 220, 80);
+    p.text('||v|| = √( v₁² + v₂² + ... + vₙ²)', 20, 140);
   };
-}
+};
 
-//15
-var form = function(p){
-  p.setup = function(){
-    p.createCanvas();
-  };
-  p.draw = function(){
-    p.background(255);
-  };
-}
+var int_2_8 = new p5(props_and_ops, 'props_and_ops');
 
-//16
-var column_v_form = function(p){
-  p.setup = function(){
-    p.createCanvas();
-  };
-  p.draw = function(){
-    p.background(255);
-  };
-}
 
-//17
-var row_v_form = function(p){
-  p.setup = function(){
-    p.createCanvas();
-  };
-  p.draw = function(){
-    p.background(255);
-  };
-}
-
-//18
-var form_exs = function(p){
-  p.setup = function(){
-    p.createCanvas();
-  };
-  p.draw = function(){
-    p.background(255);
-  };
-}
-
-//19
-var column_v = function(p){
-  p.setup = function(){
-    p.createCanvas();
-  };
-  p.draw = function(){
-    p.background(255);
-  };
-}
-
-//20
-var column_v_transpose = function(p){
-  p.setup = function(){
-    p.createCanvas();
-  };
-  p.draw = function(){
-    p.background(255);
-  };
-}
-
-//21
-var row_v = function(p){
-  p.setup = function(){
-    p.createCanvas();
-  };
-  p.draw = function(){
-    p.background(255);
-  };
-}
-
-//22
-var row_v_transpose = function(p){
-  p.setup = function(){
-    p.createCanvas();
-  };
-  p.draw = function(){
-    p.background(255);
-  };
-}
-
-//23
-var inner_product = function(p){
-  p.setup = function(){
-    p.createCanvas();
-  };
-  p.draw = function(){
-    p.background(255);
-  };
-}
-
-//24
-var summation_symbol = function(p){
-  p.setup = function(){
-    p.createCanvas();
-  };
-  p.draw = function(){
-    p.background(255);
-  };
-}
-
-//25
-var inner_product_ex = function(p){
-  p.setup = function(){
-    p.createCanvas();
-  };
-  p.draw = function(){
-    p.background(255);
-  };
-}
-
-//26
-var inner_with_self = function(p){
-  p.setup = function(){
-    p.createCanvas();
-  };
-  p.draw = function(){
-    p.background(255);
-  };
-}
-
-//27
-var inner_with_self_norm = function(p){
-  p.setup = function(){
-    p.createCanvas();
-  };
-  p.draw = function(){
-    p.background(255);
-  };
-}
-
-//28
-var normalization = function(p){
-  p.setup = function(){
-    p.createCanvas();
-  };
-  p.draw = function(){
-    p.background(255);
-  };
-}
-
-//29
-var conjugate_transpose = function(p){
-  p.setup = function(){
-    p.createCanvas();
-  };
-  p.draw = function(){
-    p.background(255);
-  };
-}
-
-//30
-var conj_trans_ex = function(p){
-  p.setup = function(){
-    p.createCanvas();
-  };
-  p.draw = function(){
-    p.background(255);
-  };
-}
-
-//31
-var wrong_way = function(p){
-  p.setup = function(){
-    p.createCanvas();
-  };
-  p.draw = function(){
-    p.background(255);
-  };
-}
-
-//32
-var complex_inner_product = function(p){
-  p.setup = function(){
-    p.createCanvas();
-  };
-  p.draw = function(){
-    p.background(255);
-  };
-}
-
-//33
-var right_way = function(p){
-  p.setup = function(){
-    p.createCanvas();
-  };
-  p.draw = function(){
-    p.background(255);
-  };
-}
-
-//35
-var grocery_list = function(p){
-  p.setup = function(){
-    p.createCanvas();
-  };
-  p.draw = function(){
-    p.background(255);
-  };
-}
-
-//36
-var linear_combs = function(p){
-  p.setup = function(){
-    p.createCanvas();
-  };
-  p.draw = function(){
-    p.background(255);
-  };
-}
-
-//37
-var vector_op = function(p){
-  p.setup = function(){
-    p.createCanvas();
-  };
-  p.draw = function(){
-    p.background(255);
-  };
-}
-
-//38
 var vector_op_graph = function(p){
   p.setup = function(){
-    p.createCanvas();
+    p.createCanvas(100, 100);
   };
   p.draw = function(){
     p.background(255);
+    p.line(20, 20, 20, 90);
+    p.line(20, 90, 90, 90);
+    p.noFill();
+    p.arc(20, 90, 30, 30, -p.HALF_PI, 0);
+    p.line(20, 75, 25, 71);
+    p.line(20, 75, 25, 79);
   };
-}
+};
 
-//39
+var int_2_9 = new p5(vector_op_graph, 'vector_op_graph');
+
+
 var matrix_ex = function(p){
   p.setup = function(){
-    p.createCanvas();
+    p.createCanvas(300, 90);
   };
   p.draw = function(){
     p.background(255);
+    p.textSize(16);
+    p.text('[[0, 1]', 20, 20);
+    p.text('[1, 0]]', 20, 53);
   };
-}
+};
 
-//40
+var int_2_11 = new p5(matrix_ex, 'matrix_ex');
+
 var zero_to_1 = function(p){
   p.setup = function(){
-    p.createCanvas();
+    p.createCanvas(300, 90);
   };
   p.draw = function(){
     p.background(255);
+    p.textSize(16);
+    p.text('[[0, 1] [[1]  =  [[1.0 + 0.1]  =  [[0]', 20, 20);
+    p.text('[1, 0]] [0]]      [1.1 + 0.0]]      [1]]', 20, 53);
   };
-}
+};
 
-//41
+var int_2_12 = new p5(zero_to_1, '0_to_1');
+
+var one_to_0 = function(p){
+  p.setup = function(){
+    p.createCanvas(300, 90);
+  };
+  p.draw = function(){
+    p.background(255);
+    p.textSize(16);
+    p.text('[[0, 1] [[0]  =  [[0.0 + 1.1]  =  [[1]', 20, 20);
+    p.text('[1, 0]] [1]]      [0.1 + 1.0]]      [0]]', 20, 53);
+  };
+};
+
+var int_2_13 = new p5(one_to_0, '1_to_0');
+
 var vector_op2_graph = function(p){
   p.setup = function(){
-    p.createCanvas();
+    p.createCanvas(300, 90);
   };
   p.draw = function(){
     p.background(255);
+    p.line(20, 20, 90, 90);
+    p.line(90, 90, 160, 20);
+    p.noFill();
+    p.arc(90, 90, 30, 30, -p.PI*3/4, -p.PI/4);
+    p.line(90, 75, 95, 71);
+    p.line(90, 75, 95, 79);
   };
-}
+};
 
-//42
+var int_2_14 = new p5(vector_op2_graph, 'vector_op2_graph');
+
+
 var wrong_matrix = function(p){
   p.setup = function(){
-    p.createCanvas();
+    p.createCanvas(300, 90);
   };
   p.draw = function(){
     p.background(255);
+    p.textSize(16);
+    p.text('[[-1, 1]', 20, 20);
+    p.text('[1, 1]]', 20, 53);
   };
-}
+};
 
-//43
+var int_2_15 = new p5(wrong_matrix, 'wrong_matrix');
+
+
 var wrong_result = function(p){
   p.setup = function(){
-    p.createCanvas();
+    p.createCanvas(300, 90);
   };
   p.draw = function(){
     p.background(255);
+    p.textSize(16);
+    p.text('[[-1, 1]  [[1]', 20, 20);
+    p.text('[1, 1]]   [1]]', 20, 53);
+    p.text('=', 110, 31.5);
+    p.text('[[0]', 140, 20);
+    p.text('[2]]', 140, 53);
   };
-}
+};
 
-//44
+var int_2_16 = new p5(wrong_result, 'wrong_result')
+
+var matrix_ex2 = function(p){
+  p.setup = function(){
+    p.createCanvas(300, 90)
+  };
+  p.draw = function(){
+    p.background(255);
+    p.textSize(16);
+    p.text('[[0, -1]', 20, 20);
+    p.text('[1, 0]]', 20, 53);
+  };
+};
+
+var int_2_17 = new p5(matrix_ex2, 'matrix_ex2');
+
+
 var right_result = function(p){
   p.setup = function(){
-    p.createCanvas();
+    p.createCanvas(300, 90);
   };
   p.draw = function(){
     p.background(255);
+    p.textSize(16);
+    p.text('[[0, -1]  [[1]', 20, 20);
+    p.text('[1, 0]]   [1]]', 20, 53);
+    p.text('=', 110, 31.5);
+    p.text('[[-1]', 140, 20);
+    p.text('[1]]', 140, 53);
   };
 }
 
-//45
+var int_2_18 = new p5(right_result, 'right_result');
+
+
 var general_matrix = function(p){
   p.setup = function(){
-    p.createCanvas();
+    p.createCanvas(300, 150);
   };
   p.draw = function(){
     p.background(255);
+    p.textSize(18);
+    p.text('X = [[x₁₁, x₁₂, ..., x₁ₘ]', 20, 20);
+    p.text('      [x₂₁, x₂₂, ..., x₂ₘ]', 20, 50);
+    p.text('      [  : ,  : , ...,  :  ]', 20, 80);
+    p.text('      [xₙ₁, xₙ₂, ..., xₙₘ]]', 20, 110);
   };
-}
+};
 
-//46
+var int_2_19 = new p5(general_matrix, 'general_matrix');
+var int_2_19_copy = new p5(general_matrix, 'matrix');
+
+
 var matrix_sum = function(p){
   p.setup = function(){
-    p.createCanvas();
+    p.createCanvas(400, 300);
   };
   p.draw = function(){
     p.background(255);
+    p.textSize(18);
+    p.text('[[a₁₁, a₁₂, ..., a₁ₘ]', 20, 20);
+    p.text('[a₂₁, a₂₂, ..., a₂ₘ]', 20, 50);
+    p.text('[  : ,  : , ...,  :  ]', 20, 80);
+    p.text('[aₙ₁, aₙ₂, ..., aₙₘ]]', 20, 110);
+    p.text('+', 160, 65);
+    p.text('[[b₁₁, b₁₂, ..., b₁ₘ]', 190, 20);
+    p.text('[b₂₁, b₂₂, ..., b₂ₘ]', 190, 50);
+    p.text('[  : ,  : , ...,  :  ]', 190, 80);
+    p.text('[bₙ₁, bₙ₂, ..., bₙₘ]]', 190, 110);
+    p.text('=', 20, 220);
+    p.text('[[a₁₁ + b₁₁, a₁₂ + b₁₂, ..., a₁ₘ + b₁ₘ]', 40, 180);
+    p.text('[a₂₁ + b₂₁, a₂₂ + b₂₂, ..., a₂ₘ + b₂ₘ]', 40, 210);
+    p.text('[      :     ,      :     , ...,      :      ]', 40, 240);
+    p.text('[aₙ₁ + bₙ₁, aₙ₂ + bₙ₂, ..., aₙₘ + bₙₘ]]', 40, 270);
   };
-}
+};
 
-//47
+var int_2_20 = new p5(matrix_sum, 'matrix_sum');
+
+
 var matrix_scalar = function(p){
   p.setup = function(){
-    p.createCanvas();
+    p.createCanvas(500, 160);
   };
   p.draw = function(){
     p.background(255);
+    p.textSize(18);
+    p.text('c * [[x₁₁, x₁₂, ..., x₁ₘ]', 20, 20);
+    p.text('     [x₂₁, x₂₂, ..., x₂ₘ]', 20, 50);
+    p.text('     [  : ,  : , ...,  :  ]', 20, 80);
+    p.text('     [xₙ₁, xₙ₂, ..., xₙₘ]]', 20, 110);
+    p.text('=', 190, 65);
+    p.text('[[cx₁₁, cx₁₂, ..., cx₁ₘ]', 220, 20);
+    p.text('[cx₂₁, cx₂₂, ..., cx₂ₘ]', 220, 50);
+    p.text('[  : ,  : , ...,  :  ]', 220, 80);
+    p.text('[cxₙ₁, cxₙ₂, ..., cxₙₘ]]', 220, 110);
   };
-}
+};
 
-//48
+var int_2_21 = new p5(matrix_scalar, 'matrix_scalar');
+
+
 var matrix_vector = function(p){
   p.setup = function(){
-    p.createCanvas();
+    p.createCanvas(400, 300);
   };
   p.draw = function(){
     p.background(255);
+    p.textSize(18);
+    p.text('[[x₁₁, x₁₂, ..., x₁ₘ]   [[w₁]', 20, 20);
+    p.text('[x₂₁, x₂₂, ..., x₂ₘ]    [w₂]', 20, 50);
+    p.text('[  : ,  : , ...,  :  ]      [:]', 20, 80);
+    p.text('[xₙ₁, xₙ₂, ..., xₙₘ]]   [wₘ]]', 20, 110);
+    p.text('=', 20, 220);
+    p.text('[[x₁₁w₁ + x₁₂w₂ + ... + x₁ₘwₘ]', 40, 180);
+    p.text('[x₂₁w₁ + x₂₂w₂ + ... + x₂ₘwₘ]', 40, 210);
+    p.text('[   :   +   :   + ... +   :   ]', 40, 240);
+    p.text('[xₙ₁w₁ + xₙ₂w₂ + ... + xₙₘwₘ]]', 40, 270);
   };
-}
+};
 
-//49
-var matrix_vector_draw = function(p){
-  p.setup = function(){
-    p.createCanvas();
-  };
-  p.draw = function(){
-    p.background(255);
-  };
-}
+var int_2_22 = new p5(matrix_vector, 'matrix_vector');
 
-//50
-var matrix_vector_forms = function(p){
-  p.setup = function(){
-    p.createCanvas();
-  };
-  p.draw = function(){
-    p.background(255);
-  };
-}
 
-//51
 var matrix_matrix = function(p){
   p.setup = function(){
-    p.createCanvas();
+    p.createCanvas(500, 300);
   };
   p.draw = function(){
     p.background(255);
+    p.textSize(18);
+    p.text('[[a₁₁, a₁₂, ..., a₁ₘ]', 20, 20);
+    p.text('[a₂₁, a₂₂, ..., a₂ₘ]', 20, 50);
+    p.text('[  : ,  : , ...,  :  ]', 20, 80);
+    p.text('[aₙ₁, aₙ₂, ..., aₙₘ]]', 20, 110);
+    p.text('[[b₁₁, b₁₂, ..., b₁ₖ]', 190, 20);
+    p.text('[b₂₁, b₂₂, ..., b₂ₖ]', 190, 50);
+    p.text('[  : ,  : , ...,  :  ]', 190, 80);
+    p.text('[bₘ₁, bₘ₂, ..., bₘₖ]]', 190, 110);
+    p.text('=', 20, 220);
+    p.text('[[⟨a₁, b₁⟩, ⟨a₁, b₂⟩, ..., ⟨a₁, bₖ⟩]', 40, 180);
+    p.text('[⟨a₂, b₁⟩, ⟨a₂, b₂⟩, ..., ⟨a₂, bₖ⟩]', 40, 210);
+    p.text('[     :    ,      :     , ...,     :     ]', 40, 240);
+    p.text('[⟨aₙ, b₁⟩, ⟨aₙ, b₂⟩, ..., ⟨aₙ, bₖ⟩]]', 40, 270);
   };
-}
+};
 
-//52
-var matrix_matrix_forms = function(p){
-  p.setup = function(){
-    p.createCanvas();
-  };
-  p.draw = function(){
-    p.background(255);
-  };
-}
+var int_2_23 = new p5(matrix_matrix, 'matrix_matrix');
 
-//53
-var matrix = function(p){
-  p.setup = function(){
-    p.createCanvas();
-  };
-  p.draw = function(){
-    p.background(255);
-  };
-}
 
-//54
 var matrix_transpose = function(p){
   p.setup = function(){
-    p.createCanvas();
+    p.createCanvas(300, 150);
   };
   p.draw = function(){
     p.background(255);
+    p.textSize(18);
+    p.text('Xᵀ = [[x₁₁, x₂₁, ..., xₙ₁]', 20, 20);
+    p.text('       [x₁₂, x₂₂, ..., xₙ₂]', 20, 50);
+    p.text('       [  : ,  : , ...,  :  ]', 20, 80);
+    p.text('       [x₁ₘ, x₂ₘ, ..., xₙₘ]]', 20, 110);
   };
-}
+};
 
-//55
+var int_2_24 = new p5(matrix_transpose, 'matrix_transpose');
+
+
 var matrix_conj_trans = function(p){
   p.setup = function(){
-    p.createCanvas();
+    p.createCanvas(300, 150);
   };
   p.draw = function(){
     p.background(255);
+    p.textSize(18);
+    p.text('X† = [[x₁₁*, x₂₁*, ..., xₙ₁*]', 20, 20);
+    p.text('       [x₁₂*, x₂₂*, ..., xₙ₂*]', 20, 50);
+    p.text('       [  : ,  : , ...,  :  ]', 20, 80);
+    p.text('       [x₁ₘ*, x₂ₘ*, ..., xₙₘ*]]', 20, 110);
   };
-}
+};
 
-//56
+var int_2_25 = new p5(matrix_conj_trans, 'matrix_conj_trans');
+
+
 var identity_matrix = function(p){
   p.setup = function(){
-    p.createCanvas();
+    p.createCanvas(300, 150);
   };
   p.draw = function(){
     p.background(255);
+    p.textSize(18);
+    p.text('I = [[1, 0, ..., 0]', 20, 20);
+    p.text('      [0, 1, ..., 0]', 20, 50);
+    p.text('      [ : , : , ..., : ]', 20, 80);
+    p.text('      [0, 0, ..., 1]]', 20, 110);
   };
-}
+};
 
-//57
-var inverse_matrix = function(p){
-  p.setup = function(){
-    p.createCanvas();
-  };
-  p.draw = function(){
-    p.background(255);
-  };
-}
+var int_2_26 = new p5(identity_matrix, 'identity_matrix');
 
-//58
+
 var inv_m_formula = function(p){
   p.setup = function(){
-    p.createCanvas();
+    p.createCanvas(400, 100);
   };
   p.draw = function(){
     p.background(255);
+    p.textSize(18);
+    p.text('X = [[x₁₁] [x₁₂]', 20, 20);
+    p.text('       [x₂₁] [x₂₂]]', 20, 50);
+    p.text('X⁻¹ = 1/(ad - bc) * [[x₂₂] [-x₁₂]', 150, 20);
+    p.text('                             [-x₂₁] [x₁₁]]', 150, 50);
   };
-}
+};
 
-//59
+var int_2_27 = new p5(inv_m_formula, 'inv_m_formula');
+
+
 var system = function(p){
   p.setup = function(){
-    p.createCanvas();
+    p.createCanvas(300, 70);
   };
   p.draw = function(){
     p.background(255);
+    p.textSize(18);
+    p.text('ax + by = e', 20, 20);
+    p.text('cx + dy = f', 20, 50);
   };
-}
+};
 
-//60
+var int_2_28 = new p5(system, 'system');
+
+
 var system_matrix = function(p){
   p.setup = function(){
-    p.createCanvas();
+    p.createCanvas(300, 70);
   };
   p.draw = function(){
     p.background(255);
+    p.textSize(18);
+    p.text('[[a] [b]   [[x]', 20, 20);
+    p.text('[c] [d]]   [y]]', 20, 50);
+    p.text('=', 120, 35);
+    p.text('[[e]', 150, 20);
+    p.text('[f]]', 150, 50);
   };
-}
+};
 
-//61
+var int_2_29 = new p5(system_matrix, 'system_matrix');
+
+
 var system_solution = function(p){
   p.setup = function(){
-    p.createCanvas();
+    p.createCanvas(300, 70);
   };
   p.draw = function(){
     p.background(255);
+    p.textSize(18);
+    p.text('[[x]', 20, 20);
+    p.text('[y]]', 20, 50);
+    p.text('=', 70, 35);
+    p.text('[[e]    [[a] [b]⁻¹', 100, 20);
+    p.text('[f]]     [c] [d]]', 100, 50);
   };
-}
+};
+
+var int_2_30 = new p5(system_solution, 'system_solution');
