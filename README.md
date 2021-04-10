@@ -44,6 +44,12 @@
 12. Set a logged in cookie in the onSignIn function - https://www.w3schools.com/js/js_cookies.asp
 13. Cookies will be stored for your enitre domain, so now on other pages you can read the cookie in javascript and show other elements - https://stackoverflow.com/questions/5639346/what-is-the-shortest-function-for-reading-a-cookie-by-name-in-javascript
 
+## Pagination
+// TODO Devon to write a tutorial
+
+## State control (save their progress for code, or quiz - similar to firebase)
+// TODO Devon to write a tutorial
+
 
 
 ## Nice to haves
