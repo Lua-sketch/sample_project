@@ -86,8 +86,8 @@
 
     <div class="post" id="post1">
 
+    <div id="intro">
     <h1>Revisão de Matemática!</h1>
-
     <h2>Trigonometria, Números Complexos, e Probabilidade</h2>
     <p>Quando comecei a estudar computação quântica, minhas fundações não eram
       das mais fortes: havia acabado de aprender sobre o ciclo trigonométrico,
@@ -105,7 +105,9 @@
       principalmente "funções trigonométricas")</p>
     <p><a target="_blank" href="https://pt.khanacademy.org/math/statistics-probability">Probabilidade</a>
       (ver principalmente "probabilidade" e "variáveis aleatórias")</p>
+    </div>
 
+    <div id="trig">
     <h3>Trigonometria</h3>
     <p>No estudo de estados quânticos, veremos que podemos representá-los com
       flechas apontando em diferentes direções, ou ângulos. Além disso, os
@@ -136,7 +138,9 @@
     <p>Veremos que estados quânticos não somente são flechas em diferentes
       ângulos, como são flechas que podem ser representadas em esferas.
       Nesse caso, é claro que coordenadas polares são as mais intuitivas.</p>
+    </div>
 
+    <div id="complex">
     <h3>Números Complexos</h3>
     <p>Já justificamos a utilidade da trigonometria, dizendo que estados quânticos
        são como flechas inclinadas a diferentes ângulos representados em uma esfera.
@@ -166,7 +170,9 @@
       desta fórmula envolve cálculo e/ou <a target="_blank" href="https://pt.wikipedia.org/wiki/S%C3%A9rie_de_Taylor">séries de Taylor</a>
       ou <a target="_blank" href="https://pt.wikipedia.org/wiki/S%C3%A9rie_de_pot%C3%AAncias">séries de potência</a>,
       conceitos estudados em cursos de cálculo; por isso, não a incluiremos aqui</p>
+    </div>
 
+    <div id="prob">
     <h3>Probabilidade</h3>
     <p>A mecânica quântica é fundamentalmente probabilística. O que quero dizer com “fundamentalmente”?
       Bom, na física clássica, podemos até considerar a jogada de uma moeda como
@@ -232,7 +238,9 @@
       do qubit está entre os dois, como se tivesse uma parte de cada. Então, a probabilidade
       de obtermos 0 e a probabilidade de obtermos 1 são, respectivamente:</p>
     <div class="interactive" id="prob_amplitudes"></div>
+    </div>
 
+    <div id="conclusion">
     <h3>Conclusão</h3>
     <p>Assim concluímos nossa revisão de matemática para computação quântica.
       Novamente, recomendo que, se você sentiu dificuldade entendendo estes
@@ -240,12 +248,14 @@
       conseguir aplicar estes conhecimentos antes de seguir em frente.</p>
     <p>Espero que tenha gostado! Para checar se você sabe o suficiente ou se
       precisa de uma revisão, acesse o quiz</p>
+    </div>
 
     </div>
 
     <div class="post">
-      <h1>Álgebra Linear</h1>
 
+      <div id="intro2">
+      <h1>Álgebra Linear</h1>
       <h2>Vetores, Matrizes, Autovalores, …</h2>
       <p>Já revisamos conteúdos básicos de matemática que serão necessários
         durante nossa jornada pelo mundo quântico. Qual o próximo passo?</p>
@@ -259,7 +269,9 @@
         aqui não assumimos conhecimento prévio. Assim, estude este post e busque outras fontes
         para lhe auxiliar. Antes de continuar, garanta que sabe tudo o que é mencionado aqui.</p>
       <p>Com tudo isso dito, vamos começar!</p>
+      </div>
 
+      <div id="vecs">
       <h3>Escalares VS Vetores</h3>
       <p>Para entender o que são vetores, começamos com uma comparação entre quantidades
         escalares e quantidades vetoriais.</p>
@@ -271,7 +283,9 @@
       <p>Um exemplo seria peso. Peso é uma força, consequência da atração gravitacional.
         Se você está na superfície da Terra e tem massa de 70 kg, seu peso é de
         aproximadamente 700 N (Newtons) apontando para baixo.</p>
+      </div>
 
+      <div id="vecs-notation">
       <h3>Representação</h3>
       <p>Agora que sabemos com que quantidades estamos lidando, podemos perguntar:
         como representamos quantidades vetoriais, ou vetores?</p>
@@ -291,7 +305,9 @@
       <p>Então, a notação geral para um vetor em duas dimensões é:</p>
       <p>v = [[vₓ]</p>
       <p>    [vᵧ]]</p>
+      </div>
 
+      <div id="props">
       <h3>Propriedades</h3>
       <p>Bom, se temos essa notação de um vetor, conseguimos encontrar sua direção
         como o ângulo que faz em relação ao eixo x e conseguimos encontrar sua magnitude.
@@ -299,7 +315,9 @@
         para polares </p>
       <p>||v|| = √(vₓ² + vᵧ²)</p>
       <p>∠ v = arctan(vᵧ/vₓ)</p>
+      </div>
 
+      <div id="ops">
       <h3>Operações</h3>
       <p>Se estou viajando a 40 km/h para a direita e a 30 km/h para cima, qual o vetor que
         representa minha velocidade? Bom, estou, de certa forma, tentando somar dois vetores!
@@ -316,7 +334,9 @@
       <p>2 * [[40] [30]] = [[80] [60]]</p>
       <p>De forma mais geral, podemos multiplicar um vetor por um escalar como segue:</p>
       <div class="interactive" id="vector_scalar_mult_formula"></div>
+      </div>
 
+      <div id="decomp">
       <h3>Decomposição</h3>
       <p>Se definirmos os vetores</p>
       <div class="interactives" id="unit_vectors"></div>
@@ -324,7 +344,9 @@
       <p>v = vₓ i + vᵧ j</p>
       <p>Dizemos que todo vetor tal que v ∊ ℝ² pode ser expresso como uma combinação linear de i e j,
         que chamamos de vetores unitários (magnitude = 1)</p>
+      </div>
 
+      <div id="general">
       <h3>Generalizando</h3>
       <p>Até agora, pensamos exclusivamente sobre vetores bidimensionais, mas estes não
         são os únicos que podem existir, são apenas os mais fáceis de visualizar. Podemos
@@ -333,7 +355,9 @@
       <div class="interactive" id="general_vector"></div>
       <p>E suas propriedades e operações, de forma geral, são</p>
       <div class="interactive" id="props_and_ops"></div>
+      </div>
 
+      <div id="form">
       <h3>Forma</h3>
       <p>Todos estes vetores a que estamos nos referindo possuem uma propriedade que chamamos de forma. A forma de um vetor qualquer é definida como</p>
       <p>    forma = (#linhas X #colunas)</p>
@@ -342,7 +366,9 @@
       <p>    (#linhas X 1)</p>
       <p>Há também vetores que são linhas, e têm formas do tipo</p>
       <p>    (1 X #colunas)</p>
+      </div>
 
+      <div id="transp">
       <h3>Transposição</h3>
       <p>A transposição é uma operação em vetores que inverte sua forma (vetores coluna se tornam vetores linha e vice-versa).</p>
       <p>Assim, se</p>
@@ -357,7 +383,9 @@
         de '[]' adicionais (além daquelas que abrem e fecham o vetor) então estamos falando de um vetor coluna.
         A partir de agora, apenas lembre-se da distinção, pois já treinamos o bastante para não precisar mais visualizar isso toda vez.</p>
       <p>De novo, isso será importante e mais geral no contexto de matrizes, mas vamos revisar o conceito quando chegarmos lá.</p>
+      </div>
 
+      <div id="dot">
       <h3>Produto Interno</h3>
       <p>O produto interno, também chamado de produto escalar, é uma operação que mapeia dois
         vetores a um número (escalar). Sua definição matemática é, para v e w vetores de linha (se forem vetores de coluna,
@@ -379,7 +407,9 @@
       <p>   = v₁² + v₂² + ... + vₙ² = ||v||²</p>
       <p>Esta é a magnitude do vetor ao quadrado!!! Lembrem que a magnitude era descrita pela
         raiz quadrada desta expressão. Uma observação final: a magnitude de um vetor também pode ser chamada de sua norma.</p>
+      </div>
 
+      <div id="norm">
       <h3>Normalização</h3>
       <p>Um vetor normalizado/unitário é um vetor de magnitude 1. Simples, não? E bastante útil também!
         Quando estudarmos estados quânticos, queremos que os vetores que os representam sejam
@@ -392,7 +422,9 @@
       <p>v = [[3] [4]]</p>
       <p>||v|| =  ⟨ v, v ⟩ = 5</p>
       <p>vetor normalizado: v / ||v|| = v/5 = [[3/5] [4/5]]</p>
+      </div>
 
+      <div id="conjtransp">
       <h3>Conjugado Transposto</h3>
       <p>O que acontece com todas as considerações que fizemos até agora se estamos lidando com
         vetores com componentes complexos?</p>
@@ -403,7 +435,9 @@
       <p>Um exemplo seria</p>
       <p>    v = [[5*exp(iθ)] [3 - 7i]]</p>
       <p>    v† = [[5*exp(-iθ)] [3 + 7i]]</p>
+      </div>
 
+      <div id="complex_dot">
       <h3>Produto Interno Complexo</h3>
       <p>Não é apenas o transposto que muda no caso de vetores complexos. Se tentarmos calcular
         o produto interno de um vetor complexo consigo mesmo, podemos obter um resultado complexo,
@@ -413,7 +447,9 @@
       <p>   ⟨ v, w ⟩ = v.w† = ∑ vᵢwᵢ*</p>
       <p>Utilizando o mesmo exemplo de vetor, obtemos, com essa nova operação:</p>
       <p>   ⟨ [[5*exp(iθ)] [3 - 7i]], [[5*exp(iθ)] [3 - 7i]] ⟩ = √(25 + 58) = √83</p>
+      </div>
 
+      <div id="lin_comb">
       <h3>Combinações Lineares</h3>
       <p>Uma combinação linear é uma entidade matemática composta de somas de diferentes termos
         multiplicados por coeficientes escalares. Isso parece bastante jargão complicado, e é.
@@ -429,7 +465,9 @@
       <p>|ψ ⟩ = α|0 ⟩ + β|1 ⟩</p>
       <p>Perceba que, neste caso, a maneira com a qual escrevemos um estado de superposição foi
         com uma combinação linear, e nem sabíamos o que isso significava ainda!</p>
+      </div>
 
+      <div id="matrix_intro">
       <h3>Introdução a Matrizes</h3>
       <p>Pense sobre a seguinte situação: temos um bit medindo 0, e queremos modificá-lo de
         forma a tornar seu valor igual a 1; temos outro bit medindo 1, e queremos tornar seu
@@ -479,7 +517,9 @@
       <p>Justamente o resultado que procurávamos! Assim, repito que, ao definir uma matriz para
         efetuar uma transformação, devemos pensar sobre o resultado que essa transformação
         teria em [[1] [0]] e escrevê-lo ao lado do resultado que ela teria em [[0] [1]]. </p>
+      </div>
 
+      <div id="notation_form">
       <h3>Notação e Forma</h3>
       <p>A parte mais importante sobre as matrizes já foi vista. Se você ainda não entendeu
         como estes objetos funcionam, não prossiga até entender.</p>
@@ -491,7 +531,9 @@
       <p>Perceba que, se a forma de um objeto é (1 X 1), se trata de um número, um escalar.
         Se a forma é (1 X m) ou (n X 1), com n, m > 1, o objeto é um vetor. Já se a forma
         é (n X m), com n, m >1, se trata de uma matriz.</p>
+      </div>
 
+      <div id="matrix_ops">
       <h3>Operações</h3>
       <p>Podemos somar quaisquer duas matrizes da mesma forma que somamos vetores: somando seus componentes.</p>
       <div class="interactive" id="matrix_sum"></div>
@@ -511,7 +553,9 @@
       <div class="interactive" id="matrix_matrix"></div>
       <p>A relação entre as formas das matrizes é:</p>
       <p>( n X m) X (m X k) => (n X k)</p>
+      </div>
 
+      <div id="matrix_transps">
       <h3>Transposto e Conjugado Transposto</h3>
       <p>De novo em analogia com vetores, matrizes possuem transpostos e conjugados transpostos. Se</p>
       <div class="interactive" id="matrix"></div>
@@ -519,7 +563,9 @@
       <div class="interactive" id="matrix_transpose"></div>
       <p>E</p>
       <div class="interactive" id="matrix_conj_trans"></div>
+      </div>
 
+      <div id="id_inv">
       <h3>Matriz Identidade e Inversão de Matrizes</h3>
       <p>A matriz identidade é uma matriz que não faz nada! Definimos matrizes para realizarem
         transformações em vetores, mas esta matriz em específico é justamente definida para não
@@ -531,7 +577,9 @@
       <p>Note que nem toda matriz possui um inverso. Uma das formas de encontrar o inverso daquelas que têm é pela fórmula</p>
       <div class="interactive" id="inv_m_formula"></div>
       <p>Que só funciona se ad-bc diferente de 0.</p>
+      </div>
 
+      <div id="systs">
       <h3>Sistemas Lineares de Equações</h3>
       <p>Outra aplicação de matrizes, e uma das motivações iniciais para seu desenvolvimento,
         é a resolução de sistemas lineares de equações. Sim, aqueles que você estudou no 7º ano.
@@ -543,7 +591,9 @@
       <div class="interactive" id="system_matrix"></div>
       <p>Para encontrar os valores de x e y, fazemos:</p>
       <div class="interactive" id="system_solution"></div>
+      </div>
 
+      <div id="conclusion2">
       <h3>Conclusão</h3>
       <p>Se você chegou até aqui e entendeu a maioria do conteúdo, parabéns!
         Essa foi uma introdução bastante rápida à álgebra linear, então tome um tempo para absorver os novos conceitos.</p>
@@ -551,6 +601,11 @@
         Geralmente, este conteúdo é visto com mais profundidade ao longo de seis meses em um curso universitário.
         O importante, para nossos objetivos aqui, é entender como aplicar estes básicos, sem necessariamente muita formalidade.</p>
       <p>Agora, vamos começar a aprender sobre computação clássica e programação em Python, antes de mergulhar no mundo quântico!</p>
+      </div>
+    </div>
+
+    <div class="post">
+      <iframe src="pre-reqs_python.html" style="border:0px #ffffff none;" name="myiFrame" scrolling="yes" frameborder="1" marginheight="0px" marginwidth="0px" height="400px" width="750px" allowfullscreen></iframe>
     </div>
   </main>
 

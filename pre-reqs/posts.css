@@ -20,3 +20,13 @@ main{
   background-color:white;
   margin-top: 50;
 }
+
+#trig, #complex, #prob, #conclusion{
+  display: none;
+}
+
+#vecs, #vecs-notation, #props, #ops, #decomp, #general, #form, #transp, #dot, #norm, #conjtransp,
+#complex_dot, #lin_comb, #matrix_intro, #notation_form, #matrix_ops, #matrix_transps, #id_inv,
+#systs, #conclusion2{
+  display:none;
+}
