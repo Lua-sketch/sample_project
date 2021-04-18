@@ -105,6 +105,7 @@
       principalmente "funções trigonométricas")</p>
     <p><a target="_blank" href="https://pt.khanacademy.org/math/statistics-probability">Probabilidade</a>
       (ver principalmente "probabilidade" e "variáveis aleatórias")</p>
+    <button onclick="paginate('intro', 'trig')">Próximo</button>
     </div>
 
     <div id="trig">
@@ -138,6 +139,8 @@
     <p>Veremos que estados quânticos não somente são flechas em diferentes
       ângulos, como são flechas que podem ser representadas em esferas.
       Nesse caso, é claro que coordenadas polares são as mais intuitivas.</p>
+    <button onclick="paginate('trig', 'intro')">Anterior</button>
+    <button onclick="paginate('trig', 'complex')">Próximo</button>
     </div>
 
     <div id="complex">
@@ -170,6 +173,8 @@
       desta fórmula envolve cálculo e/ou <a target="_blank" href="https://pt.wikipedia.org/wiki/S%C3%A9rie_de_Taylor">séries de Taylor</a>
       ou <a target="_blank" href="https://pt.wikipedia.org/wiki/S%C3%A9rie_de_pot%C3%AAncias">séries de potência</a>,
       conceitos estudados em cursos de cálculo; por isso, não a incluiremos aqui</p>
+    <button onclick="paginate('complex', 'trig')">Anterior</button>
+    <button onclick="paginate('complex', 'prob')">Próximo</button>
     </div>
 
     <div id="prob">
@@ -238,6 +243,8 @@
       do qubit está entre os dois, como se tivesse uma parte de cada. Então, a probabilidade
       de obtermos 0 e a probabilidade de obtermos 1 são, respectivamente:</p>
     <div class="interactive" id="prob_amplitudes"></div>
+    <button onclick="paginate('prob', 'complex')">Anterior</button>
+    <button onclick="paginate('prob', 'conclusion')">Próximo</button>
     </div>
 
     <div id="conclusion">
@@ -248,6 +255,7 @@
       conseguir aplicar estes conhecimentos antes de seguir em frente.</p>
     <p>Espero que tenha gostado! Para checar se você sabe o suficiente ou se
       precisa de uma revisão, acesse o quiz</p>
+    <button onclick="paginate('conclusion', 'prob')">Anterior</button>
     </div>
 
     </div>
@@ -269,6 +277,7 @@
         aqui não assumimos conhecimento prévio. Assim, estude este post e busque outras fontes
         para lhe auxiliar. Antes de continuar, garanta que sabe tudo o que é mencionado aqui.</p>
       <p>Com tudo isso dito, vamos começar!</p>
+      <button onclick="paginate('intro2', 'vecs')">Próximo</button>
       </div>
 
       <div id="vecs">
@@ -283,6 +292,8 @@
       <p>Um exemplo seria peso. Peso é uma força, consequência da atração gravitacional.
         Se você está na superfície da Terra e tem massa de 70 kg, seu peso é de
         aproximadamente 700 N (Newtons) apontando para baixo.</p>
+      <button onclick="paginate('vecs', 'intro2')">Anterior</button>
+      <button onclick="paginate('vecs', 'vecs-notation')">Próximo</button>
       </div>
 
       <div id="vecs-notation">
@@ -305,6 +316,8 @@
       <p>Então, a notação geral para um vetor em duas dimensões é:</p>
       <p>v = [[vₓ]</p>
       <p>    [vᵧ]]</p>
+      <button onclick="paginate('vecs-notation', 'vecs')">Anterior</button>
+      <button onclick="paginate('vecs-notation', 'props')">Próximo</button>
       </div>
 
       <div id="props">
@@ -315,6 +328,8 @@
         para polares </p>
       <p>||v|| = √(vₓ² + vᵧ²)</p>
       <p>∠ v = arctan(vᵧ/vₓ)</p>
+      <button onclick="paginate('props', 'vecs-notation')">Anterior</button>
+      <button onclick="paginate('props', 'ops')">Próximo</button>
       </div>
 
       <div id="ops">
@@ -334,6 +349,8 @@
       <p>2 * [[40] [30]] = [[80] [60]]</p>
       <p>De forma mais geral, podemos multiplicar um vetor por um escalar como segue:</p>
       <div class="interactive" id="vector_scalar_mult_formula"></div>
+      <button onclick="paginate('ops', 'props')">Anterior</button>
+      <button onclick="paginate('ops', 'decomp')">Próximo</button>
       </div>
 
       <div id="decomp">
@@ -344,6 +361,8 @@
       <p>v = vₓ i + vᵧ j</p>
       <p>Dizemos que todo vetor tal que v ∊ ℝ² pode ser expresso como uma combinação linear de i e j,
         que chamamos de vetores unitários (magnitude = 1)</p>
+      <button onclick="paginate('decomp', 'ops')">Anterior</button>
+      <button onclick="paginate('decomp', 'general')">Próximo</button>
       </div>
 
       <div id="general">
@@ -355,6 +374,8 @@
       <div class="interactive" id="general_vector"></div>
       <p>E suas propriedades e operações, de forma geral, são</p>
       <div class="interactive" id="props_and_ops"></div>
+      <button onclick="paginate('general', 'decomp')">Anterior</button>
+      <button onclick="paginate('general', 'form')">Próximo</button>
       </div>
 
       <div id="form">
@@ -366,6 +387,8 @@
       <p>    (#linhas X 1)</p>
       <p>Há também vetores que são linhas, e têm formas do tipo</p>
       <p>    (1 X #colunas)</p>
+      <button onclick="paginate('form', 'general')">Anterior</button>
+      <button onclick="paginate('form', 'transp')">Próximo</button>
       </div>
 
       <div id="transp">
@@ -383,6 +406,8 @@
         de '[]' adicionais (além daquelas que abrem e fecham o vetor) então estamos falando de um vetor coluna.
         A partir de agora, apenas lembre-se da distinção, pois já treinamos o bastante para não precisar mais visualizar isso toda vez.</p>
       <p>De novo, isso será importante e mais geral no contexto de matrizes, mas vamos revisar o conceito quando chegarmos lá.</p>
+      <button onclick="paginate('transp', 'form')">Anterior</button>
+      <button onclick="paginate('transp', 'dot')">Próximo</button>
       </div>
 
       <div id="dot">
@@ -407,6 +432,8 @@
       <p>   = v₁² + v₂² + ... + vₙ² = ||v||²</p>
       <p>Esta é a magnitude do vetor ao quadrado!!! Lembrem que a magnitude era descrita pela
         raiz quadrada desta expressão. Uma observação final: a magnitude de um vetor também pode ser chamada de sua norma.</p>
+      <button onclick="paginate('dot', 'transp')">Anterior</button>
+      <button onclick="paginate('dot', 'norm')">Próximo</button>
       </div>
 
       <div id="norm">
@@ -422,6 +449,8 @@
       <p>v = [[3] [4]]</p>
       <p>||v|| =  ⟨ v, v ⟩ = 5</p>
       <p>vetor normalizado: v / ||v|| = v/5 = [[3/5] [4/5]]</p>
+      <button onclick="paginate('norm', 'dot')">Anterior</button>
+      <button onclick="paginate('norm', 'conjtransp')">Próximo</button>
       </div>
 
       <div id="conjtransp">
@@ -435,6 +464,8 @@
       <p>Um exemplo seria</p>
       <p>    v = [[5*exp(iθ)] [3 - 7i]]</p>
       <p>    v† = [[5*exp(-iθ)] [3 + 7i]]</p>
+      <button onclick="paginate('conjtransp', 'norm')">Anterior</button>
+      <button onclick="paginate('conjtransp', 'complex_dot')">Próximo</button>
       </div>
 
       <div id="complex_dot">
@@ -447,6 +478,8 @@
       <p>   ⟨ v, w ⟩ = v.w† = ∑ vᵢwᵢ*</p>
       <p>Utilizando o mesmo exemplo de vetor, obtemos, com essa nova operação:</p>
       <p>   ⟨ [[5*exp(iθ)] [3 - 7i]], [[5*exp(iθ)] [3 - 7i]] ⟩ = √(25 + 58) = √83</p>
+      <button onclick="paginate('complex_dot', 'conjtransp')">Anterior</button>
+      <button onclick="paginate('complex_dot', 'lin_comb')">Próximo</button>
       </div>
 
       <div id="lin_comb">
@@ -465,6 +498,8 @@
       <p>|ψ ⟩ = α|0 ⟩ + β|1 ⟩</p>
       <p>Perceba que, neste caso, a maneira com a qual escrevemos um estado de superposição foi
         com uma combinação linear, e nem sabíamos o que isso significava ainda!</p>
+      <button onclick="paginate('lin_comb', 'complex_dot')">Anterior</button>
+      <button onclick="paginate('lin_comb', 'matrix_intro')">Próximo</button>
       </div>
 
       <div id="matrix_intro">
@@ -517,6 +552,8 @@
       <p>Justamente o resultado que procurávamos! Assim, repito que, ao definir uma matriz para
         efetuar uma transformação, devemos pensar sobre o resultado que essa transformação
         teria em [[1] [0]] e escrevê-lo ao lado do resultado que ela teria em [[0] [1]]. </p>
+      <button onclick="paginate('matrix_intro', 'lin_comb')">Anterior</button>
+      <button onclick="paginate('matrix_intro', 'notation_form')">Próximo</button>
       </div>
 
       <div id="notation_form">
@@ -531,6 +568,8 @@
       <p>Perceba que, se a forma de um objeto é (1 X 1), se trata de um número, um escalar.
         Se a forma é (1 X m) ou (n X 1), com n, m > 1, o objeto é um vetor. Já se a forma
         é (n X m), com n, m >1, se trata de uma matriz.</p>
+      <button onclick="paginate('notation_form', 'matrix_intro')">Anterior</button>
+      <button onclick="paginate('notation_form', 'matrix_ops')">Próximo</button>
       </div>
 
       <div id="matrix_ops">
@@ -553,6 +592,8 @@
       <div class="interactive" id="matrix_matrix"></div>
       <p>A relação entre as formas das matrizes é:</p>
       <p>( n X m) X (m X k) => (n X k)</p>
+      <button onclick="paginate('matrix_ops', 'notation_form')">Anterior</button>
+      <button onclick="paginate('matrix_ops', 'matrix_transps')">Próximo</button>
       </div>
 
       <div id="matrix_transps">
@@ -563,6 +604,8 @@
       <div class="interactive" id="matrix_transpose"></div>
       <p>E</p>
       <div class="interactive" id="matrix_conj_trans"></div>
+      <button onclick="paginate('matrix_transps', 'matrix_ops')">Anterior</button>
+      <button onclick="paginate('matrix_transps', 'id_inv')">Próximo</button>
       </div>
 
       <div id="id_inv">
@@ -577,6 +620,8 @@
       <p>Note que nem toda matriz possui um inverso. Uma das formas de encontrar o inverso daquelas que têm é pela fórmula</p>
       <div class="interactive" id="inv_m_formula"></div>
       <p>Que só funciona se ad-bc diferente de 0.</p>
+      <button onclick="paginate('id_inv', 'matrix_transps')">Anterior</button>
+      <button onclick="paginate('id_inv', 'systs')">Próximo</button>
       </div>
 
       <div id="systs">
@@ -591,6 +636,8 @@
       <div class="interactive" id="system_matrix"></div>
       <p>Para encontrar os valores de x e y, fazemos:</p>
       <div class="interactive" id="system_solution"></div>
+      <button onclick="paginate('systs', 'id_inv')">Anterior</button>
+      <button onclick="paginate('systs', 'conclusion2')">Próximo</button>
       </div>
 
       <div id="conclusion2">
@@ -601,6 +648,7 @@
         Geralmente, este conteúdo é visto com mais profundidade ao longo de seis meses em um curso universitário.
         O importante, para nossos objetivos aqui, é entender como aplicar estes básicos, sem necessariamente muita formalidade.</p>
       <p>Agora, vamos começar a aprender sobre computação clássica e programação em Python, antes de mergulhar no mundo quântico!</p>
+      <button onclick="paginate('conclusion2', 'systs')">Anterior</button>
       </div>
     </div>
 

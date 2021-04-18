@@ -34,3 +34,8 @@ function onSignIn(googleUser) {
       // get user profile information
       console.log(googleUser.getBasicProfile())
     }
+
+function paginate(hide, show){
+  $('#'+hide).toggle()
+  $('#'+show).toggle()
+}
