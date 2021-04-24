@@ -1,3 +1,7 @@
+#index{
+  background-color:white;
+}
+
 * {
   margin:0px;
   padding:0px;
@@ -5,7 +9,7 @@
 }
 
 body{
-  background-color: #130624;
+  background-color:#130624;
 }
 
 nav {
@@ -238,7 +242,7 @@ h1, h2, h3{
 
 main{
   width:70vw;
-  background: #130624;
+  background-color:#130624;
 }
 
 button{
