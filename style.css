@@ -223,3 +223,56 @@ main p, h1, h2{
 main ul{
   padding:10px;
 }
+
+
+             /*POST STYLING*/
+
+
+p{
+  margin:5px;
+}
+
+h1, h2, h3{
+  margin:9px;
+}
+
+main{
+  width:70vw;
+  background: #130624;
+}
+
+button{
+  background-color:purple;
+  border:none;
+  color:white;
+  padding: 15px 32px;
+  margin:5px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+}
+
+#post1{
+  margin-top:20;
+}
+
+.post{
+  width:70vw;
+  background-color:white;
+  margin-top: 50;
+}
+
+#trig, #complex, #prob, #conclusion{
+  display: none;
+}
+
+#vecs, #vecs-notation, #props, #ops, #decomp, #general, #form, #transp, #dot, #norm, #conjtransp,
+#complex_dot, #lin_comb, #matrix_intro, #notation_form, #matrix_ops, #matrix_transps, #id_inv,
+#systs, #conclusion2{
+  display:none;
+}
+
+#post4_2, #post4_3, #post4_4, #post4_5, #post4_6{
+  display:none;
+}
