@@ -49,7 +49,7 @@ button:hover{
 
 
 
-.slide{
+.slide1, .slide2{
   position: absolute;
   left: 0px;
   top: 0px;
@@ -58,9 +58,12 @@ button:hover{
   opacity: 0;
   transition: opacity 0.5s;
 }
-.active-slide{
+.active-slide, .active-slide2{
   opacity: 1;
   z-index: 2;
+	background-color:white;
+	padding:5px;
+	margin-bottom:7px;
 }
 .quiz-container{
   position: relative;

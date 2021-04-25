@@ -1,9 +1,10 @@
 (function(){
   // Functions
-  function buildQuiz(questions, quizContainer){
+  function buildQuiz(questions, quizContainer, i){
     // variable to store the HTML output
     const output = [];
-
+    i = i | 0;
+    
     // for each question...
     questions.forEach(
       (currentQuestion, questionNumber) => {
@@ -25,8 +26,9 @@
         }
 
         // add this question and its answers to the output
+        const slide = "slide" + i
         output.push(
-          `<div class="slide">
+          `<div class=${slide}>
             <div class="question"> ${currentQuestion.question} </div>
             <div class="answers"> ${answers.join("")} </div>
           </div>`
@@ -73,33 +75,62 @@
     resultsContainer.innerHTML = `${numCorrect} de ${myQuestions1.length}`;
   }
 
-  function showSlide(n, next, previous, submit) {
-    slides[currentSlide].classList.remove('active-slide');
-    slides[n].classList.add('active-slide');
+  function showSlide(n) {
+    slides1[currentSlide].classList.remove('active-slide');
+    slides1[n].classList.add('active-slide');
     currentSlide = n;
     if(currentSlide === 0){
-      previous.style.display = 'none';
+      previousButton.style.display = 'none';
     }
     else{
-      previous.style.display = 'inline-block';
+      previousButton.style.display = 'inline-block';
     }
-    if(currentSlide === slides.length-1){
-      next.style.display = 'none';
-      submit.style.display = 'inline-block';
+    if(currentSlide === slides1.length-1){
+      nextButton.style.display = 'none';
+      submitButton1.style.display = 'inline-block';
     }
     else{
-      next.style.display = 'inline-block';
-      submit.style.display = 'none';
+      nextButton.style.display = 'inline-block';
+      submitButton1.style.display = 'none';
     }
   }
 
-  function showNextSlide() {
+  function showSlide2(n) {
+    slides2[currentSlide2].classList.remove('active-slide2');
+    slides2[n].classList.add('active-slide2');
+    currentSlide2 = n;
+    if(currentSlide2 === 0){
+      previousButton2.style.display = 'none';
+    }
+    else{
+      previousButton2.style.display = 'inline-block';
+    }
+    if(currentSlide2 === slides2.length-1){
+      nextButton2.style.display = 'none';
+      submitButton2.style.display = 'inline-block';
+    }
+    else{
+      nextButton2.style.display = 'inline-block';
+      submitButton2.style.display = 'none';
+    }
+  }
+
+  function showNextSlide1() {
     console.log('next button');
-    showSlide(currentSlide + 1, nextButton, previousButton, submitButton1);
+    showSlide(currentSlide + 1);
   }
 
-  function showPreviousSlide() {
-    showSlide(currentSlide - 1, nextButton, previousButton, submitButton1);
+  function showPreviousSlide1() {
+    showSlide(currentSlide - 1);
+  }
+
+  function showNextSlide2() {
+    console.log('next button');
+    showSlide2(currentSlide2 + 1);
+  }
+
+  function showPreviousSlide2() {
+    showSlide2(currentSlide2 - 1);
   }
 
   // Variables
@@ -337,24 +368,54 @@
     }
   ];
 
+  const quizContainer2 = document.getElementById('quiz2');
+  const resultsContainer2 = document.getElementById('results2');
+  const submitButton2 = document.getElementById('submit2');
+  const myQuestions2 = [
+    {
+      question:"bla",
+      answers:{
+        a:"bli",
+        b:"blo",
+        c:"blu"
+      },
+      correctAnswer: "a"
+    }
+  ]
+
   // Kick things off
-  buildQuiz(myQuestions1, quizContainer1);
+  buildQuiz(myQuestions1, quizContainer1, 1);
+
+  buildQuiz(myQuestions2, quizContainer2, 2);
 
   // Pagination
   const previousButton = document.getElementById("previous");
   const nextButton = document.getElementById("next");
-  const slides = document.querySelectorAll(".slide");
+  const previousButton2 = document.getElementById("previous2");
+  const nextButton2 = document.getElementById("next2");
+  const slides1 = document.querySelectorAll(".slide1");
+  const slides2 = document.querySelectorAll(".slide2");
   let currentSlide = 0;
+  let currentSlide2 = 0;
 
   // Show the first slide
-  showSlide(currentSlide, nextButton, previousButton, submitButton1);
+  showSlide(currentSlide);
+  showSlide2(currentSlide2);
 
   function showResults1(){
     showResults(quizContainer1, myQuestions1, resultsContainer1);
   };
 
+  function showResults2(){
+    showResults(quizContainer2, myQuestions2, resultsContainer2);
+  };
+
   // Event listeners
   submitButton1.addEventListener("click", showResults1, false);
-  previousButton.addEventListener("click", showPreviousSlide);
-  nextButton.addEventListener("click", showNextSlide);
+  previousButton.addEventListener("click", showPreviousSlide1);
+  nextButton.addEventListener("click", showNextSlide1);
+
+  submitButton2.addEventListener("click", showResults2, false);
+  previousButton2.addEventListener("click", showPreviousSlide2);
+  nextButton2.addEventListener("click", showNextSlide2);
 })();
