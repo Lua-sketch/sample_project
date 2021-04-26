@@ -4,7 +4,6 @@
     // variable to store the HTML output
     const output = [];
     i = i | 0;
-
     // for each question...
     questions.forEach(
       (currentQuestion, questionNumber) => {
@@ -650,11 +649,11 @@
       correctAnswer:"d"
     },
     {
-      question:"para que 'while i<11: print(i)', sendo i=0, retorne 10, 9, 8, ..., 1 em linhas diferentes, precisamos",
+      question:"Para que 'while i>0: print(i)', sendo i=10, retorne 10, 9, 8, ..., 1 em linhas diferentes, precisamos",
       answers:{
-        a:"mudar 11 para 10",
+        a:"mudar 0 para 1",
         b:"rodar o programa várias vezes mudando o valor de i para ir de 10 a 1",
-        c:"adicionar 'i+=1' após 'print(i)'",
+        c:"adicionar 'i-=1' após 'print(i)'",
         d:"nada, o programa já dará este resultado"
       },
       correctAnswer:"c"
@@ -663,9 +662,7 @@
 
   // Kick things off
   buildQuiz(myQuestions1, quizContainer1, 1);
-
   buildQuiz(myQuestions2, quizContainer2, 2);
-
   buildQuiz(myQuestions3, quizContainer3, 3);
 
   // Pagination
