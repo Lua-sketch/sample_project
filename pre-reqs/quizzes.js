@@ -115,6 +115,26 @@
     }
   }
 
+  function showSlide3(n) {
+    slides3[currentSlide3].classList.remove('active-slide3');
+    slides3[n].classList.add('active-slide3');
+    currentSlide3 = n;
+    if(currentSlide3 === 0){
+      previousButton3.style.display = 'none';
+    }
+    else{
+      previousButton3.style.display = 'inline-block';
+    }
+    if(currentSlide3 === slides3.length-1){
+      nextButton3.style.display = 'none';
+      submitButton3.style.display = 'inline-block';
+    }
+    else{
+      nextButton3.style.display = 'inline-block';
+      submitButton3.style.display = 'none';
+    }
+  }
+
   function showNextSlide1() {
     console.log('next button');
     showSlide(currentSlide + 1);
@@ -131,6 +151,15 @@
 
   function showPreviousSlide2() {
     showSlide2(currentSlide2 - 1);
+  }
+
+  function showNextSlide3() {
+    console.log('next3 button');
+    showSlide3(currentSlide3 + 1);
+  }
+
+  function showPreviousSlide3() {
+    showSlide3(currentSlide3 - 1);
   }
 
   // Variables
@@ -500,26 +529,163 @@
       },
       correctAnswer:"b"
     }
-  ]
+  ];
+
+  const quizContainer3 = document.getElementById('quiz3');
+  const resultsContainer3 = document.getElementById('results3');
+  const submitButton3 = document.getElementById('submit3');
+  const myQuestions3 = [
+    {
+      question:"Fisicamente, um bit é implementado com",
+      answers:{
+        a:"micro-ondas",
+        b:"raios x",
+        c:"eletricidade",
+        d:"qualquer uma das anteriores"
+      },
+      correctAnswer:"c"
+    },
+    {
+      question:"135 em binário é",
+      answers:{
+        a:"10000000",
+        b:"10000001",
+        c:"10000011",
+        d:"10000111"
+      },
+      correctAnswer:"d"
+    },
+    {
+      question:"10101010 em decimal é",
+      answers:{
+        a:"170",
+        b:"180",
+        c:"171",
+        d:"181"
+      },
+      correctAnswer:"a"
+    },
+    {
+      question:"10101010 + 10000111 =",
+      answers:{
+        a:"20101121",
+        b:"100110001",
+        c:"100110011",
+        d:"10101111"
+      },
+      correctAnswer:"b"
+    },
+    {
+      question:"0 AND 1 OR 1 AND 1",
+      answers:{
+        a:"1",
+        b:"0"
+      },
+      correctAnswer:"a"
+    },
+    {
+      question:"1 AND 1 XOR 1 NAND 1",
+      answers:{
+        a:"1",
+        b:"0"
+      },
+      correctAnswer:"b"
+    },
+    {
+      question:"1 NOR 1 AND NOT 0",
+      answers:{
+        a:"1",
+        b:"0",
+      },
+      correctAnswer:"b"
+    },
+    {
+      question:"Em Python, 4<=3 retorna",
+      answers:{
+        a:"1",
+        b:"0",
+        c:"True",
+        d:"False"
+      },
+      correctAnswer:"d"
+    },
+    {
+      question:"Em Python, not 3==3 or 3==3 retorna",
+      answers:{
+        a:"1",
+        b:"0",
+        c:"True",
+        d:"False"
+      },
+      correctAnswer:"c"
+    },
+    {
+      question:"Como conseguimos escrever na tela o décimo item de uma lista chamada mercado?",
+      answers:{
+        a:"mercado[10]",
+        b:"print(mercado[10])",
+        c:"mercado[9]",
+        d:"print(mercado[9])"
+      },
+      correctAnswer:"d"
+    },
+    {
+      question:"Como podemos adicionar o item sorvete à lista mercado?",
+      answers:{
+        a:"mercado.add('sorvete')",
+        b:"mercado.append('sorvete')",
+        c:"mercado + 'sorvete'",
+        d:"não podemos."
+      },
+      correctAnswer:"b"
+    },
+    {
+      question:"'for item in [10, 9, 8, 7, 6, 5, 4, 3, 2, 1]: print(item)' retorna'",
+      answers:{
+        a:"1, 2, 3, 4, 5, 6, 7, 8, 9, 10 na mesma linha",
+        b:"10, 9, 8, 7, 6, 5, 4, 3, 2, 1 na mesma linha",
+        c:"1, 2, 3, 4, 5, 6, 7, 8, 9, 10 em linhas diferentes",
+        d:"10, 9, 8, 7, 6, 5, 4, 3, 2, 1 em linhas diferentes"
+      },
+      correctAnswer:"d"
+    },
+    {
+      question:"para que 'while i<11: print(i)', sendo i=0, retorne 10, 9, 8, ..., 1 em linhas diferentes, precisamos",
+      answers:{
+        a:"mudar 11 para 10",
+        b:"rodar o programa várias vezes mudando o valor de i para ir de 10 a 1",
+        c:"adicionar 'i+=1' após 'print(i)'",
+        d:"nada, o programa já dará este resultado"
+      },
+      correctAnswer:"c"
+    }
+  ];
 
   // Kick things off
   buildQuiz(myQuestions1, quizContainer1, 1);
 
   buildQuiz(myQuestions2, quizContainer2, 2);
 
+  buildQuiz(myQuestions3, quizContainer3, 3);
+
   // Pagination
   const previousButton = document.getElementById("previous");
   const nextButton = document.getElementById("next");
   const previousButton2 = document.getElementById("previous2");
   const nextButton2 = document.getElementById("next2");
+  const previousButton3 = document.getElementById("previous3");
+  const nextButton3 = document.getElementById("next3");
   const slides1 = document.querySelectorAll(".slide1");
   const slides2 = document.querySelectorAll(".slide2");
+  const slides3 = document.querySelectorAll(".slide3");
   let currentSlide = 0;
   let currentSlide2 = 0;
+  let currentSlide3 = 0;
 
   // Show the first slide
   showSlide(currentSlide);
   showSlide2(currentSlide2);
+  showSlide3(currentSlide3);
 
   function showResults1(){
     showResults(quizContainer1, myQuestions1, resultsContainer1);
@@ -527,6 +693,10 @@
 
   function showResults2(){
     showResults(quizContainer2, myQuestions2, resultsContainer2);
+  };
+
+  function showResults3(){
+    showResults(quizContainer3, myQuestions3, resultsContainer3);
   };
 
   // Event listeners
@@ -537,4 +707,8 @@
   submitButton2.addEventListener("click", showResults2, false);
   previousButton2.addEventListener("click", showPreviousSlide2);
   nextButton2.addEventListener("click", showNextSlide2);
+
+  submitButton3.addEventListener("click", showResults3, false);
+  previousButton3.addEventListener("click", showPreviousSlide3);
+  nextButton3.addEventListener("click", showNextSlide3);
 })();
