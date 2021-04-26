@@ -4,7 +4,7 @@
     // variable to store the HTML output
     const output = [];
     i = i | 0;
-    
+
     // for each question...
     questions.forEach(
       (currentQuestion, questionNumber) => {
@@ -72,7 +72,7 @@
     });
 
     // show number of correct answers out of total
-    resultsContainer.innerHTML = `${numCorrect} de ${myQuestions1.length}`;
+    resultsContainer.innerHTML = `${numCorrect} de ${questions.length}`;
   }
 
   function showSlide(n) {
@@ -125,7 +125,7 @@
   }
 
   function showNextSlide2() {
-    console.log('next button');
+    console.log('next2 button');
     showSlide2(currentSlide2 + 1);
   }
 
@@ -373,13 +373,132 @@
   const submitButton2 = document.getElementById('submit2');
   const myQuestions2 = [
     {
-      question:"bla",
+      question:"Qual das seguintes quantidades é uma quantidade escalar?",
       answers:{
-        a:"bli",
-        b:"blo",
-        c:"blu"
+        a:"massa",
+        b:"peso",
+        c:"velocidade"
       },
       correctAnswer: "a"
+    },
+    {
+      question:"Se viajo com velocidade 20 para a direita e 30 para baixo, posso representar minha velocidade total como",
+      answers:{
+        a:"[[20] [30]]",
+        b:"[[20] [-30]]",
+        c:"[[30] [20]]",
+        d:"[[-30] [20]]"
+      },
+      correctAnswer:"b"
+    },
+    {
+      question:"A magnitude da minha velocidade seria",
+      answers:{
+        a:"25",
+        b:"20",
+        c:"36"
+      },
+      correctAnswer:"c"
+    },
+    {
+      question:"Se passo a andar três vezes mais rápido, a velocidade se torna",
+      answers:{
+        a:"[[60] [-90]]",
+        b:"[[90] [60]]",
+        c:"[[60] [90]]",
+        d:"[[-90] [60]]"
+      },
+      correctAnswer:"a"
+    },
+    {
+      question:"E se aumento minha velocidade original por 20 para a esquerda e 30 para baixo?",
+      answers:{
+        a:"[[0] [0]]",
+        b:"[[-60] [0]]",
+        c:"[[-50] [-10]]",
+        d:"[[0] [-60]]"
+      },
+      correctAnswer:"d"
+    },
+    {
+      question:"A forma do vetor da minha velocidade é",
+      answers:{
+        a:"2 X 1",
+        b:"1 X 2",
+        c:"1 X 1",
+        d:"nenhuma das anteriores"
+      },
+      correctAnswer:"a"
+    },
+    {
+      question:"A forma do transposto do vetor da minha velocidade é",
+      answers:{
+        a:"2 X 1",
+        b:"1 X 2",
+        c:"1 X 1",
+        d:"nenhuma das anteriores"
+      },
+      correctAnswer:"b"
+    },
+    {
+      question:"Qual será a versão normalizada do vetor de minha velocidade original?",
+      answers:{
+        a:"[[20] [30]]/25",
+        b:"[[0.8] [-1.2]]",
+        c:"[[0.55] [-0.833]]",
+        d:"[[20] [30]]/36"
+      },
+      correctAnswer:"c"
+    },
+    {
+      question:"A magnitude do vetor [[4-3i] [7+i]] é",
+      answers:{
+        a:"55 - 10i",
+        b:"75",
+        c:"√(55 - 10i)",
+        d:"√75"
+      },
+      correctAnswer:"d"
+    },
+    {
+      question:"[[0, 1] [1, 0]] [[4] [3]] =",
+      answers:{
+        a:"[[4] [3]]",
+        b:"[[3] [4]]",
+        c:"[[-4] [-3]]",
+        d:"É impossível realizar esta operação"
+      },
+      correctAnswer:"b"
+    },
+    {
+      question:"[[0, 1, 0, 0] [0, 0, 0, 1] [1, 0, 0, 0] [0, 0, 1, 0]] [[0, 1, 2, 3] [4, 5, 6, 7] [8, 9, 10, 11] [12, 13, 14, 15]] =",
+      answers:{
+        a:"[[1, 3, 0, 2] [5, 7, 4, 6] [9, 11, 8, 10] [13, 15, 12, 14]]",
+        b:"[[0, 1, 2, 3] [4, 5, 6, 7] [8, 9, 10, 11] [12, 13, 14, 15]]",
+        c:"[[0, 1, 0, 0] [0, 0, 0, 7] [8, 0, 0, 0] [0, 0, 14, 0]]",
+        d:"[[4, 5, 6, 7] [12, 13, 14, 15] [0, 1, 2, 3] [8, 9, 10, 11]]",
+        e:"É impossível realizar esta operação"
+      },
+      correctAnswer:"d"
+    },
+    {
+      question:"[[0, 1, 2, 3] [4, 5, 6, 7] [8, 9, 10, 11] [12, 13, 14, 15]] [[0] [1]] =",
+      answers:{
+        a:"[[0, 1, 2, 3] [4, 5, 6, 7] [8, 9, 10, 11] [12, 13, 14, 15]]",
+        b:"[[0, 0, 0, 0] [4, 5, 6, 7]]",
+        c:"É impossível realizar esta operação"
+      },
+      correctAnswer:"c"
+    },
+    {
+      question:"[[0, -i] [i, 0]]⁻¹",
+      answers:{
+        a:"[[i, 0] [0, -i]]",
+        b:"[[0, -i] [i, 0]]",
+        c:"[[0, -1/i] [1/i, 0]]",
+        d:"não existe"
+      },
+      correctAnswer:"b"
     }
   ]
 
