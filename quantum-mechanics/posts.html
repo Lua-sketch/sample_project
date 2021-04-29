@@ -130,7 +130,6 @@
           quânticos, dois dos quais aprenderemos hoje: interferência quântica, superposição, e
           emaranhamento. Guarde essa informação! O entendimento desses três termos deve ser seu
           principal objetivo pelos próximos três posts.</p>
-        <div id="post_4_2_int_2"></div>
         <button onclick="paginate('post4_2', 'post4_1')">Anterior</button>
         <button onclick="paginate('post4_2', 'post4_3')">Próximo</button>
       </div>
@@ -144,9 +143,10 @@
           e interferem umas com as outras ao “colidir”. Para quem não lembra o que é
           interferência de ondas, pense nisso como sendo a capacidade de ondas de se
           somarem ou se destruírem:</p>
-        <div id="post_4_3_int_1"></div>
+        <img src="constructive.png" width="198.6" height="83.2">
+        <img src="destructive.png" width="153.6" height="83.2">
         <p>Também vale a pena lembrar de algumas características de ondas: o comprimento de onda, a frequência, e a amplitude:</p>
-        <div id="post_4_3_int_2"></div>
+        <img src="ondas.jpg" width="307.2" height="230.4">
         <p>Um dos debates mais longos da física, então, foi: a luz é feita de ondas, ou de partículas?</p>
         <p>Por algum tempo, foi aceito que a luz era feita de ondas. O motivo, é claro,
           vinha de evidência experimental. Mais especificamente, do experimento de dupla fenda.
@@ -155,7 +155,7 @@
           você coloca algo que te permita ver a luz resultante. O resultado é um padrão de interferência:
           exatamente o que seria esperado de uma onda, que se divide ao passar em cada fenda e
           então interfere consigo mesma.</p>
-        <div id="post_4_3_int_3"></div>
+        <img src="double_slit.jpg" width="307.2" height="230.4">
         <p>Tudo parecia decidido e o debate parecia acabado, até que foi observado o efeito fotoelétrico.
           Imagine agora um átomo, composto de um núcleo e de uma eletrosfera. Os elétrons se mantém ao
           redor do núcleo devido a uma atração elétrica, que podemos tentar vencer com energia
@@ -164,15 +164,14 @@
         <p>Bom, se energia é o que precisamos, podemos usar luz! Afinal, dissemos que luz é uma onda
           e ondas carregam energia. Mas quando tentamos ejetar elétrons com luz de baixa energia,
           não conseguimos nenhum, não importa quanta luz usemos. Em compensação, conseguimos tirar
-          elétrons com luz de alta energia. Isso não faz sentido! Se a luz realmente é feita de ondas,
+          elétrons com luz de alta energia.</p>
+        <p>Isso não faz sentido! Se a luz realmente é feita de ondas,
           então deveríamos conseguir, eventualmente, tirar elétrons de um átomo com luz de baixa energia,
           pois a luz é contínua e a energia eventualmente se somaria e se tornaria o suficiente.</p>
-        <div id="post_4_3_int_4"></div>
         <p>Mas e se a luz fosse feita de partículas? Então, este resultado faria sentido: tentar tirar
           elétrons de um átomo com luz de baixa energia seria como tentar derrubar pinos de boliche com
           bolas de pingue-pongue; não importa quantas usasse, uma seguida da outra, as energias não iriam
           “se somar” e nunca funcionaria.</p>
-        <div id="post_4_3_int_5"></div>
         <p>Agora, temos uma evidência de que a luz é feita de ondas, e outra evidência de que a luz é feita de partículas. O que está acontecendo??</p>
         <button onclick="paginate('post4_3', 'post4_2')">Anterior</button>
         <button onclick="paginate('post4_3', 'post4_4')">Próximo</button>
@@ -187,14 +186,12 @@
           só grupos de objetos que decidimos nomear desta maneira de acordo com algumas
           características. Tudo o que estamos dizendo agora é que descobrimos alguns
           objetos que têm características de ambos os grupos.</p>
-        <div id="post4_4_int_1"></div>
         <p>Acabamos de ver um exemplo de algo que achamos ser composto de ondas,
           mas que também se comporta como partículas. Vejamos como o contrário
           pode ocorrer. Se voltamos a realizar nosso experimento de dupla fenda,
           mas trocamos o laser de luz por uma fonte de elétrons, vemos de novo um
           padrão de interferência! Perceba que para observar esse resultado é
           necessário ter uma tela especial que detecte elétrons atrás da dupla fenda.</p>
-        <div id="post_4_4_int_2"></div>
         <p>Bom, se você já teve tempo o suficiente para aceitar essa dualidade da natureza
           (fique à vontade para tirar mais alguns minutos), você deve estar se perguntando
           como descobrimos as características de ondas das partículas. Como sabemos,
@@ -202,7 +199,7 @@
           como uma onda, precisa ter um comprimento de onda!</p>
         <p>A resposta para essa pergunta está no comprimento de onda de De Broglie.
           Todas as partículas têm um comprimento de onda que pode ser calculado usando</p>
-        <div id="post_4_4_int_3"></div>
+        <p>λ = h/(mv) = h/p</p>
         <p>Note também que quanto maior o comprimento de onda, mais comportamento de ondas
           é observado. Mas além do comprimento de onda, outra questão surge: se partículas
           podem se comportar como ondas, e até interferir umas com as outras, o que aconteceu
@@ -228,19 +225,19 @@
           os outros casos não se trata de uma falha na teoria - se trata de uma
           característica da natureza.</p>
         <p>A função de onda nos retorna uma probabilidade para cada posição e momento. Assim, depende de x e de t:</p>
-        <div id="post_4_5_int_1"></div>
+        <p>ψ(x,t)</p>
         <p>Também a representamos como um vetor (não se preocupe com os detalhes de
           como transformar uma função em um vetor; se tiver interesse, acesse,
           de graça, o curso “Quantum Mechanics for Scientists and Engineers 1”
           na edX, e procure o vídeo sobre o tópico na seção de “background mathematics” -
           deixaria o link aqui mas meu acesso ao curso expirou):</p>
-        <div id="post_4_5_int_2"></div>
+        <p>ψ(x,t) = |ψ⟩</p>
         <p>Para entender porque concluímos isso sobre a onda que representa a partícula,
           precisaríamos de muito mais tempo e matemática. Por enquanto, confie no que digo
           (se não confiar pode pesquisar). Basta saber que os experimentos que realizamos
           com elétrons e outras partículas condizem com essa ideia.</p>
         <p>As posições mais prováveis para uma dada partícula são aquelas nas quais a onda se encontra com a maior amplitude:</p>
-        <div id="post_4_5_int_3"></div>
+        <img src="wavefunction.jpg" width="307.2" height="230.4">
         <p>Vamos mudar um pouco de assunto e falar sobre energia. Ondas carregam energia,
           e estamos lidando com objetos que se comportam um pouco como ondas. No entanto,
           lembrem-se que também se comportam um pouco como partículas. Assim,
@@ -251,7 +248,7 @@
         <p>Ok, e como descobrimos quais energias são permitidas? Usamos algo chamado
           o operador Hamiltoniano, ou apenas Hamiltoniano. Trata-se de um operador
           quântico que, quando aplicado ao nosso estado, nos informa sua energia. Matematicamente,</p>
-        <div id="post_4_5_int_4"></div>
+        <p>H|ψ⟩ = E|ψ⟩</p>
         <p>Essa equação é o que chamamos de uma equação de autovalor. Basicamente,
           estamos dizendo que o operador Hamiltoniano, uma matriz, multiplicado por
           nosso estado quântico, um vetor, resulta em um escalar, a energia, vezes
@@ -261,12 +258,12 @@
         <p>As possíveis soluções para E são as energias permitidas.</p>
         <p>Para que essa equação funcione, precisamos que o Hamiltoniano capture as
           várias formas através das quais um estado quântico pode ter energia. Teremos</p>
-        <div id="post_4_5_int_5"></div>
+        <p>H = p²/(2m) + V(x)</p>
         <p>Veja que o primeiro termo, aplicado a um estado quântico, nos informa sua
           energia cinética, enquanto que o segundo termo engloba toda forma de
           energia potencial que pode ter (é uma função de x, pois energia potencial é energia devido a posição).</p>
         <p>Por fim, precisamos de uma ferramenta para descrever a mudança dos estados quânticos. Para isso, utilizamos a equação de Schrodinger:</p>
-        <div id="post_4_5_int_6"></div>
+        <img src="schrodinger.png">
         <p>Se você não sabe cálculo, basta saber que d/dt nos dá a taxa de mudança de algum
           valor (neste caso, psi). Não vamos precisar explicitamente resolver essa equação,
           que é uma equação diferencial parcial, mas é bom saber que ela existe e para que serve.
@@ -297,5 +294,6 @@
   </main>
 
   <script src="../app.js"></script>
+  <script src="posts.js"></script>
 </body>
 </html>
