@@ -289,3 +289,15 @@ button{
 #post4_2, #post4_3, #post4_4, #post4_5, #post4_6, #post4_7, #post4_8, #post4_9, #post4_10, #post4_11, #post4_12{
   display:none;
 }
+
+a.download-btn{
+  font-weight:bold;
+  color:purple;
+  background-color:white;
+  border-radius:4px;
+  border:1px solid;
+  box-shadow:4px 8px rgba(128,0,128, 0.4);
+  padding:8px;
+  position:absolute;
+  bottom:22px;
+}
