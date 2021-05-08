@@ -78,201 +78,384 @@
   <main>
     <div class="post">
       <div id="post4_1">
-        <h1>Mecânica Quântica 1</h1>
-        <h2>Dualidade onda-partícula, origens experimentais, e equação de Schrodinger</h2>
-        <p>Sejam bem-vindos e bem-vindas!!! Hoje é um dia maravilhoso pois estaremos (finalmente) aprendendo sobre mecânica quântica!</p>
-        <p>Ok, vamos começar com alguns “disclaimers”: primeiro, saibam que uma série de três
-          posts sobre mecânica quântica não é, de maneira alguma, o suficiente para aprender tudo
-          o que há a aprender sobre o tópico, e nem mesmo o suficiente para arranhar a superfície.
-          No entanto, esperem ter uma introdução divertida e aprender o mínimo necessário para
-          aplicar o conhecimento na computação quântica.</p>
+        <h1>Mecânica Quântica - Parte 1</h1>
+        <h2>Origens experimentais: Interferência Quântica, Superposição e Emaranhamento</h2>
+        <p>Sejam bem-vindas e bem-vindos ao primeiro post sobre mecânica quântica!</p>
+        <p>Vamos estudar esse conteúdo em uma série de três posts, separada em “Origens experimentais”,
+          “Postulados da Mecânica Quântica” e “Relação com a Computação Quântica”. Assim, nosso foco
+          hoje é entender como surgiram os conceitos da mecânica quântica, especificamente como
+          descobrimos a interferência quântica, a superposição e o emaranhamento.</p>
+        <p>Ok, vamos começar com alguns “disclaimers”: primeiro, saibam que uma série de três posts
+          sobre mecânica quântica não é, de maneira alguma, o suficiente para aprender tudo o que há
+          a aprender sobre o tópico, e nem mesmo o suficiente para arranhar a superfície. No entanto,
+          esperem ter uma introdução divertida e aprender o mínimo necessário para aplicar o conhecimento
+          na computação quântica.</p>
         <p>Segundo, sinto que devo lembrá-los que não estou assumindo nenhum conhecimento prévio
-          sobre este ramo da física, e também não assumo nenhuma proficiência com matemática além de
-          álgebra linear. Assim, muitos tópicos aqui podem ser aprofundados caso tenha conhecimento de
-          cálculo e equações diferenciais. Se este é seu caso, não se preocupe: recomendarei recursos
-          mais avançados conforme avançarmos no post.</p>
-        <p>Por fim, vou pedir que você leia este post com a mente aberta. A mecânica quântica tem uma
-          certa reputação como “estranha”, “aleatória” ou até “incompreensível”. Esqueça de todos esses
-          rótulos!!! Apenas leia isso sabendo que a mecânica quântica traz sim algumas noções bastante
-          diferentes daquelas na física clássica, e por isso pode parecer estranha. No entanto, é apenas
-          uma questão de costume. Ela não é, de maneira alguma, incompreensível. Você consegue!</p>
-        <p>Bom, dito tudo isso, vamos começar nossa jornada de hoje!!!</p>
+          sobre este ramo da física, e também não assumo nenhuma proficiência com matemática além
+          de álgebra linear. Assim, muitos tópicos aqui podem ser aprofundados caso tenha conhecimento
+          de cálculo e equações diferenciais. Se este é seu caso, não se preocupe: recomendarei
+          recursos mais avançados ao fim do post.</p>
+        <p>Por fim, vou pedir que você leia este post com a mente aberta. A mecânica quântica
+          tem uma certa reputação como “estranha”, “aleatória” ou até “incompreensível”.
+          Esqueça de todos esses rótulos!!! Apenas leia isso sabendo que a mecânica quântica
+          traz sim algumas noções bastante diferentes daquelas na física clássica, e por isso
+          pode parecer estranha. No entanto, é apenas uma questão de costume. Ela não é, de
+          maneira alguma, incompreensível. Você consegue!</p>
         <button onclick="paginate('post4_1', 'post4_2')">Próximo</button>
       </div>
 
       <div id="post4_2">
-        <h3>Introdução - o que a mecânica quântica descreve?</h3>
-        <p>O que é, então, a tal da mecânica quântica? Pra que ela serve? O que ela descreve? Por que você deveria se importar?</p>
-        <p>Comecemos pela primeira pergunta. A mecânica quântica nada mais é que um ramo da física.
-          Assim como aprendemos, no Ensino Médio, sobre mecânica de Newton (clássica), termodinâmica,
-          óptica, e eletromagnetismo, agora vamos aprender sobre uma nova área, a mecânica quântica.
-          A partir de agora, vamos nos referir a tudo que não é quântico como sendo clássico, como,
-          por exemplo, a mecânica de Newton (lembra de F=ma?).</p>
-        <div id="post_4_2_int_1"></div>
-        <p>Agora, quanto a sua utilidade: para que é que ela serve? Bom, obviamente que serve para
-          computação quântica (caso contrário, não estaríamos falando sobre ela). Mas a mecânica
-          quântica é também utilizada em smartphones e computadores modernos, na ressonância magnética,
-          em lasers e telecomunicações, e em relógios atômicos e no GPS. Assim, não há muita dúvida sobre sua utilidade.</p>
-        <p>Bom, sabemos que a termodinâmica descreve calor e energia, e óptica descreve a luz,
-          mas o que a mecânica quântica descreve? Basicamente, corpos pequenos. Com pequenos
-          quero dizer coisas como elétrons e fótons, que são partículas fundamentais na natureza,
-          menores que um átomo. Não é como se outros corpos não obedecessem a mecânica quântica,
-          mas quanto maior o corpo mais difícil ver os efeitos quânticos vindo das partes pequenas
-          que o compõem. Assim, uma pessoa ou um carro é melhor aproximado pelas leis da física
-          clássica, mesmo que sejam compostos de elétrons e quarks que por sua vez formam átomos e então moléculas.</p>
-        <p>Ok, e por que exatamente você deveria se importar? Se você está aqui é porque quer aprender
-          sobre computação quântica, e isso nada mais é que a ideia de utilizar as leis e propriedades
-          surgindo da mecânica quântica para criar computadores mais efetivos para certos tipos de tarefas.
-          Alguns podem argumentar que é possível fazer computação quântica sem aprender mecânica quântica.
-          Pode até ser, mas ter noção das leis e propriedades que você tem em suas mãos ao programar
-          quanticamente te ajudará bastante.</p>
-        <p>Mais especificamente, na computação quântica, queremos tirar proveito de três fenômenos
-          quânticos, dois dos quais aprenderemos hoje: interferência quântica, superposição, e
-          emaranhamento. Guarde essa informação! O entendimento desses três termos deve ser seu
-          principal objetivo pelos próximos três posts.</p>
+        <h3>Noções clássicas de ondas e partículas</h3>
+        <p>Antes da mecânica quântica ser descoberta, a noção predominante era a de que partículas
+          têm uma posição definida, são “discretas” (vêm em unidades) e ricocheteiam quando colidem
+          umas com as outras. </p>
+        <p>Um exemplo de objeto que se comporta como a nossa noção clássica de partícula é uma
+          bolinha de gude. Não temos dificuldade em apontar para sua localização (ou pelo menos
+          para a localização de seu centro). Também é fácil contar quantas bolinhas de gude
+          estão à nossa disposição. Quando colidem, é claro, elas ricocheteiam, cada uma indo
+          para uma direção.</p>
+        <p>Já as ondas não têm uma posição definida, são contínuas (não há unidades) e
+          interferem umas com as outras ao “colidir”.</p>
+        <p>Vamos tomar como exemplo ondas de água. Não sei vocês, mas eu não consigo lhes informar
+          a posição de uma onda! Claro, você pode saber a posição de onde ela surgiu ou seguir a
+          posição de uma de suas cristas, mas não tem como estabelecer uma só posição para toda a onda.
+          Por fim, vamos falar sobre o que acontece quando duas ondas de água se encontram (“colidem”).
+          Já tentaram jogar duas pedrinhas no rio, uma do lado da outra? O que acontece é que são geradas
+          duas ondas, e elas se somam ou se cancelam em diferentes posições. Chamamos esse fenômeno de interferência.</p>
+        <p>Vou aproveitar para retomar alguns conceitos importantes sobre ondas. Chamamos os pontos mais
+          altos de uma onda de cristas e os pontos mais baixos de vales. Além disso, a distância entre
+          duas cristas consecutivas é igual à distância entre dois vales consecutivos, e a chamamos de
+          comprimento de onda. A frequência é inversamente proporcional a esse comprimento (ou seja,
+          quanto maior o comprimento menor a frequência) e diretamente proporcional à energia (alta
+          frequência = alta energia). Pode ser medida como o número de oscilações por segundo ou como a
+          velocidade da luz dividida pelo comprimento de onda. Por fim, a amplitude é também diretamente
+          proporcional à energia. Todas essas características são melhor ilustradas pelo esquema:</p>
+        <img src="ondas.png" width="307.2" height="230.4">
+        <p>Com isso, podemos entender como ocorre a interferência! Quando duas cristas se encontram,
+          formam uma crista maior, e quando dois vales se encontram, formam um vale maior. Já quando um
+          vale encontra uma crista, eles se cancelam:</p>
+        <img src="constructive.png" width="198.6" height="83.2">
+        <img src="destructive.png" width="153.6" height="83.2">
         <button onclick="paginate('post4_2', 'post4_1')">Anterior</button>
         <button onclick="paginate('post4_2', 'post4_3')">Próximo</button>
       </div>
 
       <div id="post4_3">
-        <h3>Luz, experimento de dupla fenda e efeito fotoelétrico</h3>
-        <p>Antes da mecânica quântica ser descoberta, a noção predominante era a de que
-          partículas têm uma posição definida, são “discretas” (vêm em unidades) e
-          ricocheteiam quando colidem umas com as outras.</p>
-        <p>Já as ondas não têm uma posição definida, são contínuas (não há unidades)
-          e interferem umas com as outras ao “colidir”. Para quem não lembra o que é
-          interferência de ondas, pense nisso como sendo a capacidade de ondas de se
-          somarem ou se destruírem:</p>
-        <img src="constructive.png" width="198.6" height="83.2">
-        <img src="destructive.png" width="153.6" height="83.2">
-        <p>Também vale a pena lembrar de algumas características de ondas: o comprimento de onda, a frequência, e a amplitude:</p>
-        <img src="ondas.jpg" width="307.2" height="230.4">
-        <p>Um dos debates mais longos da física, então, foi: a luz é feita de ondas, ou de partículas?</p>
-        <p>Por algum tempo, foi aceito que a luz era feita de ondas. O motivo, é claro,
-          vinha de evidência experimental. Mais especificamente, do experimento de dupla fenda.
-          Imagine que você tem uma parede com duas fendas paralelas, super finas. Você então
-          deixa luz passar por tais fendas, possivelmente vinda de um laser. Atrás da parede,
-          você coloca algo que te permita ver a luz resultante. O resultado é um padrão de interferência:
-          exatamente o que seria esperado de uma onda, que se divide ao passar em cada fenda e
-          então interfere consigo mesma.</p>
-        <img src="double_slit.jpg" width="307.2" height="230.4">
-        <p>Tudo parecia decidido e o debate parecia acabado, até que foi observado o efeito fotoelétrico.
-          Imagine agora um átomo, composto de um núcleo e de uma eletrosfera. Os elétrons se mantém ao
-          redor do núcleo devido a uma atração elétrica, que podemos tentar vencer com energia
-          (mais ou menos como você consegue vencer a atração de dois ímãs se fizer força o suficiente,
-          com a diferença de que átomos são pequenos demais para tentar separar com sua mão).</p>
-        <p>Bom, se energia é o que precisamos, podemos usar luz! Afinal, dissemos que luz é uma onda
-          e ondas carregam energia. Mas quando tentamos ejetar elétrons com luz de baixa energia,
-          não conseguimos nenhum, não importa quanta luz usemos. Em compensação, conseguimos tirar
-          elétrons com luz de alta energia.</p>
-        <p>Isso não faz sentido! Se a luz realmente é feita de ondas,
-          então deveríamos conseguir, eventualmente, tirar elétrons de um átomo com luz de baixa energia,
-          pois a luz é contínua e a energia eventualmente se somaria e se tornaria o suficiente.</p>
-        <p>Mas e se a luz fosse feita de partículas? Então, este resultado faria sentido: tentar tirar
-          elétrons de um átomo com luz de baixa energia seria como tentar derrubar pinos de boliche com
-          bolas de pingue-pongue; não importa quantas usasse, uma seguida da outra, as energias não iriam
-          “se somar” e nunca funcionaria.</p>
-        <p>Agora, temos uma evidência de que a luz é feita de ondas, e outra evidência de que a luz é feita de partículas. O que está acontecendo??</p>
+        <h3>O experimento de dupla-fenda, o efeito fotoelétrico e a dualidade onda-partícula</h3>
+        <p>Tudo o que falamos até agora se refere à noções clássicas (pré mecânica quântica).
+          Agora, vamos começar a entender como essas ideias passam a ser desafiadas
+          experimentalmente para indicar a necessidade de uma nova teoria.</p>
+        <p>Por muito tempo, se debateu sobre a natureza da luz: a luz é formada de ondas, ou de partículas?</p>
+        <p>Para responder a esta pergunta, vamos realizar dois experimentos mentais. Primeiramente,
+          imagine que temos um laser de luz de cor única. Na frente dessa fonte temos uma parede com
+          duas finas fendas. Por fim, colocamos uma parede normal após as fendas.</p>
+        <p>O que acontece se ligarmos o laser? Antes de saber o que acontece experimentalmente,
+          vamos pensar no que aconteceria se a luz agisse de acordo com nossas noções clássicas de
+          partículas e ondas, respectivamente.</p>
+        <p>Se a luz fosse feita de objetos agindo de acordo com nossa noção clássica de partículas,
+          seria como imaginar várias bolinhas de gude viajando em direções aleatórias, mas elas
+          seriam muito mais rápidas e leves que bolinhas de gude (na verdade, sem massa, mas comento
+          mais depois). Bom, então esperaríamos ver algo mais ou menos assim:</p>
+        <!-- ADICIONAR RESULTADO ESPERADO DE PARTICULAS  -->
+        <p>E se a luz fosse composta de ondas? Bom, existe algo que não mencionei sobre ondas clássicas:
+          quando atingem uma fenda, agem como se formassem novas ondas a partir daquele ponto (como se
+          a fenda se tornasse uma fonte de ondas). Assim, duas fendas gerariam duas frentes de ondas,
+          e quando elas se encontrassem resultariam em um padrão de interferência:</p>
+        <img src="double_slit.jpg" width="512" height="382">
+        <p>Ok. Quero que pause aqui e tente adivinhar qual é o resultado experimental.</p>
+        <p>Pausou? Fez sua hipótese?</p>
+        <p>…</p>
+        <p>E o resultado é… a segunda opção!</p>
+        <p>Ah, então tudo certo, né? A luz é feita de ondas, está decidido. Veremos…</p>
         <button onclick="paginate('post4_3', 'post4_2')">Anterior</button>
         <button onclick="paginate('post4_3', 'post4_4')">Próximo</button>
       </div>
 
       <div id="post4_4">
-        <h3>A dualidade onda-partícula e o comprimento de onda de De Broglie</h3>
-        <p>Calma! Tá tudo certo. O que acontece é que acabamos de descobrir a
-          dualidade onda-partícula! Na mecânica quântica, objetos podem ser descritos
-          como partículas E como ondas ao mesmo tempo!</p>
-        <p>Isso nos parece contra-intuitivo, mas perceba que partículas e ondas são
-          só grupos de objetos que decidimos nomear desta maneira de acordo com algumas
-          características. Tudo o que estamos dizendo agora é que descobrimos alguns
-          objetos que têm características de ambos os grupos.</p>
-        <p>Acabamos de ver um exemplo de algo que achamos ser composto de ondas,
-          mas que também se comporta como partículas. Vejamos como o contrário
-          pode ocorrer. Se voltamos a realizar nosso experimento de dupla fenda,
-          mas trocamos o laser de luz por uma fonte de elétrons, vemos de novo um
-          padrão de interferência! Perceba que para observar esse resultado é
-          necessário ter uma tela especial que detecte elétrons atrás da dupla fenda.</p>
-        <p>Bom, se você já teve tempo o suficiente para aceitar essa dualidade da natureza
-          (fique à vontade para tirar mais alguns minutos), você deve estar se perguntando
-          como descobrimos as características de ondas das partículas. Como sabemos,
-          por exemplo, qual o comprimento de onda de um elétron? Se ele se comporta
-          como uma onda, precisa ter um comprimento de onda!</p>
-        <p>A resposta para essa pergunta está no comprimento de onda de De Broglie.
-          Todas as partículas têm um comprimento de onda que pode ser calculado usando</p>
-        <p>λ = h/(mv) = h/p</p>
-        <p>Note também que quanto maior o comprimento de onda, mais comportamento de ondas
-          é observado. Mas além do comprimento de onda, outra questão surge: se partículas
-          podem se comportar como ondas, e até interferir umas com as outras, o que aconteceu
-          com a noção de que elas têm uma posição definida?</p>
+        <h3>Dupla-fenda alterada</h3>
+        <p>Vamos alterar nosso experimento um pouquinho. O que acontece se adicionarmos uma câmera entre o laser e as fendas?</p>
+        <!-- ADICIONAR ESQUEMA DO EXPERIMENTO ALTERADO -->
+        <p>Tente adivinhar. Ainda temos interferência?</p>
+        <p>Não. Agora que estamos tentando olhar para a luz (“medí-la”), ela decide agir como se fosse feita
+          de partículas! O resultado passa a ser as duas linhas retas esperadas para partículas passando pelas fendas.</p>
+        <p>Como assim? O que está acontecendo? Na verdade, ninguém sabe. Com isso não quero dizer que não tenhamos uma teoria que inclua
+          esse comportamento estranho quando observamos a luz e que traga resultados extremamente bem testados quando
+           comparados a resultados experimentais - temos sim, e se trata da mecânica quântica. O que quero dizer é que não sabemos
+           explicar porquê a luz - e, como veremos, outras ondas/partículas - exibe este comportamento. Em outras palavras, o que
+           exatamente ocorre durante uma medição/observação? Não sabemos, e isso é, na física, conhecido como o problema de medição.
+           Para mais informações, recomendo assistir à explicação de Sabine Hossenfelder no vídeo
+           <a href="https://youtu.be/igsuIuI_HAQ">Understanding Quantum Mechanics #5: Decoherence</a>.</p>
+        <p>Dito isso, vamos continuar.</p>
         <button onclick="paginate('post4_4', 'post4_3')">Anterior</button>
         <button onclick="paginate('post4_4', 'post4_5')">Próximo</button>
       </div>
 
       <div id="post4_5">
-        <h3>Função de onda e equação de Schrodinger</h3>
-        <p>A partir de agora, vamos dizer que toda partícula é descrita por uma
-          “função de onda”. O comprimento de onda que calculamos é o comprimento
-          dessa onda. Mas mais que isso, a função de onda nos dará informação
-          sobre a posição da nossa partícula.</p>
-        <p>O tipo de informação que conseguimos não é o mais satisfatório…
-          tudo o que conseguimos saber é a probabilidade de que uma partícula esteja
-          em alguma posição a qualquer momento. Sei que essa é uma das partes mais
-          difíceis de entender da mecânica quântica - como assim a probabilidade?
-          Quer dizer que não temos informação o suficiente, é um defeito da teoria?
-          Não! Quer dizer que é fisicamente impossível saber mais que isso.
-          Como veremos, em alguns casos a probabilidade em alguma posição será de
-          100% e então teremos certeza de onde se encontra a partícula, mas em todos
-          os outros casos não se trata de uma falha na teoria - se trata de uma
-          característica da natureza.</p>
-        <p>A função de onda nos retorna uma probabilidade para cada posição e momento. Assim, depende de x e de t:</p>
-        <p>ψ(x,t)</p>
-        <p>Também a representamos como um vetor (não se preocupe com os detalhes de
-          como transformar uma função em um vetor; se tiver interesse, acesse,
-          de graça, o curso “Quantum Mechanics for Scientists and Engineers 1”
-          na edX, e procure o vídeo sobre o tópico na seção de “background mathematics” -
-          deixaria o link aqui mas meu acesso ao curso expirou):</p>
-        <p>ψ(x,t) = |ψ⟩</p>
-        <p>Para entender porque concluímos isso sobre a onda que representa a partícula,
-          precisaríamos de muito mais tempo e matemática. Por enquanto, confie no que digo
-          (se não confiar pode pesquisar). Basta saber que os experimentos que realizamos
-          com elétrons e outras partículas condizem com essa ideia.</p>
-        <p>As posições mais prováveis para uma dada partícula são aquelas nas quais a onda se encontra com a maior amplitude:</p>
-        <img src="wavefunction.jpg" width="307.2" height="230.4">
-        <p>Vamos mudar um pouco de assunto e falar sobre energia. Ondas carregam energia,
-          e estamos lidando com objetos que se comportam um pouco como ondas. No entanto,
-          lembrem-se que também se comportam um pouco como partículas. Assim,
-          nossos estados quânticos carregam energia, mas nem toda energia é permitida.
-          A energia vem em “quanta”, pequenos pacotes. Dizemos que é quantizada,
-          discreta como partículas (que vêm em unidades, como vimos). É daí que vem
-          o termo mecânica quântica!</p>
-        <p>Ok, e como descobrimos quais energias são permitidas? Usamos algo chamado
-          o operador Hamiltoniano, ou apenas Hamiltoniano. Trata-se de um operador
-          quântico que, quando aplicado ao nosso estado, nos informa sua energia. Matematicamente,</p>
-        <p>H|ψ⟩ = E|ψ⟩</p>
-        <p>Essa equação é o que chamamos de uma equação de autovalor. Basicamente,
-          estamos dizendo que o operador Hamiltoniano, uma matriz, multiplicado por
-          nosso estado quântico, um vetor, resulta em um escalar, a energia, vezes
-          esse mesmo estado quântico. Pode existir mais de um resultado, e pode não
-          existir nenhum. Para uma solução psi_0, E_0, dizemos que psi_0 é autovetor
-          de H, e E_0 é o autovalor.</p>
-        <p>As possíveis soluções para E são as energias permitidas.</p>
-        <p>Para que essa equação funcione, precisamos que o Hamiltoniano capture as
-          várias formas através das quais um estado quântico pode ter energia. Teremos</p>
-        <p>H = p²/(2m) + V(x)</p>
-        <p>Veja que o primeiro termo, aplicado a um estado quântico, nos informa sua
-          energia cinética, enquanto que o segundo termo engloba toda forma de
-          energia potencial que pode ter (é uma função de x, pois energia potencial é energia devido a posição).</p>
-        <p>Por fim, precisamos de uma ferramenta para descrever a mudança dos estados quânticos. Para isso, utilizamos a equação de Schrodinger:</p>
-        <img src="schrodinger.png">
-        <p>Se você não sabe cálculo, basta saber que d/dt nos dá a taxa de mudança de algum
-          valor (neste caso, psi). Não vamos precisar explicitamente resolver essa equação,
-          que é uma equação diferencial parcial, mas é bom saber que ela existe e para que serve.
-          Se quiser saber mais, veja os recursos recomendados na próxima sessão.</p>
+        <h3>Outro exemplo de comportamento de partícula da luz</h3>
+        <p>Ok, então já sabemos que a luz se comporta como uma onda quando ninguém está
+          vendo mas passa a agir como uma partícula quando tentamos observá-la. Estranho,
+          mas os experimentos não mentem.</p>
+        <p>Existe mais uma situação interessante na qual a luz mostra sua “personalidade ]
+          partícula” (ela tem duas caras, fazer o quê): no efeito fotoelétrico.</p>
+        <p>Imagine que tenhamos um átomo, do qual queremos retirar um ou mais elétrons.
+          Um átomo é composto de um núcleo de carga positiva e uma eletrosfera de carga negativa,
+          então retirar um elétron requer vencer sua atração ao núcleo. Assim, isso exige energia.</p>
+        <p>Bom, a luz tem energia! Não importa se por enquanto que não sabemos exatamente o que a
+          luz é, pensemos sobre ela como uma onda ou uma partícula: tanto ondas quanto partículas
+          possuem energia. Ok. Mas existe uma diferença entre o resultado de tentar retirar elétrons
+          do átomo com luz se ela se comportar como partículas comparado ao resultado que ocorre
+          se se comportar como ondas. Vamos entender a diferença:</p>
+        <p>Se a luz se comportar como partículas nesse cenário (não digo se a luz for composta de
+          partículas pois já vimos que depende do momento; lembrem: ela tem duas faces), então precisamos
+          usar a luz com a energia certa para retirar um dado elétron. Se um dado elétron precisa de dada
+          energia para ser retirado de sua posição confortável no átomo, não importa quantas partículas de
+          energia menor que a necessária você jogue nele - ele não vai sair. Seria como tentar derrubar um
+          canhão com várias bolinhas de gude.</p>
+        <p>Se a luz se comportar como ondas nesse cenário, então poderíamos usar luz de qualquer energia
+          para retirar o elétron, desde que usássemos a quantidade suficiente. Afinal, uma onda é contínua:
+          é como se a energia aplicada fosse se acumulando.</p>
+        <p>E desta vez, qual o resultado?</p>
+        <p>Forme uma hipótese (não deve ser muito difícil, considerando o título da seção)</p>
+        <p>...</p>
+        <p>Dessa vez, a primeira opção é o resultado observado! Mais uma situação na qual a luz decide se comportar como partícula!</p>
         <button onclick="paginate('post4_5', 'post4_4')">Anterior</button>
         <button onclick="paginate('post4_5', 'post4_6')">Próximo</button>
       </div>
 
       <div id="post4_6">
+        <h3>Dualidade onda-partícula, outra dupla-fenda alterada e o comprimento de onda de De Broglie</h3>
+        <p>Uau, isso está se tornando uma confusão. A luz uma hora é partícula, outra hora é onda,
+          muda de ideia de novo e vira partícula…</p>
+        <p>Vamos nos organizar. Já sabemos que objetos podem se comportar como partículas e ondas ao
+          mesmo tempo. Até agora, só vimos isso acontecer com a luz, sobre a qual a maior parte das pessoas
+          pensa como sendo uma onda. Mas também vale para todas as outras partículas fundamentais! Se
+          alteramos a fonte da nossa dupla fenda de um laser para uma fonte de elétrons, e não temos a
+          câmera entre a fonte e as fendas, vemos um padrão de interferência como o observado com a luz!</p>
+        <p>Ok, imagino que isso seja o suficiente para lhe convencer de que essa dupla personalidade se
+          aplica a qualquer coisa pequena. Chamamos essa dupla personalidade de dualidade onda-partícula.</p>
+        <p>Se tudo o que considerávamos serem partículas (átomos, elétrons, prótons, etc) pode se comportar
+          como ondas, então devem ter aquelas características básicas de ondas que vimos antes, incluindo
+          um comprimento de onda. Para uma partícula de massa m e velocidade v, o comprimento de onda
+          correspondente é</p>
+        <p>λ = h/(mv) = h/p</p>
+        <p>Chamado de comprimento de onda de De Broglie. Mas o que exatamente acontece quando uma partícula
+          se comporta como uma onda? Uma onda está em vários lugares ao mesmo tempo (lembrem-se, ondas são
+          contínuas), mas como, então, ela pode voltar a agir como uma partícula quando observada? Como
+          escolhe uma única posição?</p>
+        <button onclick="paginate('post4_6', 'post4_5')">Anterior</button>
+        <button onclick="paginate('post4_6', 'post4_7')">Próximo</button>
+      </div>
+
+      <div id="post4_7">
+        <h3>Função de onda, operador Hamiltoniano e equação de Schrodinger</h3>
+        <p>Acontece que todos os objetos quânticos são descritos por uma função de onda. Já vamos
+          entender porque a palavra “função” está neste nome, mas antes vamos entender o que ela representa.</p>
+        <p>Bom, vamos mudar nossa atenção para um experimento bem menos realístico, apenas mental.
+          Imaginemos um só elétron. Ele se comporta como uma onda quando ninguém está vendo, mas passa
+          a agir como uma partícula ao ser medido. Uma onda não tem posição definida, como vimos. Então,
+          a pergunta volta: que posição ele escolhe ao ser medido?</p>
+        <p>Se conseguíssemos realizar este experimento, veríamos que… depende da vez! Como assim?
+          Bom, se repetimos o experimento, vemos que o elétron escolhe diferentes posições a cada vez.
+          Se repetimos o experimento um número suficiente de vezes, passamos a ver padrões: algumas
+          posições são escolhidas com mais frequência, outras quase nunca. E é isso que a tal da função
+          de onda representa! É uma onda de probabilidade!</p>
+        <p>Especificamente, os pontos de maior amplitude na função de onda de uma partícula correspondem às suas posições mais prováveis:</p>
+        <img src="wavefunction.jpg" width="512" height="382">
+        <p>Ok, como prometido, vamos entender o significado do nome “função de onda”. Não escolhemos o termo
+          função aleatoriamente! Pense assim: temos uma onda que nos fornece as probabilidade de cada
+          posição para uma partícula uma vez que for medida. Mas veja que o que essa onda realmente está
+          fazendo é agindo como uma função: ela depende da posição, e retorna uma probabilidade. Além disso,
+          essa onda vai evoluir com o tempo, mudando seu formato e as probabilidades. Assim, se trata de uma
+          função de duas variáveis: x (posição) e t (tempo):</p>
+        <p>ψ(x,t) = |ψ⟩</p>
+        <p>Para descrever essa dependência temporal, vamos mudar um pouco de assunto e falar sobre energia.
+          Ondas carregam energia, e estamos lidando com objetos que se comportam um pouco como ondas.
+          No entanto, lembrem-se que também se comportam um pouco como partículas. Assim, nossos estados
+          quânticos carregam energia, mas nem toda energia é permitida. A energia vem em “quanta”, pequenos
+          pacotes. Dizemos que é quantizada, discreta como partículas (que vêm em unidades, como vimos). É daí
+          que vem o termo mecânica quântica!</p>
+        <p>Ok, e como descobrimos quais energias são permitidas? Usamos algo chamado o operador Hamiltoniano,
+          ou apenas Hamiltoniano. Trata-se de um operador quântico que, quando aplicado ao nosso estado, nos
+          informa sua energia. Matematicamente,</p>
+        <p>H|ψ⟩ = E|ψ⟩</p>
+        <p>Essa equação é o que chamamos de uma equação de autovalor. Basicamente, estamos dizendo que o
+          operador Hamiltoniano, uma matriz, multiplicado por nosso estado quântico, um vetor, resulta em
+          um escalar, a energia, vezes esse mesmo estado quântico. Pode existir mais de um resultado, e
+          pode não existir nenhum. Para uma solução psi_0, E_0, dizemos que psi_0 é autovetor de H, e
+          E_0 é o autovalor.</p>
+        <p>As possíveis soluções para E são as energias permitidas.</p>
+        <p>Para que essa equação funcione, precisamos que o Hamiltoniano capture as várias formas através das quais um estado quântico pode ter energia. Teremos</p>
+        <p>H = p²/(2m) + V(x)</p>
+        <p>Veja que o primeiro termo, aplicado a um estado quântico, nos informa sua energia cinética,
+          enquanto que o segundo termo engloba toda forma de energia potencial que pode ter (é uma
+          função de x, pois energia potencial é energia devido a posição).</p>
+        <p>Por fim, precisamos de uma ferramenta para descrever a mudança dos estados quânticos. Para isso, utilizamos a equação de Schrodinger:</p>
+        <img src="schrodinger.png">
+        <p>Se você não sabe cálculo, basta saber que d/dt nos dá a taxa de mudança de algum valor (neste caso, psi).
+          Não vamos precisar explicitamente resolver essa equação, que é uma equação diferencial parcial, mas é
+          bom saber que ela existe e para que serve. Se quiser saber mais, veja os recursos recomendados na última
+          sessão do post.</p>
+        <button onclick="paginate('post4_7', 'post4_6')">Anterior</button>
+        <button onclick="paginate('post4_7', 'post4_8')">Próximo</button>
+      </div>
+
+      <div id="post4_8">
+        <h3>Definindo interferência quântica e superposição</h3>
+        <p>Lembra que, na introdução a este post, disse que nosso foco seria entender a
+          interferência quântica, a superposição, e o emaranhamento? Bom, nós já estamos
+          prontos para formalizar as duas primeiras noções!</p>
+        <p>Ondas interferem. Já revisamos isso. Mas também sabemos que objetos quânticos
+          são representados por funções de onda. Tanto que elétrons passando por uma dupla
+          fenda criam um padrão de interferência, como ondas! Então, já sabemos o que é a
+          interferência quântica: a habilidade de objetos quânticos de interferirem uns com
+          os outros como ondas antes de serem observados. Basicamente, expandimos a noção de
+          interferência clássica para todo objeto quântico, incluindo coisas que acreditávamos
+          se comportar apenas como partículas.</p>
+        <p>E a tal da superposição? Do que se trata? Lembre que as ondas não têm uma posição
+          definida - são contínuas. Se objetos quânticos se comportam como ondas antes de serem
+          medidos, então eles também não têm uma posição definida quando ninguém está olhando!
+          Dizemos que se encontram em uma superposição de diferentes estados - estão em vários
+          lugares ao mesmo tempo.</p>
+        <p>Isso se estende para além da posição dos objetos, e pode envolver uma superposição
+          de diferentes níveis de energia, uma superposição de diferentes spins, etc. Essas outras
+          propriedades, assim como a posição, saem da superposição quando o objeto é observado.
+          O efeito do observador é o de desfazer a superposição, forçando a partícula a escolher
+          apenas um estado.</p>
+        <p>Um resumo final dessas duas propriedades: a interferência quântica é a habilidade de objetos
+          quânticos de afetarem uns aos outros como ondas quando ninguém está olhando, e a superposição
+          é sua habilidade de estar em mais de um estado (posição, energia, spin, etc) ao mesmo tempo
+          (de novo, enquanto ninguém está olhando).</p>
+        <button onclick="paginate('post4_8', 'post4_7')">Anterior</button>
+        <button onclick="paginate('post4_8', 'post4_9')">Próximo</button>
+      </div>
+
+      <div id="post4_9">
+        <h3>Stern-Gerlach</h3>
+        <p>Para entender nossos últimos conceitos de mecânica quântica, vamos introduzir um novo
+          experimento utilizando analisadores Stern-Gerlach.</p>
+        <p>Já vimos que um objeto quântico pode estar em mais de um estado ao mesmo tempo. Mas,
+          para computação, queremos que existam apenas dois estados possíveis, correspondendo
+          ao 0 e 1. Assim, um bit quântico poderá estar em uma superposição de 0 e 1. Posição
+          claramente não é uma propriedade de dois valores possíveis (um sistema de dois níveis).
+          A energia de um elétron ou outra partícula muitas vezes pode ser, assim como a polarização
+          da luz. Mas vamos focar em outro exemplo: o spin.</p>
+        <p>Spin é apenas uma propriedade eletromagnética de partículas como o elétron. Como sabemos
+          que há apenas dois possíveis valores para o spin de um elétron? É aí que entra o experimento
+          de Stern-Gerlach.</p>
+        <p>Imagine que criamos um aparelho usando dois enormes polos magnéticos. Colocamos o polo
+          Norte em baixo e o Sul em cima, sendo que o formato dos polos faz com que o campo magnético
+          gerado seja mais forte próximo ao polo Sul (apontando para cima):</p>
+        <!-- ESQUEMA DO EXPERIMENTO -->
+        <p>Se enviamos um ímã com polo Norte para cima através deste aparelho, podemos esperar que
+          ele seja desviado para cima. Isso porque a atração do polo Norte do ímã ao polo Sul do
+          aparelho será maior que a atração do polo Sul do ímã ao polo Norte do aparelho (lembre que
+          o campo magnético é mais forte para cima).</p>
+        <!-- PRIMEIRO IMA -->
+        <p>Similarmente, se o polo Norte está para baixo, esperamos que seja desviado para baixo.
+          Desta vez, isso se deve a uma repulsão mais forte entre os polos Norte do ímã e do aparelho
+          que a repulsão entre os polos Sul.</p>
+        <!-- SEGUNDO IMA -->
+        <p>E se enviássemos um ímã horizontal? Ele não seria desviado!</p>
+        <!-- TERCEIRO IMA -->
+        <p>Então, podemos imaginar que se enviamos vários ímãs de orientação aleatória através
+          do aparelho, vemos um contínuum de desvios diferentes:</p>
+        <!-- RESULTADO GERAL -->
+        <p>Até agora, estamos lidando com ímãs clássicos: nada quântico ou inesperado aconteceu.
+          Se trocamos nossos ímãs por elétrons, vemos um resultado bastante diferente. Eles sempre
+          são desviados ou para cima ou para baixo, mas nunca têm um desvio intermediário:</p>
+        <!-- RESULTADO COM ELETRONS -->
+        <p>Como podemos interpretar isso? Bom, primeiramente perceba que esse experimento indica
+          que o spin de um elétron é um sistema de dois níveis. No entanto, precisamos lembrar que
+          elétrons são objetos quânticos, e, como tal, são afetados pelo ato de observação.</p>
+        <p>O aparelho de Stern-Gerlach pode não ser uma câmera, mas ele está tentando medir o spin
+          dos elétrons. Assim, podemos inferir que os elétrons podem se encontrar em uma superposição
+          de spins (para baixo e para cima ao mesmo tempo) antes de passar pelo aparelho, mas que o
+          ato de medição os força a escolher apenas uma opção.</p>
+        <p>Um motivo mais concreto pelo qual podemos inferir isso é que assumimos que enviamos
+          elétrons aleatoriamente (de estados desconhecidos e aleatórios) ao aparelho, e conseguimos
+          exatamente 50% de chances de irem para cima, e 50% de irem para baixo.</p>
+        <p>Esse é o experimento de Stern-Gerlach! A seguir, vamos falar um pouco mais sobre ele e
+          usá-lo para introduzir o emaranhamento. No entanto, note que o que explicamos aqui é bastante
+          importante: introduzimos uma propriedade quântica que, como todas as outras, permite
+          superposição e interferência, mas que, diferente do que já havíamos mencionado (posição),
+          é um sistema de dois níveis. Garanta que você entende o que isso significa antes de continuar.</p>
+        <button onclick="paginate('post4_9', 'post4_8')">Anterior</button>
+        <button onclick="paginate('post4_9', 'post4_10')">Próximo</button>
+      </div>
+
+      <div id="post4_10">
+        <h3>Diferentes bases com Stern-Gerlach</h3>
+        <p>O que acontece se, agora, repetimos o experimento de Stern-Gerlach com elétrons, mas rodando
+          nosso aparelho de forma que se alinhe ao eixo x?</p>
+        <!-- ESQUEMA DE SGX -->
+        <p>Bom, se enviamos vários elétrons através do aparelho novamente, vemos de novo apenas duas
+          possibilidades de desvio: para a esquerda ou para a direita (cada um com 50% de probabilidade),
+          e nada intermediário:</p>
+        <!-- RESULTADO SGX PARA ELETRONS -->
+        <p>Antes, dizemos que o aparelho estava alinhado ao eixo z. Quando os elétrons vão para cima,
+          dizemos que seu spin foi medido como sendo 0. Quando vão para baixo, seu spin foi medido
+          como sendo 1. Uma vez que um elétron, possivelmente em superposição de spins, tem seu spin medido,
+          não há volta: o spin observado passa a ser o estado do elétron.</p>
+        <p>Nesse novo eixo x, quando vão para a esquerda dizemos que seu spin é -, e quando vão para a
+          direita seu spin foi medido como sendo +.</p>
+        <p>E se colocarmos um aparelho de Stern-Gerlach alinhado ao eixo z (SGZ), com uma barreira para
+          os elétrons que saírem com spin 1, seguido de um aparelho de Stern-Gerlach alinhado ao eixo x
+          (SGX), com uma barreira para os elétrons que saírem com spin -, e então outro SGZ?</p>
+        <!-- ESQUEMA VARIOS SGs-->
+        <p>Bom, se enviamos vários elétrons através do primeiro aparelho, obtemos 0 ou 1 com 50% de
+          probabilidade. Barramos os elétrons de spin 1, então apenas aqueles que foram desviados para
+          cima continuam para o SGX. E então, o que acontece?</p>
+        <p>Crie sua hipótese sobre o resultado de passar esses elétrons pelo SGX.</p>
+        <p>Criou?</p>
+        <p>É possível que sua intuição tenha te enganado um pouco. Às vezes pensamos que se
+          saímos do 0, que é o desvio para o eixo +z, mediremos apenas um desvio para o eixo +x,
+          ou seja, um spin +. No entanto, mudamos de base! A base x não liga para o que ocorreu
+          na base z. Conseguiremos, de novo, 50% e 50% de probabilidade para cada desvio (spin + ou -).</p>
+        <p>Agora, bloqueamos os elétrons que foram para a esquerda, e apenas aqueles com spin + são
+          enviados pelo último SGZ. Este é o grande ponto de realizar este experimento mental: quais
+          as probabilidades de obter spin 0 ou 1 após esse último aparelho?</p>
+        <p>Você pode pensar que, como no início bloqueamos todos os elétrons de spin 1 no eixo z,
+          vamos obter spin 0 com 100% de certeza ao fim do experimento. Aliás, é isso que esperaríamos,
+          classicamente falando.</p>
+        <p>No entanto, já sabemos que a mecânica quântica pode nos enganar desse jeito, sempre contra
+          nossas expectativas. Na verdade, o resultado é de 50% de probabilidade para cada spin! É como
+          se os elétrons não se lembrassem de que tinham spin 0 na base z, porque foram medidos na base
+          x. Eles só “lembram” da última medição realizada neles, então tudo o que eles lembram é que tem
+          spin + no eixo x e portanto podem ter qualquer spin no eixo z.</p>
+        <p>Isso é estranho. Você pode ter acertado na sua previsão, mas provavelmente porque esqueceu que
+          todos os elétrons que continuaram até o final tinham spin 0 no eixo z inicialmente. Se já
+          conseguiu aceitar que os elétrons têm memória de curto termo, vamos para o último conceito
+          deste post.</p>
+        <button onclick="paginate('post4_10', 'post4_9')">Anterior</button>
+        <button onclick="paginate('post4_10', 'post4_11')">Próximo</button>
+      </div>
+
+      <div id="post4_11">
+        <h3>Emaranhamento</h3>
+        <p>Estamos quase terminando. A última coisa que precisamos entender é o emaranhamento. Como
+          com a maioria dos conceitos neste post, vamos introduzi-lo com outro experimento.</p>
+        <p>Suponha que possamos construir uma fonte de elétrons que emite dois elétrons por vez,
+          em direções opostas e com spins opostos em qualquer que seja a base de medição. Em cada
+          lado dessa fonte, colocamos um aparelho SGZ. Se lançarmos os nossos dois elétrons aos seus
+          respectivos aparelhos, sempre vamos obter 0 em um e 1 no outro.</p>
+        <p>Chamamos esse tipo de estado de estado emaranhado. O motivo é que não importa se esses dois
+          elétrons forem medidos em cantos diferentes do Universo, eles sempre estarão conectados.</p>
+        <p>Uma maneira ainda mais clara de ver isso é: imagine que, dessa vez, coloquemos um dos aparelhos,
+          digamos que o da esquerda, mais próximo da fonte que o aparelho na direita. Além disso, o aparelho
+          da esquerda é um SGZ e o da direita é um SGX. Se lançamos nossos dois elétrons, o da esquerda
+          será medido antes, e como está sendo medido no eixo z, o outro elétron imediatamente é retirado de
+          qualquer superposição para apresentar o spin oposto no eixo z aquele que foi medido.</p>
+        <p>Assim, quando o segundo elétron passa pelo SGX, é como se ele já soubesse que o outro foi medido
+          no eixo z e que portanto ele também foi colapsado a um estado de spin no eixo z. Então, ao ser medido
+          no eixo x, terá 50% de probabilidade de ter spin + ou -.</p>
+        <p>Para aquelas e aqueles que conhecem a relatividade especial e estão confusos quanto a essa conexão
+          instantânea (será que ela viola a teoria de Einstein?), recomendo que esclareçam suas dúvidas no vídeo
+          <a href="https://youtu.be/XL9wWeEmQvo">Understanding Quantum Mechanics #3: Non-locality</a>.</p>
+        <button onclick="paginate('post4_11', 'post4_10')">Anterior</button>
+        <button onclick="paginate('post4_11', 'post4_12')">Próximo</button>
+      </div>
+
+      <div id="post4_12">
         <h3>Recursos de aprofundamento</h3>
         <p>Para aqueles(as) que querem entender melhor a mecânica quântica,
           incluindo toda a matemática mais avançada, deixo a seguir uma lista de
@@ -284,16 +467,16 @@
           <li>Quantum Computation and Quantum Information, Nielsen e Chuang, capítulo 1 parte 2</li>
           <li>Quantum Mechanics for Everyone, curso no edX</li>
           <li>Quantum Mechanics for Scientists and Engineers 1, curso no edX*</li>
+          <li><a href="https://youtube.com/playlist?list=PLwgQsqtH9H5djIfFhXE6We207beTgUnyL">Understanding Quantum Mechanics</a></li>
           <li><a href="http://learnqm.gatech.edu/">Learn Quantum Mechanics (jogos de aprendizado)</a></li>
           <li><a href="http://theoreticalminimum.com/courses/quantum-mechanics/2012/winter">Quantum Mechanics, Theoretical Minimum</a></li>
           <li><a href="https://www.feynmanlectures.caltech.edu/III_toc.html">Feynman Lectures in Physics Volume 3, capítulos 1 a 16 (mas vale a pena ver todos)</a></li>
         </ul>
-        <button onclick="paginate('post4_6', 'post4_5')">Anterior</button>
+        <button onclick="paginate('post4_12', 'post4_11')">Anterior</button>
       </div>
     </div>
   </main>
 
   <script src="../app.js"></script>
-  <script src="posts.js"></script>
 </body>
 </html>
