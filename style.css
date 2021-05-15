@@ -290,6 +290,10 @@ button{
   display:none;
 }
 
+#post5_2, #post5_3, #post5_4, #post5_5, #post5_6, #post5_7, #post5_8{
+  display:none;
+}
+
 a.download-btn{
   font-weight:bold;
   color:purple;

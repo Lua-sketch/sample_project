@@ -474,6 +474,126 @@
         <button onclick="paginate('post4_12', 'post4_11')">Anterior</button>
       </div>
     </div>
+
+    <div class="post">
+      <div id="post5_1">
+        <h1>Mecânica Quântica - Parte 2</h1>
+        <h2>Os postulados da mecânica quântica: formalizando os resultados experimentais</h2>
+        <p>Postulados nada mais são que pressuposições. Sem eles, não podemos construir
+          uma teoria matemática. No entanto, como temos experimentos para indicar prováveis
+          propriedades da natureza, podemos partir de certas suposições com confiança razoável.
+          É isso que faremos hoje.</p>
+        <p>Já discutimos os principais experimentos na base da mecânica quântica. Agora, com
+          seus resultados em mãos, os traduzimos para postulados matemáticos. Isso permitirá a
+          formulação de uma teoria física.</p>
+        <button onclick="paginate('post5_1', 'post5_2')">Próximo</button>
+      </div>
+      <div id="post5_2">
+        <h3>Postulado 1 - descrevendo um estado quântico</h3>
+        <p>O nosso primeiro postulado será de que um estado quântico é representado por um “ket”
+          |ψ⟩ em um espaço de Hilbert.</p>
+        <p>Ok, comecemos por justificar o uso de kets. Como vimos antes, um ket é simplesmente
+          um vetor coluna. Assim, a pergunta se torna: por que usamos vetores ao representar
+          estados quânticos? Bom, vetores podem ser intuitivamente utilizados para comunicar as
+          probabilidades de cada estado!</p>
+        <p>Lembram da superposição? E lembram que a probabilidade de se medir dado estado quântico
+          é proporcional a amplitude da função de onda? Isso se aplica, novamente, a qualquer tipo
+          de “estado” (posição, energia, spin, etc). Aqui, vamos apenas nos referir a sistemas de
+          dois níveis, como o spin ou, em algumas condições, a energia, porque são o que nos interessa
+          dentro da computação. Um desses níveis corresponderá ao 0, e outro ao 1.</p>
+        <p>Se um estado está “entre” o 0 e o 1, podemos expressá-lo especificando a “quantidade” de 0
+          e a “quantidade” de 1 presentes. Vamos representar 0 como o vetor coluna |0⟩=[[1] [0]], e 1
+          como o vetor coluna |1⟩=[[0] [1]]. Assim, se dizemos que
+          |ψ⟩=[[1/√2] [1/√2]] = 1/√2|0⟩+1/√2|1⟩, é fácil ver que temos 1/√2 de
+          0 e 1/√2 de 1 presentes.</p>
+        <p>Ok, os vetores são convenientes. Mas o que é um espaço de Hilbert? Pense nele como o espaço
+          em que os vetores vivem. Ele é um espaço especial (diferente do que chamamos de um espaço vetorial)
+          por permitir que vetores sejam multiplicados usando o produto interno.</p>
+        <button onclick="paginate('post5_2', 'post5_1')">Anterior</button>
+        <button onclick="paginate('post5_2', 'post5_3')">Próximo</button>
+      </div>
+      <div id="post5_3">
+        <h3>Postulado 2 - quantias observáveis de um estado quântico</h3>
+        <p>O segundo postulado diz que quantidades observáveis clássicas são introduzidas na
+          mecânica quântica por meio de operadores. Cada quantidade mensurável de um sistema físico
+          é descrito por um operador que age em estados quânticos (ou seja, que age em kets).</p>
+        <p>Já vimos isso antes! No post anterior, quando falamos de energia, introduzimos o operador Hamiltoniano:</p>
+        <p>H|ψ⟩ = E|ψ⟩</p>
+        <p>Nossa motivação? Bom, já sabíamos que nem toda energia era permitida a um dado estado quântico
+          (pense em elétrons em átomos: eles só podem se encontrar em um nível de energia ou no outro, nunca
+          no meio). Se encontrássemos uma matriz/um operador com autovalores correspondentes aos valores
+          permitidos da energia, teríamos uma ferramenta poderosa em nossas mãos para prever esses valores
+          antes de medí-los.</p>
+        <p>O mesmo ocorre com outras propriedades. Nem todo valor de momento linear é permitido. Portanto, criamos
+          um operador para o momento linear que contenha como autovalores os valores permitidos. E assim vai.
+          Para medir o spin de um elétron no eixo z, por exemplo, usamos</p>
+        <p>σz = [[1, 0] [0, -1]]</p>
+        <p>Enquanto que a mesma medição na direção x exige o uso de</p>
+        <p>σₓ = [[0, 1] [1, 0]]</p>
+        <p>Uma observação importante é que operadores mensuráveis devem ser matrizes hermitianas. Em outras palavras, para que A possa ser um operador quântico,</p>
+        <p>A = A†</p>
+        <button onclick="paginate('post5_3', 'post5_2')">Anterior</button>
+        <button onclick="paginate('post5_3', 'post5_4')">Próximo</button>
+      </div>
+      <div id="post5_4">
+        <h3>Postulado 3 - possíveis resultados de uma observação</h3>
+        <p>O resultado da medição de um observável de operador A só pode ser um autovalor de A.</p>
+        <p>Isso já foi mencionado como parte de nossa motivação para o Postulado 2, mas não tinha
+          um postulado próprio ainda. Matematicamente, precisamos deixar tudo claro como cristal.</p>
+        <button onclick="paginate('post5_4', 'post5_3')">Anterior</button>
+        <button onclick="paginate('post5_4', 'post5_5')">Próximo</button>
+      </div>
+      <div id="post5_5">
+        <h3>Postulado 4 - probabilidade de cada resultado</h3>
+        <p>Quando a medição de um observável de operador A é realizada em um estado genérico |ψ⟩, a probabilidade de obter um dado valor aᵢ é dada por P(aᵢ) = |⟨aᵢ|ψ⟩|².</p>
+        <p>Para entender porque, vamos voltar ao nosso exemplo de sistemas de dois níveis, com possíveis
+          resultados 0 ou 1. Queremos que a “quantidade” de 0 em um estado seja proporcional à probabilidade
+          de obter 0 ao medí-lo. Mais ou menos como se tivéssemos uma moeda inclinada ou pouco mais para a
+          direita: há maiores chances de que caia para a direita que para a esquerda.</p>
+        <p>Então, se temos um estado |ψ⟩=[[1/√2] [1/√2]], em que as “quantidades” de 0 e 1 são iguais,
+          queremos probabilidades iguais. Também precisamos que as probabilidades somem 1 (100%), o que obtemos
+          por meio da normalização (dê uma olhada no post de álgebra linear se não lembra o que isso significa).
+          Neste caso, como veremos, o vetor já está normalizado.</p>
+        <p>Bom, vamos calcular as probabilidades pelo método proposto no postulado:</p>
+        <p>P(0) = |⟨0|ψ⟩|² = |⟨0|1/√2|0⟩+⟨0|1/√2|1⟩|² = |1/√2+0|² = ½</p>
+        <p>P(1) = |⟨1|ψ⟩|² = |⟨1|1/√2|0⟩+⟨1|1/√2|1⟩|² = |0+1/√2|² = ½</p>
+        <p>As probabilidades são as mesmas, e têm soma 1! Isso é uma boa indicação de que a fórmula funciona, apesar de não ser uma prova.</p>
+        <button onclick="paginate('post5_5', 'post5_4')">Anterior</button>
+        <button onclick="paginate('post5_5', 'post5_6')">Próximo</button>
+      </div>
+      <div id="post5_6">
+        <h3>Postulado 5 - efeito do observador</h3>
+        <p>Logo após a medição de um observável como tendo valor aᵢ, o estado do sistema é o auto-estado |aᵢ⟩.</p>
+        <p>Em outras palavras, quando medimos um estado e determinamos, por exemplo, que tem valor 1,
+          acabamos de alterar seu estado com o simples ato de medir. Não importa qual era seu estado
+          previamente: agora, colapsamos qualquer que fosse a superposição para o estado |1⟩.</p>
+        <p>Sabemos que isso ocorre porque sabemos que o experimento de dupla-fenda é alterado pela
+          presença de uma câmera: sem ninguém vendo, os estados estão em superposição de posições, agindo,
+          portanto, como ondas; assim que tentamos observar o experimento mais de perto, passam a se
+          comportar como partículas, indicando que saíram de sua superposição para uma só posição.</p>
+        <button onclick="paginate('post5_6', 'post5_5')">Anterior</button>
+        <button onclick="paginate('post5_6', 'post5_7')">Próximo</button>
+      </div>
+      <div id="post5_7">
+        <h3>Postulado 6 - evolução temporal</h3>
+        <p>Por fim, estados quânticos evoluem com o tempo. Tal evolução deve preservar sua normalização, e é descrita por</p>
+        <p>|ψ(t)⟩ = U(t)|ψ(0)⟩, para um operador unitário U(t).</p>
+        <p>Um operador unitário é apenas uma matriz que conserva a norma de um vetor. Assim, é exatamente
+          o que precisamos: queremos que a probabilidade total de um estado ter algum valor quando medido
+          seja 1 em qualquer momento.</p>
+        <p>Já sabíamos que estados quânticos podem mudar: vimos exemplos disso com o efeito do observador
+          e durante os experimentos de Stern-Gerlach no último post. Aqui, apenas generalizamos essa mudança,
+          ou evolução, impondo a regra de que ela deve preservar a normalização de nosso estado.</p>
+        <button onclick="paginate('post5_7', 'post5_6')">Anterior</button>
+        <button onclick="paginate('post5_7', 'post5_8')">Próximo</button>
+      </div>
+      <div id="post5_8">
+        <h3>Conclusão</h3>
+        <p>Isso é tudo por hoje! Este post, apesar de curto, é de extrema importância para o resto
+          do conteúdo. Leia e releia esses postulados se necessário, e só então avance ao próximo post. Até!</p>
+        <button onclick="paginate('post5_8', 'post5_7')">Anterior</button>
+      </div>
+    </div>
   </main>
 
   <script src="../app.js"></script>
