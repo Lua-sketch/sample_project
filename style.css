@@ -309,3 +309,7 @@ a.download-btn{
   position:absolute;
   bottom:22px;
 }
+
+.g-signin2{
+  display:none;
+}
