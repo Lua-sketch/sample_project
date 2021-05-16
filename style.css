@@ -294,6 +294,10 @@ button{
   display:none;
 }
 
+#post6_2, #post6_3, #post6_4, #post6_5, #post6_6{
+  display:none;
+}
+
 a.download-btn{
   font-weight:bold;
   color:purple;

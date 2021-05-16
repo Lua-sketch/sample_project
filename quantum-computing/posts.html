@@ -5,7 +5,6 @@
   <title>Universo Emaranhado</title>
   <link rel="shortcut icon" type="image/x-icon" href="../favicon.ico"></link>
   <link rel="stylesheet" type="text/css" href="../style.css"></link>
-  <link rel="stylesheet" type="text/css" href="code.css"></link>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
   <script src="../p5.js"></script>
   <link rel="preconnect" href="https://fonts.gstatic.com">
@@ -77,7 +76,90 @@
   </nav>
 
   <main>
+    <div class="post">
+      <div id="post6_1">
+        <h1>Computação Quântica no Abstrato</h1>
+        <h2>Como interferência, superposição e emaranhamento podem nos ajudar a computar</h2>
+        <p>Uau! Já chegamos à nossa introdução à computação quântica! Aprendemos bastante
+          sobre mecânica quântica e suas principais características. Agora, vamos entender
+          como podemos aproveitá-las para resolver certos problemas computacionais!</p>
+        <button onclick="paginate('post6_1', 'post6_2')">Próximo</button>
+      </div>
+      <div id="post6_2">
+        <h3>Diferença entre bits clássicos e quânticos</h3>
+        <p>Comecemos por diferenciar bits de qubits. Como já sabemos, o termo “qubit” vem de
+          “bit quântico”. Além disso, já vimos que bits são unidades básicas de informação clássica
+          e que podem ter valor 0 ou 1. Então, o que caracteriza um bit quântico?</p>
+        <p>Bom, um bit quântico é, basicamente, um sistema quântico de dois níveis. Assim, pode
+          ser o spin de um elétron ou a polarização da luz, por exemplo. Como vimos, um sistema
+          quântico de dois níveis é aquele que, quando medido, só tem dois resultados possíveis.
+          Para a computação, um deles será considerado como 0, e o outro como 1. A diferença é que,
+          por se tratar de um sistema quântico, pode apresentar propriedades como interferência
+          quântica, superposição e emaranhamento.</p>
+        <p>Esclarecida a definição de um qubit, vamos ver como suas propriedades quânticas os tornam úteis...</p>
+        <button onclick="paginate('post6_2', 'post6_1')">Anterior</button>
+        <button onclick="paginate('post6_2', 'post6_3')">Próximo</button>
+      </div>
+      <div id="post6_3">
+        <h3>Superposição na computação</h3>
+        <p>Um qubit, quando medido, pode estar em um de dois possíveis estados, os quais rotulamos
+          como 0 e 1. Porém, enquanto não for medido, pode se encontrar em uma superposição de tais estados.
+          Enquanto um bit sempre é 0 ou 1, um qubit pode estar entre 0 e 1.</p>
+        <p>Em termos práticos, isso permite que, usando nossa matemática de vetores e matrizes, consigamos
+          manipular os qubits em superposições de forma a obter as probabilidades que desejamos para cada
+          estado ao fim do nosso programa.</p>
+        <p>Mais que isso, a superposição de qubits permite computações mais rápidas: afinal, é como se nos
+          permitisse realizar operações com 0 e 1 ao mesmo tempo! Veremos que é mais complicado que isso,
+          mas, por enquanto, é uma maneira intuitiva de pensar sobre o poder dos computadores quânticos.</p>
+        <button onclick="paginate('post6_3', 'post6_2')">Anterior</button>
+        <button onclick="paginate('post6_3', 'post6_4')">Próximo</button>
+      </div>
+      <div id="post6_4">
+        <h3>Interferência na computação</h3>
+        <p>Enquanto o qubit estiver em superposição, se comportará como uma onda. Isso significa que poderá
+          interferir com outros qubits, que poderão aumentar a probabilidade de um resultado quando a
+          amplitude da probabilidade de tal resultado em ambos qubits tiverem o mesmo sinal e diminuir a
+          probabilidade quando tiverem sinais opostos. Isso é o mesmo que dizer que ondas se somam quando
+          uma crista encontra uma crista ou um vale encontra um vale e que se cancelam quando uma crista
+          encontra um vale.</p>
+        <p>Para entender como isso pode ser útil, vamos a um spoiler sobre o algoritmo de Grover. Se queremos
+          encontrar um item em uma lista com um computador clássico, temos de olhar item por item até encontrar
+          o que queremos. Mas se temos interferência à nossa disposição, então podemos deixar cada item em um
+          estado de superposição e então organizar nosso programa para que as possibilidades erradas se cancelem
+          e a probabilidade de medir o item procurado seja praticamente 100%.</p>
+        <button onclick="paginate('post6_4', 'post6_3')">Anterior</button>
+        <button onclick="paginate('post6_4', 'post6_5')">Próximo</button>
+      </div>
+      <div id="post6_5">
+        <h3>Emaranhamento na computação</h3>
+        <p>Por fim, com qubits, também podemos fazer uso do emaranhamento quântico. Se temos um par de qubits
+          emaranhado, e medimos um deles, então determinamos o estado do outro qubit também.</p>
+        <p>Essa propriedade é especialmente útil em dois cenários famosos: computação super condensada e
+          teletransporte quântico. O primeiro cenário se trata de uma maneira fornecida por computadores
+          quânticos de transmitir informação equivalente àquela carregada por dois bits clássicos em apenas
+          um qubit. O segundo se trata da transmissão de um estado quântico por meio de um canal clássico.
+          Vamos estudar os protocolos para ambas essas situações, e veremos que dependem de duas pessoas
+          compartilhando um par emaranhado.</p>
+        <button onclick="paginate('post6_5', 'post6_4')">Anterior</button>
+        <button onclick="paginate('post6_5', 'post6_6')">Próximo</button>
+      </div>
+      <div id="post6_6">
+        <h3>Conclusão</h3>
+        <p>No fim das contas, a computação quântica oferece um grande potencial para revolucionar certas
+          indústrias, mas temos de manter em mente que seu poder se limita a apenas alguns problemas, geralmente
+          aqueles que nem mesmo nossos supercomputadores atuais conseguem resolver.</p>
+        <p>Além disso, os exemplos citados nesse post são de protocolos e algoritmos que serão explorados em
+          breve, mas que têm pouca chance de implementação no futuro próximo. O tópico continua sendo de interesse
+          prático hoje porque, em vários cenários, é possível utilizar nossos computadores quânticos atuais, que
+          têm poucos qubits e nenhuma correção de erros, em conjunto com computadores clássicos para formação de algoritmos
+          híbridos. Quando aprendi sobre tudo isso pela primeira vez, só me informaram deste detalhe no final da batalha,
+          então queria avisá-los já no início.</p>
+        <p>No próximo post, vamos discutir qubits, a Bloch-sphere, e portas quânticas.</p>
+        <button onclick="paginate('post6_6', 'post6_5')">Anterior</button>
+      </div>
+    </div>
   </main>
 
+  <script src="../app.js"></script>
 </body>
 </html>
