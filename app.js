@@ -30,10 +30,10 @@ const navSlide = () => {
 
 navSlide();
 
-function onSignIn(googleUser) {
+//function onSignIn(googleUser) {
       // get user profile information
-      console.log(googleUser.getBasicProfile())
-    }
+    //  console.log(googleUser.getBasicProfile())
+    //}
 
 function paginate(hide, show){
   $('#'+hide).toggle()
