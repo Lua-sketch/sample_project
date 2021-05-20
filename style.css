@@ -323,6 +323,7 @@ a.download-btn{
   background-color:#9253f2;
   padding:5px;
   min-height:24px;
+  z-index:10;
 }
 
 .footer a{
